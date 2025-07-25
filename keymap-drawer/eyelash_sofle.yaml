@@ -80,23 +80,23 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - '&'
-  - '*'
-  - )
-  - (
-  - ^
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '%'
   - '!'
   - '#'
   - '@'
   - $
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&'
+  - '*'
+  - )
+  - (
+  - ^
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
-  - '}'
   - '{'
-  - {t: ']', s: '}'}
+  - '}'
   - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - '"'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - Gui+$$mdi:keyboard-tab$$
