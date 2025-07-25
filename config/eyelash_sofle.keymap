@@ -72,11 +72,11 @@
 
         symbol {
             bindings = <
-&trans      &none         &none         &none           &none             &none          &mmv MOVE_UP     &trans             &trans                &trans                 &trans          &trans           &trans
-&trans      &kp DOLLAR    &kp AT_SIGN   &kp HASH        &kp EXCLAMATION   &kp PERCENT    &mmv MOVE_DOWN   &kp CARET          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK    &kp AMPERSAND    &trans
-&trans      &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none          &mmv MOVE_LEFT   &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp TILDE
-&trans      &kp F6        &kp F7        &kp F8          &kp F9            &kp F10        &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp MINUS             &kp EQUAL              &kp UNDERSCORE  &kp PLUS         &trans
-&kp C_MUTE  &trans        &trans        &trans          &trans            &trans         &mkp LCLK        &trans             &trans                &trans                 &trans          &trans
+&trans      &none         &none         &none           &none             &none          &mmv MOVE_UP     &trans             &trans                &trans                 &trans          &trans            &trans
+&trans      &kp DOLLAR    &kp AT_SIGN   &kp HASH        &kp EXCLAMATION   &kp PERCENT    &mmv MOVE_DOWN   &kp CARET          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK    &kp AMPERSAND     &kp LEFT_SHIFT
+&trans      &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none          &mmv MOVE_LEFT   &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp TILDE
+&trans      &kp F6        &kp F7        &kp F8          &kp F9            &kp F10        &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp MINUS             &kp EQUAL              &kp UNDERSCORE  &kp PLUS          &kp RIGHT_ALT
+&kp C_MUTE  &trans        &trans        &trans          &trans            &trans         &mkp LCLK        &trans             &trans                &trans                 &trans          &kp LEFT_CONTROL
             >;
 
             display-name = "layer1";
@@ -85,11 +85,11 @@
 
         num {
             bindings = <
-&trans  &none          &none            &none         &none        &trans    &mmv MOVE_UP     &trans        &trans  &trans  &trans  &trans      &trans
-&trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp KP_PLUS  &trans    &mmv MOVE_DOWN   &kp KP_COMMA  &kp N7  &kp N8  &kp N9  &none       &trans
-&trans  &kp LGUI       &kp LALT         &kp LSHFT     &kp LCTRL    &trans    &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_DOT  &trans
-&trans  &kp F1         &kp F2           &kp F3        &kp F4       &kp F5    &mmv MOVE_RIGHT  &kp KP_EQUAL  &kp N1  &kp N2  &kp N3  &none       &trans
-&trans  &trans         &trans           &trans        &trans       &trans    &mkp LCLK        &trans        &trans  &trans  &trans  &trans
+&trans  &none          &none            &none         &none        &trans    &mmv MOVE_UP     &trans        &trans  &trans  &trans  &trans            &trans
+&trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp KP_PLUS  &trans    &mmv MOVE_DOWN   &kp KP_COMMA  &kp N7  &kp N8  &kp N9  &none             &kp LEFT_SHIFT
+&trans  &kp LGUI       &kp LALT         &kp LSHFT     &kp LCTRL    &trans    &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_DOT        &trans
+&trans  &kp F1         &kp F2           &kp F3        &kp F4       &kp F5    &mmv MOVE_RIGHT  &kp KP_EQUAL  &kp N1  &kp N2  &kp N3  &none             &kp RIGHT_ALT
+&trans  &trans         &trans           &trans        &trans       &trans    &mkp LCLK        &trans        &trans  &trans  &trans  &kp LEFT_CONTROL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -107,11 +107,11 @@
 
         media_nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &kp UP_ARROW  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans        &trans     &trans
             >;
         };
 
