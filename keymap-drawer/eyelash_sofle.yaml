@@ -277,9 +277,9 @@ layers:
   - $$mdi:bluetooth-off$$
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
-  - $$mdi:volume-off$$
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
+  - PLAY PAUSE
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -287,12 +287,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - PREVIOUS
-  - $$mdi:skip-next$$
-  - PLAY PAUSE
-  - {t: '$$mdi:transfer$$', type: trans}
+  - EP OFF
+  - AL WWW
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - $$mdi:volume-off$$
+  - AL CALCULATOR
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
@@ -301,8 +301,8 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB EFF
+  - RGB TOG
   - REWIND
   - FAST FORWARD
   - {t: '$$mdi:transfer$$', type: trans}
