@@ -63,7 +63,7 @@ layers:
   - nav
   - {t: '$$mdi:keyboard-return$$', h: layer1}
   - media_nav_settings
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - F24
   - mouse
   layer1:
   - {t: '$$mdi:transfer$$', type: trans}
