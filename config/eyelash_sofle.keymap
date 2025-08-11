@@ -38,7 +38,7 @@
     gresc_mo: gresc_mo {
         compatible = "zmk,behavior-hold-tap";
         label = "GRESC_MO";
-        bindings = <&mo>, <&gresc>;
+        bindings = <&mo>, <&kp>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
@@ -62,28 +62,30 @@
 
         normal {
             bindings = <
-&kp LA(TAB)     &kp F5      &kp F2        &kp F6         &kp F11    &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE      &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE
-&kp TAB         &kp Q       &kp W         &kp E          &kp R      &kp T               &kp DOWN_ARROW   &kp Y         &kp U              &kp I          &kp O          &kp P          &kp BSLH
-&kp LEFT_SHIFT  &kp A       &kp S         &kp D          &kp F      &kp G               &kp LEFT_ARROW   &kp H         &kp J              &kp K          &kp L          &kp SEMI       &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp Z       &kp X         &kp C          &kp V      &kp B               &kp RIGHT_ARROW  &kp N         &kp M              &kp COMMA      &kp DOT        &kp FSLH       &kp RIGHT_ALT
-&kp C_MUTE      &kp DELETE  &kp LEFT_GUI  &gresc_mo 2 0  &kp SPACE  &kp LEFT_CONTROL    &kp ENTER        &mo 3         &enter_mo 1 ENTER  &mo 4          &kp F24        &mo 5
+&kp LA(TAB)     &kp F5      &kp F2        &kp F6           &kp F11    &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE      &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &to 6
+&kp TAB         &kp Q       &kp W         &kp E            &kp R      &kp T               &kp DOWN_ARROW   &kp Y         &kp U              &kp I          &kp O          &kp P          &kp BSLH
+&kp LEFT_SHIFT  &kp A       &kp S         &kp D            &kp F      &kp G               &kp LEFT_ARROW   &kp H         &kp J              &kp K          &kp L          &kp SEMI       &kp RIGHT_SHIFT
+&kp LEFT_ALT    &kp Z       &kp X         &kp C            &kp V      &kp B               &kp RIGHT_ARROW  &kp N         &kp M              &kp COMMA      &kp DOT        &kp FSLH       &kp RIGHT_ALT
+&kp C_MUTE      &kp DELETE  &kp LEFT_GUI  &gresc_mo 2 ESC  &kp SPACE  &kp LEFT_CONTROL    &kp ENTER        &mo 3         &enter_mo 1 ENTER  &mo 4          &kp F24        &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "LAYER0";
+            label = "默认层";
         };
 
         symbol {
             bindings = <
 &trans          &trans            &trans           &trans            &trans             &trans               &mmv MOVE_UP     &none          &none             &none                 &none                  &none         &trans
 &kp LEFT_SHIFT  &kp DOLLAR        &kp AT           &kp HASH          &kp EXCLAMATION    &kp PERCENT          &mmv MOVE_DOWN   &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &trans
-&kp TILDE       &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &mmv MOVE_LEFT   &kp LG(TAB)    &kp LEFT_CONTROL  &kp LEFT_SHIFT        &kp LEFT_ALT           &kp LEFT_GUI  &trans
+&kp GRAVE       &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES    &mmv MOVE_LEFT   &kp LG(TAB)    &kp LEFT_CONTROL  &kp LEFT_SHIFT        &kp LEFT_ALT           &kp LEFT_GUI  &trans
 &kp RIGHT_ALT   &kp PLUS          &kp UNDERSCORE   &kp EQUAL         &kp MINUS          &kp SINGLE_QUOTE     &mmv MOVE_RIGHT  &kp F6         &kp F7            &kp F8                &kp F7                 &kp F10       &trans
 &kp C_MUTE      &kp LEFT_CONTROL  &trans           &trans            &trans             &trans               &mkp LCLK        &trans         &trans            &trans                &trans                 &trans
             >;
 
             display-name = "layer1";
             sensor-bindings = <&scroll_encoder>;
+            label = "符号层";
         };
 
         num {
@@ -96,6 +98,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "数字层";
         };
 
         nav {
@@ -106,19 +109,23 @@
 &trans  &none           &kp PAGE_UP  &kp PRINTSCREEN  &kp PAGE_DOWN  &none            &trans  &none   &none      &none      &none     &none     &trans
 &trans  &trans          &trans       &trans           &trans         &trans           &trans  &trans  &trans     &trans     &trans    &trans
             >;
+
+            label = "方向键层";
         };
 
         media_nav_settings {
             bindings = <
-&bt BT_CLR_ALL     &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2     &bt BT_SEL 3        &bt BT_SEL 4           &trans  &trans  &trans          &trans        &trans     &trans      &trans
-&bt BT_CLR         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREV       &kp C_NEXT          &kp C_PLAY_PAUSE       &trans  &trans  &trans          &kp UP_ARROW  &trans     &trans      &trans
-&ext_power EP_OFF  &kp C_AL_WWW          &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &kp C_MUTE          &kp C_AL_CALCULATOR    &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp C_MUTE  &trans
-&trans             &rgb_ug RGB_EFF       &rgb_ug RGB_TOG       &kp C_REWIND     &kp C_FAST_FORWARD  &trans                 &trans  &trans  &trans          &trans        &trans     &trans      &trans
-&trans             &trans                &trans                &trans           &trans              &trans                 &trans  &trans  &trans          &trans        &trans     &trans
+&bt BT_CLR_ALL     &bt BT_SEL 0          &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3        &bt BT_SEL 4    &trans  &trans  &trans          &trans        &trans     &trans      &trans
+&bt BT_CLR         &kp C_BRIGHTNESS_INC  &kp C_PREV         &kp C_NEXT       &kp C_PLAY_PAUSE    &kp F13         &trans  &trans  &trans          &kp UP_ARROW  &trans     &trans      &trans
+&ext_power EP_OFF  &kp C_BRI_DN          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE          &kp F14         &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp C_MUTE  &trans
+&trans             &rgb_ug RGB_EFF       &rgb_ug RGB_TOG    &kp C_REWIND     &kp C_FAST_FORWARD  &kp F15         &trans  &trans  &trans          &trans        &trans     &trans      &trans
+&trans             &trans                &trans             &trans           &trans              &trans          &trans  &trans  &trans          &trans        &trans     &trans
             >;
+
+            label = "媒体键和键盘设置键";
         };
 
-        mouse {
+        quiker {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -126,6 +133,20 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "快捷键层";
+        };
+
+        applic_mouse {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none      &none           &none           &none            &none     &to 0
+&none  &none  &none  &none  &none  &none    &none  &none      &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none     &none
+&none  &none  &none  &none  &none  &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &mkp MB4         &mkp MB5
+            >;
+
+            label = "特定软件功能键和鼠标模拟";
         };
     };
 };
