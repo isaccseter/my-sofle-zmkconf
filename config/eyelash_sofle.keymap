@@ -35,39 +35,6 @@
         tap-ms = <100>;
     };
 
-    lt_space: lt_space {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LT_SPACE";
-        bindings = <&mo>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        flavor = "balanced";
-        retro-tap;
-    };
-
-    lt_enter: lt_enter {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LT_ENTER";
-        bindings = <&mo>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        retro-tap;
-    };
-
-    lt_gresc: lt_gresc {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LT_GRESC";
-        bindings = <&mo>, <&gresc>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <220>;
-        flavor = "tap-preferred";
-        hold-trigger-key-positions = <21 22 23 24 34 35 36 37 47 48 49 50 20 33 46 30 29 28 27>;
-        retro-tap;
-    };
-
     behaviors {
     };
 
@@ -93,11 +60,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)     &kp F5      &kp F2        &kp F6         &kp F11            &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE      &kp BACKSPACE  &kp BACKSPACE       &kp BACKSPACE  &sl 6
-&kp TAB         &kp Q       &kp W         &kp E          &kp R              &kp T               &kp DOWN_ARROW   &kp Y         &kp U              &kp I          &kp O               &kp P          &kp BSLH
-&kp LEFT_SHIFT  &kp A       &kp S         &kp D          &kp F              &kp G               &kp LEFT_ARROW   &kp H         &kp J              &kp K          &kp L               &kp SEMI       &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp Z       &kp X         &kp C          &kp V              &kp B               &kp RIGHT_ARROW  &kp N         &kp M              &kp COMMA      &kp DOT             &kp FSLH       &kp RIGHT_ALT
-&kp C_MUTE      &kp DELETE  &kp LEFT_GUI  &lt_gresc 5 0  &lt_space 2 SPACE  &kp LEFT_CONTROL    &kp ENTER        &mo 3         &lt_enter 1 ENTER  &mo 4          &kp LS(LA(LC(F8)))  &kp GRAVE
+&kp LG(TAB)     &kp F5      &kp F2        &kp F6  &kp F11  &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE       &kp BACKSPACE  &sl 6
+&kp TAB         &kp Q       &kp W         &kp E   &kp R    &kp T               &kp DOWN_ARROW   &kp Y         &kp U          &kp I          &kp O               &kp P          &kp BSLH
+&kp LEFT_SHIFT  &kp A       &kp S         &kp D   &kp F    &kp G               &kp LEFT_ARROW   &kp H         &kp J          &kp K          &kp L               &kp SEMI       &kp RIGHT_SHIFT
+&kp LEFT_ALT    &kp Z       &kp X         &kp C   &kp V    &kp B               &kp RIGHT_ARROW  &kp N         &kp M          &kp COMMA      &kp DOT             &kp FSLH       &kp RIGHT_ALT
+&kp C_MUTE      &kp DELETE  &kp LEFT_GUI  &none   &none    &kp LEFT_CONTROL    &kp ENTER        &mo 3         &none          &mo 4          &kp LS(LA(LC(F8)))  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
