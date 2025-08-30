@@ -52,10 +52,10 @@ layers:
   - {t: ',', h: 'Alt+$$mdi:apple-keyboard-shift$$', s: <}
   - {t: ., h: 媒体键和键盘设置键}
   - {t: /, h: RIGHT GUI, s: '?'}
-  - '&key_repeat'
+  - LEFT WIN
   - $$mdi:volume-off$$
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:apple-keyboard-command$$
+  - '&double_bracket'
   - Meh+F8
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
