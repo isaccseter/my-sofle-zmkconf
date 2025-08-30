@@ -49,6 +49,58 @@
         hold-trigger-on-release;
     };
 
+    shift_L: shift_L {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SHIFT_L";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <180>;
+        flavor = "balanced";
+        hold-while-undecided;
+        hold-trigger-key-positions = <7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51>;
+        hold-trigger-on-release;
+    };
+
+    shift_R: shift_R {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SHIFT_R";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <180>;
+        flavor = "balanced";
+        hold-while-undecided;
+        hold-trigger-on-release;
+        hold-trigger-key-positions = <0 1 13 14 15 16 17 18 26 27 28 29 30 31 41 42 43 44 39 40 2 3 4 5>;
+    };
+
+    symbol_L: symbol_L {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SYMBOL_L";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <220>;
+        flavor = "balanced";
+        retro-tap;
+        hold-trigger-on-release;
+        hold-trigger-key-positions = <7 8 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51 9 10>;
+    };
+
+    symbol_R: symbol_R {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SYMBOL_R";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <220>;
+        flavor = "balanced";
+        retro-tap;
+        hold-trigger-key-positions = <0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 2 3 4 5>;
+        hold-trigger-on-release;
+    };
+
     behaviors {
     };
 
@@ -74,11 +126,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)     &kp F5      &kp F2        &kp F6  &kp F11  &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE       &kp BACKSPACE  &sl 6
-&kp TAB         &kp Q       &kp W         &kp E   &kp R    &kp T               &kp DOWN_ARROW   &kp Y         &kp U          &kp I          &kp O               &kp P          &kp BSLH
-&kp LEFT_SHIFT  &kp A       &kp S         &kp D   &kp F    &kp G               &kp LEFT_ARROW   &kp H         &kp J          &kp K          &kp L               &kp SEMI       &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp Z       &kp X         &kp C   &kp V    &kp B               &kp RIGHT_ARROW  &kp N         &kp M          &kp COMMA      &kp DOT             &kp FSLH       &kp RIGHT_ALT
-&kp C_MUTE      &kp DELETE  &kp LEFT_GUI  &none   &none    &kp LEFT_CONTROL    &kp ENTER        &mo 3         &none          &mo 4          &kp LS(LA(LC(F8)))  &kp GRAVE
+&kp LG(TAB)     &kp F5      &kp F2         &kp F6                 &kp F11   &kp F12             &kp UP_ARROW     &kp CAPSLOCK  &kp BACKSPACE  &kp BACKSPACE           &kp BACKSPACE       &kp BACKSPACE  &sl 6
+&kp TAB         &kp Q       &kp W          &kp E                  &kp R     &kp T               &kp DOWN_ARROW   &kp Y         &kp U          &kp I                   &kp O               &kp P          &kp BSLH
+&kp LEFT_SHIFT  &kp A       &symbol_L 1 S  &shift_L LEFT_SHIFT D  &num 2 F  &kp G               &kp LEFT_ARROW   &kp H         &nav 3 J       &shift_R RIGHT_SHIFT K  &symbol_R 1 L       &kp SEMI       &kp RIGHT_SHIFT
+&kp LEFT_ALT    &kp Z       &kp X          &kp C                  &kp V     &kp B               &kp RIGHT_ARROW  &kp N         &kp M          &kp COMMA               &kp DOT             &kp FSLH       &kp RIGHT_ALT
+&kp C_MUTE      &kp DELETE  &kp LEFT_GUI   &none                  &none     &kp LEFT_CONTROL    &kp ENTER        &mo 3         &none          &mo 4                   &kp LS(LA(LC(F8)))  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
