@@ -330,11 +330,11 @@
 
         symbol {
             bindings = <
-&trans      &trans           &trans          &trans            &trans             &trans               &mmv MOVE_UP     &trans         &trans            &trans                &trans                 &trans        &trans
-&none       &kp DOLLAR       &kp AT          &kp HASH          &kp EXCLAMATION    &kp PERCENT          &mmv MOVE_DOWN   &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET     &trans
-&kp TILDE   &kp RIGHT_BRACE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET    &mmv MOVE_LEFT   &kp LG(TAB)    &kp LEFT_CONTROL  &kp LEFT_SHIFT        &kp LEFT_ALT           &kp LEFT_GUI  &trans
-&none       &kp PLUS         &kp EQUAL       &kp UNDERSCORE    &kp MINUS          &kp SINGLE_QUOTE     &mmv MOVE_RIGHT  &none          &none             &none                 &none                  &none         &trans
-&kp C_MUTE  &trans           &trans          &trans            &trans             &trans               &mkp LCLK        &trans         &trans            &trans                &trans                 &trans
+&trans      &trans           &trans         &trans            &trans             &trans           &mmv MOVE_UP     &trans       &trans                &trans                 &trans             &trans        &trans
+&none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &trans
+&none       &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &trans
+&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &trans
+&kp C_MUTE  &trans           &trans         &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &trans             &trans
             >;
 
             display-name = "layer1";
