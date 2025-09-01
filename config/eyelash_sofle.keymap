@@ -291,6 +291,13 @@
         require-prior-idle-ms = <140>;
     };
 
+    td_ctrlGrave: td_ctrlGrave {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_CTRLGRAVE";
+        #binding-cells = <0>;
+        bindings = <&kp LC(GRAVE)>, <&kp LC(LS(GRAVE))>;
+    };
+
     behaviors {
     };
 
@@ -330,11 +337,11 @@
 
         symbol {
             bindings = <
-&trans      &trans           &trans         &trans            &trans             &trans           &mmv MOVE_UP     &trans       &trans                &trans                 &trans             &trans        &trans
-&trans      &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &trans
-&trans      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &trans
-&trans      &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &trans
-&kp C_MUTE  &trans           &trans         &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &trans             &trans
+&none          &none            &none          &none             &none              &none            &mmv MOVE_UP     &none        &none                 &none                  &none              &none         &none
+&none          &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &none
+&td_ctrlGrave  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &none
+&none          &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &none
+&kp C_MUTE     &none            &none          &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &none              &none
             >;
 
             display-name = "layer1";
@@ -344,11 +351,11 @@
 
         num {
             bindings = <
-&trans  &none          &none            &none         &none        &trans    &mmv MOVE_UP     &trans        &trans  &trans  &trans  &trans      &trans
-&trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp KP_PLUS  &trans    &mmv MOVE_DOWN   &kp KP_COMMA  &kp N7  &kp N8  &kp N9  &none       &trans
-&trans  &kp LGUI       &kp LALT         &kp LSHFT     &kp LCTRL    &trans    &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_DOT  &trans
-&trans  &none          &none            &none         &none        &none     &mmv MOVE_RIGHT  &kp KP_EQUAL  &kp N1  &kp N2  &kp N3  &none       &trans
-&trans  &trans         &trans           &trans        &trans       &trans    &mkp LCLK        &trans        &trans  &trans  &trans  &trans
+&none  &none         &none      &none      &none   &none     &mmv MOVE_UP     &none         &none   &kp KP_DIVIDE  &kp KP_ASTERISK  &none         &none
+&none  &none         &kp DOT    &kp COMMA  &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8         &kp N9           &kp LS(X)     &none
+&none  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5         &kp N6           &kp PERCENT   &none
+&none  &kp LGUI      &none      &none      &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2         &kp N3           &kp KP_EQUAL  &none
+&none  &none         &none      &trans     &trans  &trans    &mkp LCLK        &trans        &trans  &trans         &kp E            &kp CARET
             >;
 
             sensor-bindings = <&scroll_encoder>;
