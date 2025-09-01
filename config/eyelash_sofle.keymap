@@ -331,9 +331,9 @@
         symbol {
             bindings = <
 &trans      &trans           &trans         &trans            &trans             &trans           &mmv MOVE_UP     &trans       &trans                &trans                 &trans             &trans        &trans
-&none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &trans
-&none       &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &trans
-&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &trans
+&trans      &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &trans
+&trans      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &trans
+&trans      &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &trans
 &kp C_MUTE  &trans           &trans         &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &trans             &trans
             >;
 
