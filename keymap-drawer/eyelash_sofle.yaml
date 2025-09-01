@@ -214,6 +214,7 @@ layers:
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
+  - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -222,12 +223,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+$$mdi:arrow-left-bold$$
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
+  - Ctl+Sft+PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
@@ -237,10 +237,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgDn
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgUp
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - APPLICATION
+  - Sft+Ctl+$$mdi:arrow-left-bold$$
+  - Sft+Ctl+$$mdi:arrow-right-bold$$
+  - Ctl+Z
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
