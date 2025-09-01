@@ -55,7 +55,7 @@ layers:
   - LEFT WIN
   - $$mdi:volume-off$$
   - $$mdi:backspace-reverse-outline$$
-  - '&double_bracket'
+  - F2
   - Meh+F8
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
