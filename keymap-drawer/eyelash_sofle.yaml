@@ -80,43 +80,43 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $
-  - '@'
-  - '#'
-  - '!'
-  - '%'
+  - {t: '`', s: '~'}
+  - <
+  - '>'
+  - {t: '-', s: _}
+  - '|'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - ^
+  - '{'
+  - '}'
+  - $
+  - '?'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '!'
+  - {t: '*', type: held}
+  - {t: /, s: '?'}
+  - {t: '=', s: +}
   - '&'
-  - '*'
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - '#'
   - (
   - )
-  - ^
+  - {t: ;, s: ':', type: held alternate}
+  - .
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '~'
-  - '}'
-  - {t: '{', type: held}
-  - {t: '[', s: '{'}
-  - '"'
-  - {t: ']', s: '}'}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - Gui+$$mdi:keyboard-tab$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
-  - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - +
-  - {t: '=', s: +}
-  - _
-  - {t: '-', s: _}
-  - {t: '''', s: '"'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - '%'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '@'
+  - ':'
+  - {t: ',', s: <}
+  - '"'
+  - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
