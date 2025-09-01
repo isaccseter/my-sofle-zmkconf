@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
   - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
-  - $$mdi:keyboard-tab-reverse$$
+  - {t: '-', s: _}
   - {t: '$$mdi:keyboard-return$$', h: 额外F区和鼠标模拟}
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - X
@@ -60,7 +60,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: _, s: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Alt+$$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
