@@ -30,13 +30,13 @@ layers:
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: 符号层}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: F, h: 数字层}
   - G
   - $$mdi:arrow-left-bold$$
   - H
   - {t: J, h: 方向键层}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: ''''}
   - {t: \, s: '|'}
@@ -44,11 +44,11 @@ layers:
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - X
   - {t: C, h: 'Alt+$$mdi:apple-keyboard-shift$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-control$$'}
   - B
   - $$mdi:arrow-right-bold$$
   - N
-  - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ',', h: 'Alt+$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: ., h: windows_manager_Others, s: '!'}
   - {t: /, h: RIGHT GUI, s: ^}
