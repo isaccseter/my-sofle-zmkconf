@@ -316,6 +316,118 @@
 
             label = "SELECT_LINE";
         };
+
+        double_win1: double_win1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "DOUBLE_WIN1";
+        };
+
+        three_win1: three_win1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "THREE_WIN1";
+        };
+
+        four_win1: four_win1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "FOUR_WIN1";
+        };
+
+        double_win2: double_win2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N2 &kp N2>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "DOUBLE_WIN2";
+        };
+
+        three_win2: three_win2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N2 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "THREE_WIN2";
+        };
+
+        four_win2: four_win2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "FOUR_WIN2";
+        };
+
+        double_win3: double_win3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "DOUBLE_WIN3";
+        };
+
+        three_win3: three_win3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1 &kp N1 &kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "THREE_WIN3";
+        };
     };
 
     keymap {
