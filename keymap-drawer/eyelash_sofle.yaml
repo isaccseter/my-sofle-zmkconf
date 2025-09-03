@@ -289,9 +289,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - EP OFF
   - $$mdi:brightness-7$$
-  - {t: Gui+6, s: Gui+^}
-  - {t: Gui+5, s: Gui+%}
-  - {t: Gui+4, s: Gui+$}
+  - '&win3'
+  - '&win2'
+  - '&win1'
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -302,9 +302,9 @@ layers:
   - {t: 默认层, h: toggle}
   - RGB EFF
   - RGB TOG
-  - {t: Gui+3, s: Gui+#}
-  - {t: Gui+2, s: Gui+@}
-  - {t: Gui+1, s: Gui+!}
+  - '&win6'
+  - '&win5'
+  - '&win4'
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
