@@ -331,6 +331,14 @@
 
             label = "SELSEARCH";
         };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&macro_wait_time 30>, <&kp LS(END)>;
+
+            label = "SELECT_LINE";
+        };
     };
 
     keymap {
@@ -341,8 +349,8 @@
 &kp LG(TAB)           &kp LC(Z)          &kp LC(V)      &kp LC(C)                     &kp LC(X)        &kp LS(LA(LC(F7)))    &kp UP_ARROW     &kp HOME          &kp LEFT         &kp BACKSPACE                      &kp RIGHT                  &kp END             &kp CAPSLOCK
 &kp LC(A)             &kp Q              &kp W          &kp E                         &kp R            &kp T                 &kp DOWN_ARROW   &kp Y             &kp U            &kp I                              &kp O                      &kp P               &key_repeat
 &kp TAB               &alt_L LEFT_ALT A  &symbol_L 1 S  &shift_L LEFT_SHIFT D         &num 2 F         &kp G                 &kp LEFT_ARROW   &kp H             &nav 3 J         &shift_R RIGHT_SHIFT K             &symbol_R 1 L              &alt_R RIGHT_ALT 0  &kp BSLH
-&extra_enter 6 ENTER  &gui_L LEFT_GUI Z  &kp X          &shiftAlt_L LA(LEFT_SHIFT) C  &ctrl_L LCTRL V  &kp B                 &kp RIGHT_ARROW  &kp N             &ctrl_R RCTRL M  &shiftAlt_R LA(RIGHT_SHIFT) COMMA  &windows_manager 0 PERIOD  &gui_R RIGHT_GUI 0  &kp LEFT_WIN
-&kp C_MUTE            &kp DELETE         &kp F2         &kp LS(LA(LC(F8)))            &kp SPACE        &kp ESCAPE            &kp ENTER        &underscore_LAlt  &kp ENTER        &kp LA(LEFT_SHIFT)                 &none                      &none
+&extra_enter 6 ENTER  &gui_L LEFT_GUI Z  &kp X          &shiftAlt_L LA(LEFT_SHIFT) C  &ctrl_L LCTRL V  &kp B                 &kp RIGHT_ARROW  &kp N             &ctrl_R RCTRL M  &shiftAlt_R LA(RIGHT_SHIFT) COMMA  &windows_manager 4 PERIOD  &gui_R RIGHT_GUI 0  &kp LEFT_WIN
+&kp C_MUTE            &kp DELETE         &kp F2         &kp LS(LA(LC(F8)))            &kp SPACE        &kp ESCAPE            &kp ENTER        &underscore_LAlt  &lt 0 ENTER      &kp LA(LEFT_SHIFT)                 &none                      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -366,11 +374,11 @@
 
         num {
             bindings = <
-&none  &none         &none      &none      &none   &none     &mmv MOVE_UP     &none         &none   &kp KP_DIVIDE  &kp KP_ASTERISK  &none         &none
-&none  &none         &kp DOT    &kp COMMA  &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8         &kp N9           &kp LS(X)     &none
-&none  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5         &kp N6           &kp PERCENT   &none
-&none  &kp LGUI      &to 2      &none      &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2         &kp N3           &kp KP_EQUAL  &none
-&none  &none         &none      &trans     &trans  &trans    &mkp LCLK        &trans        &trans  &trans         &kp E            &kp CARET
+&none  &none     &none               &none         &none   &none     &mmv MOVE_UP     &none         &none   &kp BACKSPACE  &none        &none            &none
+&none  &none     &kp LA(LEFT_SHIFT)  &kp LEFT_ALT  &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8         &kp N9       &kp KP_DIVIDE    &none
+&none  &to 2     &kp LCTRL           &kp LSHFT     &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5         &kp N6       &kp KP_MULTIPLY  &none
+&none  &kp LGUI  &kp DOT             &kp COMMA     &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2         &kp N3       &kp KP_EQUAL     &none
+&none  &none     &none               &trans        &trans  &trans    &mkp LCLK        &trans        &trans  &trans         &kp PERCENT  &kp X
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -379,11 +387,11 @@
 
         nav {
             bindings = <
-&none  &none       &none              &none             &none              &none                    &none  &none               &none   &none          &none      &none          &none
-&none  &selSearch  &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP              &none  &none               &none   &kp PAGE_DOWN  &kp PG_UP  &none          &none
-&none  &kp DELETE  &kp LEFT           &kp DOWN          &kp RIGHT          &kp LC(LS(PAGE_DOWN))    &none  &none               &none   &kp LSHFT      &kp RCTRL  &kp RIGHT_ALT  &none
-&none  &none       &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)                &none  &none               &none   &none          &to 3      &kp RGUI       &none
-&none  &none       &none              &trans            &trans             &trans                   &none  &kp LA(LEFT_ARROW)  &trans  &trans         &none      &none
+&none  &none         &none              &none             &none              &none            &none  &none   &none   &kp BACKSPACE  &none              &none     &none
+&none  &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT  &kp LS(RIGHT_ALT)  &none     &none
+&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LSHFT      &kp RCTRL          &to 3     &none
+&none  &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none          &none              &kp RGUI  &none
+&none  &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans         &none              &none
             >;
 
             label = "方向键层";
@@ -399,16 +407,14 @@
             >;
         };
 
-        F_key {
+        Fkey {
             bindings = <
-&none  &none         &none         &none           &none      &none    &none  &none            &none   &none    &none    &none    &none
-&none  &none         &none         &none           &none      &none    &none  &kp INS          &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none    &none  &kp PRINTSCREEN  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &none         &none         &none           &none      &none    &none  &kp SCROLLLOCK   &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none         &none         &none           &none      &none    &none  &none            &none   &none    &none    &none
+&none  &none    &none    &none    &none   &none    &none  &none  &none          &none            &none             &none  &none
+&none  &kp F12  &kp F11  &kp F10  &kp F9  &none    &none  &none  &kp PAGE_UP    &kp RIGHT_ALT    &kp LS(LEFT_ALT)  &none  &none
+&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN  &kp RIGHT_SHIFT  &kp RCTRL         &to 5  &none
+&none  &kp F4   &kp F3   &kp F2   &kp F1  &none    &none  &none  &none          &none            &none             &none  &none
+&none  &none    &none    &none    &none   &none    &none  &none  &none          &none            &none             &none
             >;
-
-            label = "F区和功能键";
         };
 
         applic_mouse {
