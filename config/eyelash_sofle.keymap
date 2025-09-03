@@ -331,19 +331,6 @@
 
             label = "SELECT_LINE";
         };
-
-        win_plus_one: win_plus_one {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = 
-                <&macro_press &kp LGUI>        // 按下 Win 键
-                <&macro_tap &kp N1>           // 按下并释放 1 键
-                <&macro_pause_for_release>    // 暂停宏，等待键释放
-                <&macro_wait 1000>            // 释放后等待 1 秒
-                <&macro_release &kp LGUI>;     // 释放 Win 键
-
-            label = "WIN1";
-        };
     };
 
     keymap {
