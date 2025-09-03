@@ -331,6 +331,21 @@
 
             label = "SELECT_LINE";
         };
+
+        win1: win1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN1";
+        };
     };
 
     keymap {
