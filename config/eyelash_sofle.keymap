@@ -33,7 +33,7 @@
         flavor = "balanced";
         retro-tap;
         quick-tap-ms = <140>;
-        require-prior-idle-ms = <140>;
+        require-prior-idle-ms = <130>;
     };
 
     num: num {
@@ -46,7 +46,7 @@
         flavor = "balanced";
         retro-tap;
         quick-tap-ms = <140>;
-        require-prior-idle-ms = <140>;
+        require-prior-idle-ms = <130>;
     };
 
     shift_L: shift_L {
@@ -290,6 +290,52 @@
         bindings = <&kp LC(GRAVE)>, <&kp LC(LS(GRAVE))>;
     };
 
+    win1: win1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN1";
+        #binding-cells = <0>;
+        bindings = <&kp LG(N1)>, <&double_win1>, <&three_win1>, <&four_win1>;
+    };
+
+    win2: win2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN2";
+        #binding-cells = <0>;
+        bindings =
+            <&kp LG(NUMBER_2)>,
+            <&double_win2>,
+            <&three_win2>,
+            <&four_win2>;
+    };
+
+    win3: win3 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN3";
+        #binding-cells = <0>;
+        bindings = <&kp LG(N3)>, <&double_win3>, <&three_win3>;
+    };
+
+    win4: win4 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN4";
+        #binding-cells = <0>;
+        bindings = <&kp LG(N4)>, <&double_win4>, <&three_win3>;
+    };
+
+    win5: win5 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN5";
+        #binding-cells = <0>;
+        bindings = <&kp LG(N5)>, <&double_win5>, <&three_win5>;
+    };
+
+    win6: win6 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "WIN6";
+        #binding-cells = <0>;
+        bindings = <&kp LG(N6)>, <&double_win6>, <&three_win6>;
+    };
+
     behaviors {
     };
 
@@ -432,84 +478,84 @@
         double_win4: double_win4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&kp N4>,
-                <&kp N4>,
+                <&kp N4 &kp N4>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "DOUBLE_WIN4";
         };
 
         double_win5: double_win5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
-                <&kp N5>,
-                <&kp N5>,
+                <&kp N5 &kp N5>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "DOUBLE_WIN5";
         };
 
         double_win6: double_win6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp N6 &kp N6>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "WIN6";
         };
 
-three_win4: three_win4 {
+        three_win4: three_win4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp N4 &kp N4 &kp N4>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "THREE_WIN4";
         };
+
         three_win5: three_win5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp N5 &kp N5 &kp N5>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "THREE_WIN5";
         };
+
         three_win6: three_win6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
+            bindings =
                 <&macro_press>,
                 <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp N6 &kp N6 &kp N6>,
                 <&macro_release>,
-                <&kp LEFT_WIN>
-            >;
+                <&kp LEFT_WIN>;
+
             label = "WIN6";
         };
     };
@@ -574,8 +620,8 @@ three_win4: three_win4 {
             bindings = <
 &bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none   &none            &none        &none  &none  &none
 &bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)       &none  &none   &none            &none        &none  &none  &none
-&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N6)         &kp LG(N5)       &kp LG(N4)    &kp LG(D)       &none  &none   &none            &none        &none  &none  &to 0
-&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N3)         &kp LG(N2)       &kp LG(N1)    &kp LG(X)       &none  &none   &kp LA(LS(TAB))  &kp LA(TAB)  &none  &to 4  &none
+&ext_power EP_OFF  &kp C_BRI_DN     &win3              &win2            &win1         &kp LG(D)       &none  &none   &none            &none        &none  &none  &to 0
+&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &win6              &win5            &win4         &kp LG(X)       &none  &none   &kp LA(LS(TAB))  &kp LA(TAB)  &none  &to 4  &none
 &none              &none            &none              &trans           &trans        &trans          &none  &trans  &trans           &trans       &none  &none
             >;
         };
