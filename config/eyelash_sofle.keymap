@@ -294,46 +294,54 @@
         compatible = "zmk,behavior-tap-dance";
         label = "WIN1";
         #binding-cells = <0>;
-        bindings = <&kp LG(N1)>, <&double_win1>, <&three_win1>, <&four_win1>;
+        bindings = <&Owin1>, <&double_win1>, <&three_win1>, <&four_win1>;
+
+        tapping-term-ms = <250>;
     };
 
     win2: win2 {
         compatible = "zmk,behavior-tap-dance";
         label = "WIN2";
         #binding-cells = <0>;
-        bindings =
-            <&kp LG(NUMBER_2)>,
-            <&double_win2>,
-            <&three_win2>,
-            <&four_win2>;
+        bindings = <&Owin2>, <&double_win2>, <&three_win2>, <&four_win2>;
+
+        tapping-term-ms = <250>;
     };
 
     win3: win3 {
         compatible = "zmk,behavior-tap-dance";
         label = "WIN3";
         #binding-cells = <0>;
-        bindings = <&kp LG(N3)>, <&double_win3>, <&three_win3>;
+        bindings = <&Owin3>, <&double_win3>, <&three_win3>;
+
+        tapping-term-ms = <250>;
     };
 
     win4: win4 {
         compatible = "zmk,behavior-tap-dance";
         label = "WIN4";
         #binding-cells = <0>;
-        bindings = <&kp LG(N4)>, <&double_win4>, <&three_win3>;
+        bindings = <&Owin4>, <&double_win4>, <&three_win3>;
+
+        tapping-term-ms = <250>;
     };
 
     win5: win5 {
         compatible = "zmk,behavior-tap-dance";
         label = "WIN5";
         #binding-cells = <0>;
-        bindings = <&kp LG(N5)>, <&double_win5>, <&three_win5>;
+        bindings = <&Owin5>, <&double_win5>, <&three_win5>;
+
+        tapping-term-ms = <250>;
     };
 
     win6: win6 {
         compatible = "zmk,behavior-tap-dance";
         label = "WIN6";
         #binding-cells = <0>;
-        bindings = <&kp LG(N6)>, <&double_win6>, <&three_win6>;
+        bindings = <&Owin6>, <&double_win6>, <&three_win6>;
+
+        tapping-term-ms = <250>;
     };
 
     behaviors {
@@ -375,6 +383,8 @@
                 <&kp LEFT_WIN>;
 
             label = "DOUBLE_WIN1";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win1: three_win1 {
@@ -389,6 +399,8 @@
                 <&kp LEFT_WIN>;
 
             label = "THREE_WIN1";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         four_win1: four_win1 {
@@ -403,6 +415,8 @@
                 <&kp LEFT_WIN>;
 
             label = "FOUR_WIN1";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         double_win2: double_win2 {
@@ -417,6 +431,8 @@
                 <&kp LEFT_WIN>;
 
             label = "DOUBLE_WIN2";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win2: three_win2 {
@@ -431,6 +447,8 @@
                 <&kp LEFT_WIN>;
 
             label = "THREE_WIN2";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         four_win2: four_win2 {
@@ -445,6 +463,8 @@
                 <&kp LEFT_WIN>;
 
             label = "FOUR_WIN2";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         double_win3: double_win3 {
@@ -459,6 +479,8 @@
                 <&kp LEFT_WIN>;
 
             label = "DOUBLE_WIN3";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win3: three_win3 {
@@ -473,6 +495,8 @@
                 <&kp LEFT_WIN>;
 
             label = "THREE_WIN3";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         double_win4: double_win4 {
@@ -487,6 +511,8 @@
                 <&kp LEFT_WIN>;
 
             label = "DOUBLE_WIN4";
+            tap-ms = <20>;
+            wait-ms = <20>;
         };
 
         double_win5: double_win5 {
@@ -501,6 +527,8 @@
                 <&kp LEFT_WIN>;
 
             label = "DOUBLE_WIN5";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         double_win6: double_win6 {
@@ -515,6 +543,8 @@
                 <&kp LEFT_WIN>;
 
             label = "WIN6";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win4: three_win4 {
@@ -529,6 +559,8 @@
                 <&kp LEFT_WIN>;
 
             label = "THREE_WIN4";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win5: three_win5 {
@@ -543,6 +575,8 @@
                 <&kp LEFT_WIN>;
 
             label = "THREE_WIN5";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
 
         three_win6: three_win6 {
@@ -557,6 +591,104 @@
                 <&kp LEFT_WIN>;
 
             label = "WIN6";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin1: Owin1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N1>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN1";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin2: Owin2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN2";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin3: Owin3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN3";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin4: Owin4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN4";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin5: Owin5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN5";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        Owin6: Owin6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "OWIN6";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
     };
 
