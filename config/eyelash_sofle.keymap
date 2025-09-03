@@ -346,6 +346,81 @@
 
             label = "WIN1";
         };
+
+        win2: win2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN2";
+        };
+
+        win3: win3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN3";
+        };
+
+        win4: win4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN4";
+        };
+
+        win5: win5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN5";
+        };
+
+        win6: win6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_WIN>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "WIN6";
+        };
     };
 
     keymap {
