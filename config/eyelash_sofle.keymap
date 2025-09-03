@@ -397,6 +397,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
+    };
 
     keymap {
         compatible = "zmk,keymap";
