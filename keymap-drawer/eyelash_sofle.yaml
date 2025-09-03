@@ -30,13 +30,13 @@ layers:
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: 符号层}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: 数字层}
   - G
   - $$mdi:arrow-left-bold$$
   - H
   - {t: J, h: 方向键层}
-  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: 符号层}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: ''''}
   - {t: \, s: '|'}
@@ -44,11 +44,11 @@ layers:
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - X
   - {t: C, h: 'Alt+$$mdi:apple-keyboard-shift$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
   - B
   - $$mdi:arrow-right-bold$$
   - N
-  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ',', h: 'Alt+$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: ., h: windows_manager_Others, s: '!'}
   - {t: /, h: RIGHT GUI, s: ^}
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Alt+$$mdi:apple-keyboard-shift$$
+  - Ctl+$$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -159,8 +159,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 数字层, h: toggle}
-  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
@@ -219,7 +219,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
-  - Sft+$$mdi:apple-keyboard-option$$
+  - Ctl+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -231,8 +231,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: 方向键层, h: toggle}
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -349,7 +349,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PgUp
   - $$mdi:apple-keyboard-option$$
-  - Sft+$$mdi:apple-keyboard-option$$
+  - Ctl+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -361,8 +361,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PgDn
-  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: Fkey, h: toggle}
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -373,8 +373,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Alt+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -393,8 +393,8 @@ layers:
   额外F区和鼠标模拟:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -455,10 +455,3 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - '&soft_off'
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [53, 54]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
-  l: [默认层]
-- p: [2, 3]
-  k: 额外F区和鼠标模拟
-  l: [默认层, 额外F区和鼠标模拟]
