@@ -376,7 +376,7 @@
             bindings = <
 &none  &none     &none               &none         &none   &none     &mmv MOVE_UP     &none         &none   &kp BACKSPACE  &none        &none            &none
 &none  &none     &kp LA(LEFT_SHIFT)  &kp LEFT_ALT  &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8         &kp N9       &kp KP_DIVIDE    &none
-&none  &to 2     &kp LCTRL           &kp LSHFT     &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5         &kp N6       &kp KP_MULTIPLY  &none
+&none  &to 2     &kp LCTRL           &kp LSHFT     &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5         &kp N6       &kp KP_MULTIPLY  &to 0
 &none  &kp LGUI  &kp DOT             &kp COMMA     &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2         &kp N3       &kp KP_EQUAL     &none
 &none  &none     &none               &trans        &trans  &trans    &mkp LCLK        &trans        &trans  &trans         &kp PERCENT  &kp X
             >;
@@ -389,7 +389,7 @@
             bindings = <
 &none  &none         &none              &none             &none              &none            &none  &none   &none   &kp BACKSPACE  &none              &none     &none
 &none  &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT  &kp LS(RIGHT_ALT)  &none     &none
-&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LSHFT      &kp RCTRL          &to 3     &none
+&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LSHFT      &kp RCTRL          &to 3     &to 0
 &none  &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none          &none              &kp RGUI  &none
 &none  &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans         &none              &none
             >;
@@ -401,7 +401,7 @@
             bindings = <
 &bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none   &none            &none        &none  &none  &none
 &bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)       &none  &none   &none            &none        &none  &none  &none
-&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N6)         &kp LG(N5)       &kp LG(N4)    &kp LG(D)       &none  &none   &none            &none        &none  &none  &none
+&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N6)         &kp LG(N5)       &kp LG(N4)    &kp LG(D)       &none  &none   &none            &none        &none  &none  &to 0
 &rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N3)         &kp LG(N2)       &kp LG(N1)    &kp LG(X)       &none  &none   &kp LA(LS(TAB))  &kp LA(TAB)  &none  &to 4  &none
 &none              &none            &none              &trans           &trans        &trans          &none  &trans  &trans           &trans       &none  &none
             >;
@@ -411,7 +411,7 @@
             bindings = <
 &none  &none    &none    &none    &none   &none    &none  &none  &none          &none            &none             &none  &none
 &none  &kp F12  &kp F11  &kp F10  &kp F9  &none    &none  &none  &kp PAGE_UP    &kp RIGHT_ALT    &kp LS(LEFT_ALT)  &none  &none
-&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN  &kp RIGHT_SHIFT  &kp RCTRL         &to 5  &none
+&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN  &kp RIGHT_SHIFT  &kp RCTRL         &to 5  &to 0
 &none  &kp F4   &kp F3   &kp F2   &kp F1  &none    &none  &none  &none          &none            &none             &none  &none
 &none  &none    &none    &none    &none   &none    &none  &none  &none          &none            &none             &none
             >;
@@ -421,7 +421,7 @@
             bindings = <
 &none  &none    &none    &none    &none    &none    &none  &none      &none           &none           &none            &none   &to 0
 &none  &kp F13  &kp F14  &kp F15  &kp F16  &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none   &none
-&none  &kp F17  &kp F18  &kp F19  &kp F20  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none
+&none  &kp F17  &kp F18  &kp F19  &kp F20  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &to 0
 &none  &kp F21  &kp F22  &kp F23  &kp F24  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none   &none
 &none  &none    &none    &none    &none    &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &trans
             >;
