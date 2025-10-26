@@ -302,6 +302,24 @@
         require-prior-idle-ms = <130>;
     };
 
+    underscore_F4: underscore_F4 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UNDERSCORE_F4";
+        bindings = <&kp UNDERSCORE>, <&kp F4>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
+
+    backslash_F5: backslash_F5 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "BACKSLASH_F5";
+        bindings = <&kp BACKSLASH>, <&kp F5>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
+
     behaviors {
     };
 
@@ -648,6 +666,13 @@
             wait-ms = <20>;
             tap-ms = <20>;
         };
+
+        zero3: zero3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp N0>;
+            label = "ZERO3";
+        };
     };
 
     keymap {
@@ -659,7 +684,7 @@
 &none                 &kp R               &kp N              &kp Y                  &kp G            &kp Q         &kp DOWN_ARROW   &kp P           &kp C            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
 &kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H         &kp LEFT_ARROW   &kp O           &nav 3 U         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &kp D
 &extra_enter 5 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B         &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT F  &apostrophe_minus   &kp LEFT_WIN
-&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &kp UNDERSCORE  &lt 6 ENTER      &kp BACKSLASH           &kp LEFT_ALT        &kp LEFT_SHIFT
+&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &kp LEFT_ALT        &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -683,11 +708,11 @@
 
         num {
             bindings = <
-&none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &trans        &trans  &trans  &trans       &trans           &none
-&none  &tog 2        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8  &kp N9       &kp KP_DIVIDE    &none
-&none  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6       &kp KP_MULTIPLY  &none
-&none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2  &kp N3       &kp PERCENT      &none
-&none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans  &trans  &kp PERCENT  &kp LS(X)
+&none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &trans        &kp KP_SLASH  &trans  &kp KP_MULTIPLY  &trans       &none
+&none  &tog 2        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7        &kp N8  &kp N9           &zero3       &none
+&none  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4        &kp N5  &kp N6           &kp PERCENT  &none
+&none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1        &kp N2  &kp N3           &kp ENTER    &none
+&none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans        &trans  &kp BACKSLASH    &kp LS(X)
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -696,11 +721,11 @@
 
         nav {
             bindings = <
-&none  &none         &none              &none             &none              &none            &none  &trans  &trans  &trans            &trans             &trans         &none
-&none  &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 3         &none
-&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &none
-&none  &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none             &none              &none          &none
-&none  &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
+&trans  &trans        &trans             &trans            &trans             &trans           &none  &trans  &trans  &trans            &trans             &trans         &trans
+&none   &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 3         &none
+&none   &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &none
+&none   &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none             &none              &none          &none
+&none   &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
             >;
 
             label = "方向键层";
@@ -718,9 +743,9 @@
 
         applic_mouse {
             bindings = <
-&none  &none    &none    &none    &none    &none    &none  &none      &none           &none           &none            &none   &to 0
-&none  &kp F13  &kp F14  &kp F15  &kp F16  &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none   &none
-&none  &kp F17  &kp F18  &kp F19  &kp F20  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &to 0
+&none  &none    &none    &none    &none    &none    &none  &none      &none           &none           &none            &none   &none
+&none  &kp F13  &kp F14  &kp F15  &kp F16  &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &tog 5  &none
+&none  &kp F17  &kp F18  &kp F19  &kp F20  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none
 &none  &kp F21  &kp F22  &kp F23  &kp F24  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none   &none
 &none  &none    &none    &none    &none    &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &trans
             >;
