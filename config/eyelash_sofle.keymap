@@ -130,7 +130,7 @@
     windows_manager: windows_manager {
         compatible = "zmk,behavior-hold-tap";
         label = "WINDOWS_MANAGER";
-        bindings = <&mo>, <&comma_question>;
+        bindings = <&mo>, <&kp>;
 
         #binding-cells = <2>;
         tapping-term-ms = <220>;
@@ -303,9 +303,9 @@
         normal {
             bindings = <
 &kp LG(TAB)           &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT           &kp END             &kp CAPSLOCK
-&none                 &kp R               &kp N              &kp Y                  &kp G            &kp Q         &kp DOWN_ARROW   &kp P           &kp C            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
-&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H         &kp LEFT_ARROW   &kp O           &nav 3 U         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &none
-&extra_enter 5 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B         &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT F  &apostrophe_minus   &kp LEFT_WIN
+&none                 &kp R               &kp N              &kp Y                  &kp G            &kp Q         &kp DOWN_ARROW   &kp P           &kp C            &windows_manager 4 J    &alt_R RIGHT_ALT Q  &apostrophe_minus   &kp LC(SPACE)
+&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT D  &num 2 T         &kp H         &kp LEFT_ARROW   &kp O           &nav 3 U         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &none
+&extra_enter 5 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B         &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &comma_question         &dot_exclamation    &slash_caret        &kp LEFT_WIN
 &kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &kp LEFT_ALT        &kp LEFT_SHIFT
             >;
 
