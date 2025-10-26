@@ -39,7 +39,7 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: 符号层}
   - {t: A, h: RIGHT GUI}
-  - D
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', h: 额外F区和鼠标模拟}
   - Z
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
