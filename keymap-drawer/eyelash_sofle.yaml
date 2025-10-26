@@ -23,15 +23,15 @@ layers:
   - $$mdi:arrow-down-bold$$
   - P
   - C
-  - {t: ',', h: windows_manager_Others, s: '?'}
-  - {t: ., s: '!'}
-  - {t: /, s: ^}
+  - {t: J, h: windows_manager_Others}
+  - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '''', s: '-'}
   - Ctl+$$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
   - {t: S, h: '$$mdi:apple-keyboard-command$$'}
   - {t: L, h: 符号层}
-  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: D, h: 数字层}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: T, h: 数字层}
   - H
   - $$mdi:arrow-left-bold$$
   - O
@@ -49,9 +49,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - X
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - J
-  - {t: F, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '''', s: '-'}
+  - {t: ',', s: '?'}
+  - {t: ., s: '!'}
+  - {t: /, s: ^}
   - LEFT WIN
   - $$mdi:volume-off$$
   - Meh+F7
