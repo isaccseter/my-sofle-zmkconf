@@ -655,11 +655,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)           &kp LC(Z)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp LS(LA(LC(DELETE)))    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT           &kp END             &kp CAPSLOCK
-&kp LC(A)             &kp N               &kp R              &kp C                  &kp G            &kp F                     &kp DOWN_ARROW   &kp Y           &kp P            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
-&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H                     &kp LEFT_ARROW   &kp O           &nav 3 O         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &kp D
-&extra_enter 6 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B                     &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT Q  &apostrophe_minus   &kp LEFT_WIN
-&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE                &kp ENTER        &kp UNDERSCORE  &lt 5 ENTER      &kp BACKSLASH           &kp LEFT_ALT        &kp LEFT_SHIFT
+&kp LG(TAB)           &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT           &kp END             &kp CAPSLOCK
+&none                 &kp R               &kp N              &kp Y                  &kp G            &kp Q         &kp DOWN_ARROW   &kp P           &kp C            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
+&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H         &kp LEFT_ARROW   &kp O           &nav 3 U         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &kp D
+&extra_enter 5 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B         &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT F  &apostrophe_minus   &kp LEFT_WIN
+&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &kp UNDERSCORE  &lt 6 ENTER      &kp BACKSLASH           &kp LEFT_ALT        &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -683,11 +683,11 @@
 
         num {
             bindings = <
-&none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &none         &trans  &trans  &trans       &trans           &none
+&none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &trans        &trans  &trans  &trans       &trans           &none
 &none  &tog 2        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8  &kp N9       &kp KP_DIVIDE    &none
 &none  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6       &kp KP_MULTIPLY  &none
-&none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2  &kp N3       &kp KP_EQUAL     &none
-&none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans  &trans  &kp PERCENT  &kp X
+&none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2  &kp N3       &kp PERCENT      &none
+&none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans  &trans  &kp PERCENT  &kp LS(X)
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -716,16 +716,6 @@
             >;
         };
 
-        Fkey {
-            bindings = <
-&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none  &none
-&none  &kp F12  &kp F11  &kp F10  &kp F9  &none    &none  &none  &kp PAGE_UP       &kp RIGHT_ALT     &kp LC(LEFT_ALT)  &none  &none
-&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN     &kp LEFT_CONTROL  &kp LEFT_SHIFT    &to 5  &to 0
-&none  &kp F4   &kp F3   &kp F2   &kp F1  &none    &none  &none  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LA(LEFT_ALT)  &none  &none
-&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none
-            >;
-        };
-
         applic_mouse {
             bindings = <
 &none  &none    &none    &none    &none    &none    &none  &none      &none           &none           &none            &none   &to 0
@@ -736,6 +726,16 @@
             >;
 
             label = "额外F区和鼠标模拟";
+        };
+
+        Fkey {
+            bindings = <
+&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none          &none
+&none  &kp F12  &kp F11  &kp F10  &kp F9  &none    &none  &none  &kp PAGE_UP       &kp RIGHT_ALT     &kp LC(LEFT_ALT)  &tog 6         &none
+&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN     &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp RIGHT_WIN  &none
+&none  &kp F4   &kp F3   &kp F2   &kp F1  &none    &none  &none  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LA(LEFT_ALT)  &none          &none
+&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none
+            >;
         };
     };
 };
