@@ -171,15 +171,6 @@
         hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 56 57>;
     };
 
-    underscore_LAlt: underscore_LAlt {
-        compatible = "zmk,behavior-mod-morph";
-        label = "UNDERSCORE_LALT";
-        bindings = <&kp UNDER>, <&kp LEFT_ALT>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
-    };
-
     comma_question: comma_question {
         compatible = "zmk,behavior-mod-morph";
         label = "COMMA_QUESTION";
@@ -198,10 +189,10 @@
         mods = <(MOD_LSFT)>;
     };
 
-    minus_apostrophe: minus_apostrophe {
+    apostrophe_minus: apostrophe_minus {
         compatible = "zmk,behavior-mod-morph";
-        label = "MINUS_APOSTROPHE";
-        bindings = <&kp MINUS>, <&kp APOSTROPHE>;
+        label = "APOSTROPHE_MINUS";
+        bindings = <&kp APOSTROPHE>, <&kp MINUS>;
 
         #binding-cells = <0>;
         mods = <(MOD_LSFT)>;
@@ -242,13 +233,6 @@
         hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 56 57>;
         quick-tap-ms = <140>;
         require-prior-idle-ms = <140>;
-    };
-
-    td_ctrlGrave: td_ctrlGrave {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD_CTRLGRAVE";
-        #binding-cells = <0>;
-        bindings = <&kp LC(GRAVE)>, <&kp LC(LS(GRAVE))>;
     };
 
     win1: win1 {
@@ -303,15 +287,6 @@
         bindings = <&Owin6>, <&double_win6>, <&three_win6>;
 
         tapping-term-ms = <250>;
-    };
-
-    shift_bslh: shift_bslh {
-        compatible = "zmk,behavior-mod-morph";
-        label = "SHIFT_BSLH";
-        bindings = <&kp BSLH>, <&kp LEFT_SHIFT>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
     };
 
     nav: nav {
@@ -680,11 +655,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)           &kp LC(Z)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp LS(LA(LC(DELETE)))    &kp UP_ARROW     &kp HOME          &kp LEFT         &kp BACKSPACE           &kp RIGHT           &kp END             &kp CAPSLOCK
-&kp LC(A)             &kp N               &kp R              &kp C                  &kp G            &kp F                     &kp DOWN_ARROW   &kp Y             &kp P            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
-&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H                     &kp LEFT_ARROW   &kp O             &nav 3 O         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &kp D
-&extra_enter 6 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B                     &kp RIGHT_ARROW  &kp X             &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT Q  &kp SEMI            &kp LEFT_WIN
-&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE                &kp ENTER        &underscore_LAlt  &lt 5 ENTER      &shift_bslh             &kp LEFT_ALT        &kp LEFT_SHIFT
+&kp LG(TAB)           &kp LC(Z)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp LS(LA(LC(DELETE)))    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT           &kp END             &kp CAPSLOCK
+&kp LC(A)             &kp N               &kp R              &kp C                  &kp G            &kp F                     &kp DOWN_ARROW   &kp Y           &kp P            &windows_manager 4 0    &dot_exclamation    &slash_caret        &kp LC(SPACE)
+&kp TAB               &gui_L LEFT_GUI S   &symbol_L 1 L      &shift_L LEFT_SHIFT T  &num 2 D         &kp H                     &kp LEFT_ARROW   &kp O           &nav 3 O         &shift_R RIGHT_SHIFT E  &symbol_R 1 I       &gui_R RIGHT_GUI A  &kp D
+&extra_enter 6 ENTER  &kp Z               &alt_L LEFT_ALT V  &kp W                  &ctrl_L LCTRL M  &kp B                     &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL K  &kp J                   &alt_R RIGHT_ALT Q  &apostrophe_minus   &kp LEFT_WIN
+&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE                &kp ENTER        &kp UNDERSCORE  &lt 5 ENTER      &kp BACKSLASH           &kp LEFT_ALT        &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -694,11 +669,11 @@
 
         symbol {
             bindings = <
-&none          &none            &none          &none             &none              &none            &mmv MOVE_UP     &none        &none                 &none                  &none              &none         &none
-&none          &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &none
-&td_ctrlGrave  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &none
-&none          &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &none
-&kp C_MUTE     &none            &none          &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &none              &none
+&none       &none            &none          &none             &none               &none            &mmv MOVE_UP     &none        &none                 &none                  &none              &none         &none
+&none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS           &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION  &none
+&tog 1      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL           &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp PERIOD    &tog 1
+&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOUBLE_QUOTES  &kp SLASH     &none
+&kp C_MUTE  &none            &none          &kp LC(LEFT_ALT)  &kp LA(LEFT_SHIFT)  &kp LS(LCTRL)    &mkp LCLK        &kp RCTRL    &kp RIGHT_SHIFT       &kp RIGHT_ALT          &none              &none
             >;
 
             display-name = "layer1";
@@ -708,11 +683,11 @@
 
         num {
             bindings = <
-&none  &none     &none             &none             &none   &none     &mmv MOVE_UP     &none         &trans  &trans  &trans       &trans           &none
-&none  &none     &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8  &kp N9       &kp KP_DIVIDE    &none
-&none  &to 2     &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6       &kp KP_MULTIPLY  &to 0
-&none  &kp LGUI  &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2  &kp N3       &kp KP_EQUAL     &none
-&none  &none     &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans  &trans  &kp PERCENT  &kp X
+&none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &none         &trans  &trans  &trans       &trans           &none
+&none  &tog 2        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7  &kp N8  &kp N9       &kp KP_DIVIDE    &none
+&none  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4  &kp N5  &kp N6       &kp KP_MULTIPLY  &none
+&none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1  &kp N2  &kp N3       &kp KP_EQUAL     &none
+&none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans  &trans  &kp PERCENT  &kp X
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -721,10 +696,10 @@
 
         nav {
             bindings = <
-&none  &none         &none              &none             &none              &none            &none  &none   &none   &kp BACKSPACE     &none              &none     &none
-&none  &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &none     &none
-&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &tog 3    &none
-&none  &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none             &none              &kp RGUI  &none
+&none  &none         &none              &none             &none              &none            &none  &trans  &trans  &trans            &trans             &trans         &none
+&none  &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 3         &none
+&none  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &none
+&none  &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none             &none              &none          &none
 &none  &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
             >;
 
