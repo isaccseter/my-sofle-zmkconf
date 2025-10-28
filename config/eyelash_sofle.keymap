@@ -221,7 +221,7 @@
     alt_R: alt_R {
         compatible = "zmk,behavior-hold-tap";
         label = "ALT_R";
-        bindings = <&kp>, <&kp>;
+        bindings = <&kp>, <&apostrophe_minus>;
 
         #binding-cells = <2>;
         tapping-term-ms = <220>;
@@ -302,11 +302,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)           &kp LC(A)           &kp LC(V)  &kp LC(C)           &kp LC(X)  &kp DELETE    &kp UP_ARROW     &kp HOME        &kp LEFT     &kp BACKSPACE  &kp RIGHT     &kp END         &kp CAPSLOCK
-&none                 &kp COMMA           &kp T      &kp S               &kp Z      &kp B         &kp DOWN_ARROW   &kp P           &kp F        &kp R          &kp D         &kp DOT         &kp LC(SPACE)
-&kp TAB               &kp O               &kp A      &kp E               &kp G      &kp Y         &kp LEFT_ARROW   &kp L           &kp N        &kp I          &kp H         &kp U           &none
-&extra_enter 5 ENTER  &kp X               &kp Q      &kp J               &kp C      &kp V         &kp RIGHT_ARROW  &kp K           &kp M        &kp W          &kp SEMI      &kp FSLH        &kp LEFT_WIN
-&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2     &kp LS(LA(LC(F8)))  &kp SPACE  &kp ESCAPE    &kp ENTER        &underscore_F4  &lt 6 ENTER  &backslash_F5  &kp LEFT_ALT  &kp LEFT_SHIFT
+&kp LG(TAB)           &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp CAPSLOCK
+&none                 &comma_question     &kp T              &kp S                  &kp Z            &kp B         &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &dot_exclamation    &kp LC(SPACE)
+&kp TAB               &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y         &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &none
+&extra_enter 5 ENTER  &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &kp V         &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &kp W                   &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
+&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &kp LEFT_ALT           &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
