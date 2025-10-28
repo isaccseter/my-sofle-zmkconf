@@ -15,7 +15,7 @@ layers:
   - END
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ',', s: <}
+  - {t: ',', s: '?'}
   - T
   - S
   - Z
@@ -25,33 +25,33 @@ layers:
   - F
   - R
   - D
-  - {t: ., s: '>'}
+  - {t: ., s: '!'}
   - Ctl+$$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
-  - O
-  - A
-  - E
-  - G
+  - {t: O, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: A, h: 符号层}
+  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: G, h: 数字层}
   - Y
   - $$mdi:arrow-left-bold$$
   - L
-  - N
-  - I
-  - H
-  - U
+  - {t: N, h: 方向键层}
+  - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: H, h: 符号层}
+  - {t: U, h: RIGHT GUI}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', h: 额外F区和鼠标模拟}
   - X
-  - Q
+  - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
   - J
-  - C
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
   - V
   - $$mdi:arrow-right-bold$$
   - K
-  - M
+  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
   - W
-  - {t: ;, s: ':'}
-  - {t: /, s: '?'}
+  - {t: '''', h: '$$mdi:apple-keyboard-option$$', s: '-'}
+  - {t: /, s: ^}
   - LEFT WIN
   - $$mdi:volume-off$$
   - Meh+F7
@@ -94,7 +94,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 符号层, h: toggle}
   - '!'
-  - '*'
+  - {t: '*', type: held}
   - {t: /, s: '?'}
   - {t: '=', s: +}
   - '&'
@@ -102,7 +102,7 @@ layers:
   - '#'
   - (
   - )
-  - {t: ;, s: ':'}
+  - {t: ;, s: ':', type: held alternate}
   - .
   - {t: 符号层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -161,7 +161,7 @@ layers:
   - LEFT WIN
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
@@ -230,7 +230,7 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - RIGHT WIN
