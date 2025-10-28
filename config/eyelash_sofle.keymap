@@ -117,16 +117,6 @@
         require-prior-idle-ms = <140>;
     };
 
-    extra_enter: extra_enter {
-        compatible = "zmk,behavior-hold-tap";
-        label = "EXTRA_ENTER";
-        bindings = <&mo>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        retro-tap;
-    };
-
     windows_manager: windows_manager {
         compatible = "zmk,behavior-hold-tap";
         label = "WINDOWS_MANAGER";
@@ -262,6 +252,19 @@
         mods = <(MOD_LSFT)>;
     };
 
+    applic_mouse: applic_mouse {
+        compatible = "zmk,behavior-hold-tap";
+        label = "APPLIC_MOUSE";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <220>;
+        flavor = "balanced";
+        quick-tap-ms = <140>;
+        require-prior-idle-ms = <120>;
+        hold-trigger-key-positions = <7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51>;
+    };
+
     behaviors {
     };
 
@@ -302,11 +305,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)           &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE    &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp CAPSLOCK
-&none                 &comma_question     &kp T              &kp S                  &kp Z            &kp B         &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &dot_exclamation    &kp LC(SPACE)
-&kp TAB               &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y         &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &none
-&extra_enter 5 ENTER  &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &kp V         &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &kp W                   &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
-&kp C_MUTE            &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE    &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &kp LEFT_ALT           &kp LEFT_SHIFT
+&kp LG(TAB)     &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp CAPSLOCK
+&lt 6 LEFT_ALT  &comma_question     &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &dot_exclamation    &none
+&kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
+&none           &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 V    &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
+&kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &mo 6                  &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -355,44 +358,36 @@
 
         windows_manager_Others {
             bindings = <
-&bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none   &none        &none   &none            &none   &none
-&bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)       &none  &none   &kp LA(TAB)  &none   &kp LS(LA(TAB))  &tog 4  &none
-&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N3)         &kp LG(N2)       &kp LG(N1)    &kp LG(D)       &none  &none   &none        &none   &none            &none   &none
-&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N6)         &kp LG(N5)       &kp LG(N4)    &kp LG(X)       &none  &none   &none        &none   &none            &none   &none
-&none              &none            &none              &trans           &trans        &trans          &none  &trans  &trans       &trans  &none            &none
+&bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none      &none        &none   &none            &none   &none
+&bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)       &none  &none      &none        &none   &none            &none   &none
+&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N1)         &kp LG(N2)       &kp LG(N3)    &kp LG(D)       &none  &none      &none        &none   &none            &none   &none
+&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N4)         &kp LG(N5)       &kp LG(N6)    &kp LG(X)       &none  &soft_off  &kp LA(TAB)  &none   &kp LA(LS(TAB))  &tog 4  &none
+&none              &none            &none              &trans           &trans        &trans          &none  &trans     &trans       &trans  &none            &none
             >;
         };
 
         applic_mouse {
             bindings = <
-&none  &none    &none    &none    &none    &none    &none  &none      &none           &none           &none            &none   &none
-&none  &kp F13  &kp F14  &kp F15  &kp F16  &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &tog 5  &none
-&none  &kp F17  &kp F18  &kp F19  &kp F20  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none
-&none  &kp F21  &kp F22  &kp F23  &kp F24  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none   &none
-&none  &none    &none    &none    &none    &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &trans
+&none  &none   &none     &none      &none      &none    &none  &none      &none           &none           &none            &none   &none
+&none  &none   &none     &none      &none      &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &tog 5  &none
+&none  &tog 5  &kp LALT  &kp LSHFT  &kp LCTRL  &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none
+&none  &none   &none     &none      &none      &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none   &none
+&none  &none   &none     &none      &none      &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &none
             >;
 
-            label = "额外F区和鼠标模拟";
+            label = "额外功能和鼠标模拟";
         };
 
-        Fkey {
+        Fkey-keypad {
             bindings = <
-&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none          &none
-&none  &kp F12  &kp F11  &kp F10  &kp F9  &none    &none  &none  &kp PAGE_UP       &kp RIGHT_ALT     &kp LC(LEFT_ALT)  &tog 6         &none
-&none  &kp F8   &kp F7   &kp F6   &kp F5  &none    &none  &none  &kp PAGE_DOWN     &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp RIGHT_WIN  &none
-&none  &kp F4   &kp F3   &kp F2   &kp F1  &none    &none  &none  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LA(LEFT_ALT)  &none          &none
-&none  &none    &none    &none    &none   &none    &none  &none  &none             &none             &none             &none
+&none   &none    &none    &none     &none      &none        &none  &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp BSPC         &kp KP_ASTERISK  &none         &none
+&none   &kp F12  &kp F11  &kp F10   &kp F9     &none        &none  &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &zero3        &none
+&tog 6  &kp F8   &kp F7   &kp F6    &kp F5     &none        &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT   &none
+&none   &kp F4   &kp F3   &kp F2    &kp F1     &none        &none  &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &none
+&none   &none    &none    &kp LALT  &kp LSHFT  &kp LCTRL    &none  &none            &tog 6           &kp PAGE_DOWN    &none            &kp PG_UP
             >;
-        };
 
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+            label = "F键和小键盘";
         };
     };
 };
