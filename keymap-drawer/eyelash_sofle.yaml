@@ -15,43 +15,43 @@ layers:
   - END
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - R
-  - N
-  - Y
-  - G
-  - Q
+  - {t: ',', s: <}
+  - T
+  - S
+  - Z
+  - B
   - $$mdi:arrow-down-bold$$
   - P
-  - C
-  - {t: J, h: windows_manager_Others}
-  - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '''', s: '-'}
+  - F
+  - R
+  - D
+  - {t: ., s: '>'}
   - Ctl+$$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
-  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: L, h: 符号层}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: T, h: 数字层}
-  - H
-  - $$mdi:arrow-left-bold$$
   - O
-  - {t: U, h: 方向键层}
-  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: I, h: 符号层}
-  - {t: A, h: RIGHT GUI}
+  - A
+  - E
+  - G
+  - Y
+  - $$mdi:arrow-left-bold$$
+  - L
+  - N
+  - I
+  - H
+  - U
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', h: 额外F区和鼠标模拟}
-  - Z
-  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
-  - W
-  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
-  - B
-  - $$mdi:arrow-right-bold$$
   - X
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ',', s: '?'}
-  - {t: ., s: '!'}
-  - {t: /, s: ^}
+  - Q
+  - J
+  - C
+  - V
+  - $$mdi:arrow-right-bold$$
+  - K
+  - M
+  - W
+  - {t: ;, s: ':'}
+  - {t: /, s: '?'}
   - LEFT WIN
   - $$mdi:volume-off$$
   - Meh+F7
@@ -94,7 +94,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 符号层, h: toggle}
   - '!'
-  - {t: '*', type: held}
+  - '*'
   - {t: /, s: '?'}
   - {t: '=', s: +}
   - '&'
@@ -102,7 +102,7 @@ layers:
   - '#'
   - (
   - )
-  - {t: ;, s: ':', type: held alternate}
+  - {t: ;, s: ':'}
   - .
   - {t: 符号层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -161,7 +161,7 @@ layers:
   - LEFT WIN
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
@@ -230,7 +230,7 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - RIGHT WIN
@@ -283,7 +283,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+Alt+$$mdi:keyboard-tab$$
   - {t: windows_manager_Others, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
