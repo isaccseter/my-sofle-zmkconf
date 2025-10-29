@@ -15,7 +15,7 @@ layers:
   - END
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:apple-keyboard-option$$', h: F键和小键盘}
-  - {t: ',', s: '?'}
+  - {t: ., s: '!'}
   - T
   - S
   - Z
@@ -25,8 +25,8 @@ layers:
   - F
   - R
   - D
-  - {t: ., s: '!'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ',', s: '?'}
+  - $$mdi:alpha-w-box$$
   - $$mdi:keyboard-tab$$
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
   - {t: A, h: 符号层}
@@ -40,7 +40,7 @@ layers:
   - {t: H, h: 符号层}
   - {t: U, h: RIGHT GUI}
   - Ctl+$$mdi:keyboard-space$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - X
   - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
   - J
@@ -63,7 +63,7 @@ layers:
   - {t: _, s: F4}
   - {t: '$$mdi:keyboard-return$$', h: F键和小键盘}
   - {t: \, s: F5}
-  - F键和小键盘
+  - {t: '$$mdi:apple-keyboard-control$$', h: F键和小键盘}
   - $$mdi:apple-keyboard-shift$$
   符号层:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -240,7 +240,7 @@ layers:
   - APPLICATION
   - Sft+Ctl+$$mdi:arrow-left-bold$$
   - Sft+Ctl+$$mdi:arrow-right-bold$$
-  - Ctl+Z
+  - Ins
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -393,8 +393,8 @@ layers:
   F键和小键盘:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Ins
+  - Ctl+Ins
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -455,3 +455,7 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - PG UP
+combos:
+- p: [2, 3]
+  k: Ctl+Z
+  l: [默认层]
