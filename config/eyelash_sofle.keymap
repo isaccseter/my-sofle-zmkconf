@@ -268,7 +268,15 @@
     behaviors {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ctrl_Z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+    };
 
     macros {
         selSearch: selSearch {
@@ -306,10 +314,10 @@
         normal {
             bindings = <
 &kp LG(TAB)     &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp CAPSLOCK
-&lt 6 LEFT_ALT  &comma_question     &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &dot_exclamation    &none
+&lt 6 LEFT_ALT  &dot_exclamation    &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &comma_question     &caps_word
 &kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
-&none           &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 V    &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
-&kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &mo 6                  &kp LEFT_SHIFT
+&kp ENTER       &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 V    &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
+&kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &lt 6 LCTRL            &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -349,7 +357,7 @@
 &trans  &trans        &trans             &trans            &trans             &trans           &none  &trans  &trans  &trans            &trans             &trans         &trans
 &none   &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 3         &none
 &none   &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &none
-&none   &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &none             &none              &none          &none
+&none   &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp INSERT       &none  &none   &none   &none             &none              &none          &none
 &none   &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
             >;
 
@@ -380,11 +388,11 @@
 
         Fkey-keypad {
             bindings = <
-&none   &none    &none    &none     &none      &none        &none  &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp BSPC         &kp KP_ASTERISK  &none         &none
-&none   &kp F12  &kp F11  &kp F10   &kp F9     &none        &none  &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &zero3        &none
-&tog 6  &kp F8   &kp F7   &kp F6    &kp F5     &none        &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT   &none
-&none   &kp F4   &kp F3   &kp F2    &kp F1     &none        &none  &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &none
-&none   &none    &none    &kp LALT  &kp LSHFT  &kp LCTRL    &none  &none            &tog 6           &kp PAGE_DOWN    &none            &kp PG_UP
+&none   &none    &kp LS(INSERT)  &kp LC(INSERT)  &none      &none        &none  &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp BSPC         &kp KP_ASTERISK  &none         &none
+&none   &kp F12  &kp F11         &kp F10         &kp F9     &none        &none  &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &zero3        &none
+&tog 6  &kp F8   &kp F7          &kp F6          &kp F5     &none        &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT   &none
+&none   &kp F4   &kp F3          &kp F2          &kp F1     &none        &none  &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &none
+&none   &none    &none           &kp LALT        &kp LSHFT  &kp LCTRL    &none  &none            &tog 6           &kp PAGE_DOWN    &none            &kp PG_UP
             >;
 
             label = "F键和小键盘";
