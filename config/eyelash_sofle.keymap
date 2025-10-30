@@ -322,7 +322,7 @@
             bindings = <
 &kp LG(TAB)     &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
 &lt 6 LEFT_ALT  &kp Q               &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &kp X               &caps_word
-&kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 3 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
+&kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
 &kp ENTER       &apostrophe_minus   &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 V    &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
 &kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &kp ENTER        &backslash_F5           &lt 6 LCTRL            &kp LEFT_SHIFT
             >;
