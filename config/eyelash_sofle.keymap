@@ -128,6 +128,7 @@
         retro-tap;
         require-prior-idle-ms = <140>;
         quick-tap-ms = <140>;
+        hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44>;
     };
 
     gui_L: gui_L {
@@ -271,10 +272,15 @@
     combos {
         compatible = "zmk,combos";
 
-        ctrl_Z {
-            bindings = <&kp LC(Z)>;
+        shift_insert {
+            bindings = <&kp LS(INSERT)>;
             key-positions = <2 3>;
             layers = <0>;
+        };
+
+        ctrl_insert {
+            bindings = <&kp LC(INSERT)>;
+            key-positions = <3 4>;
         };
     };
 
@@ -315,9 +321,9 @@
             bindings = <
 &kp LG(TAB)     &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
 &lt 6 LEFT_ALT  &dot_exclamation    &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp D                  &comma_question     &caps_word
-&kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
+&kp TAB         &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 3 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 4 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &kp LC(SPACE)
 &kp ENTER       &kp X               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 V    &kp RIGHT_ARROW  &kp K           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
-&kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &lt 6 ENTER      &backslash_F5           &lt 6 LCTRL            &kp LEFT_SHIFT
+&kp C_MUTE      &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &kp ENTER        &backslash_F5           &lt 6 LCTRL            &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -342,7 +348,7 @@
         num {
             bindings = <
 &none  &none         &none             &none             &none   &none     &mmv MOVE_UP     &trans        &kp KP_SLASH  &trans  &kp KP_MULTIPLY  &trans       &none
-&none  &tog 2        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7        &kp N8  &kp N9           &zero3       &none
+&none  &tog 3        &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp KP_MINUS  &kp N7        &kp N8  &kp N9           &zero3       &none
 &none  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0        &kp N4        &kp N5  &kp N6           &kp PERCENT  &none
 &none  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp KP_PLUS   &kp N1        &kp N2  &kp N3           &kp ENTER    &none
 &none  &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans        &trans        &trans  &kp BACKSLASH    &kp LS(X)
@@ -355,7 +361,7 @@
         nav {
             bindings = <
 &trans  &trans        &trans             &trans            &trans             &trans           &none  &trans  &trans  &trans            &trans             &trans         &trans
-&none   &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 3         &none
+&none   &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog 4         &none
 &none   &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &none
 &none   &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp INSERT       &none  &none   &none   &none             &none              &none          &none
 &none   &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
