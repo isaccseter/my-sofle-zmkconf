@@ -31,7 +31,7 @@ layers:
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
   - {t: A, h: 符号层}
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: 方向键层}
+  - {t: G, h: 数字层}
   - Y
   - $$mdi:arrow-left-bold$$
   - L
@@ -161,7 +161,7 @@ layers:
   - LEFT WIN
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
@@ -226,11 +226,11 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
-  - {t: '$$mdi:arrow-right-bold$$', type: held}
+  - $$mdi:arrow-right-bold$$
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - RIGHT WIN
