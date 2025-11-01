@@ -183,7 +183,7 @@
         bindings = <&kp APOSTROPHE>, <&kp MINUS>;
 
         #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
+        mods = <(MOD_LSFT)>;
     };
 
     slash_caret: slash_caret {
