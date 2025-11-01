@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - {t: '$$mdi:apple-keyboard-option$$', h: F键和小键盘}
+  - {t: 'Ctl+$$mdi:keyboard-space$$', h: F键和小键盘}
   - Q
   - T
   - S
@@ -24,9 +24,9 @@ layers:
   - P
   - F
   - R
-  - D
+  - M
   - X
-  - $$mdi:alpha-w-box$$
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-tab$$
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
   - {t: A, h: 符号层}
@@ -39,16 +39,16 @@ layers:
   - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: H, h: 符号层}
   - {t: U, h: RIGHT GUI}
-  - Ctl+$$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '''', s: '-'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - V
   - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: '?'}
   - J
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: V, h: 额外功能和鼠标模拟}
+  - {t: U, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
   - K
-  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: W, h: windows_manager_Others}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: /, s: ^}
