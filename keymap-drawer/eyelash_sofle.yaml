@@ -25,7 +25,7 @@ layers:
   - F
   - R
   - M
-  - X
+  - K
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-tab$$
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
@@ -47,7 +47,7 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
   - {t: U, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
-  - K
+  - X
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: W, h: windows_manager_Others}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
