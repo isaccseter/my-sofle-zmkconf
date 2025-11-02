@@ -283,6 +283,13 @@
             key-positions = <3 4>;
             layers = <0>;
         };
+
+        ao {
+            bindings = <&ao>;
+            key-positions = <48 49>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
     };
 
     macros {
@@ -313,6 +320,14 @@
             bindings = <&kp N0 &kp N0 &kp N0>;
             label = "ZERO3";
         };
+
+        ao: ao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&macro_wait_time 30>, <&kp O>;
+
+            label = "AO";
+        };
     };
 
     keymap {
@@ -322,8 +337,8 @@
             bindings = <
 &kp LG(TAB)      &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
 &lt 6 LC(SPACE)  &kp Q               &kp T              &kp S                  &kp Z            &kp B                &kp DOWN_ARROW   &kp P           &kp F            &kp R                   &kp M                  &kp K               &kp CAPSLOCK
-&kp TAB          &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &apostrophe_minus
-&kp ENTER        &kp V               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 U    &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL D  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &slash_caret        &kp LEFT_WIN
+&kp TAB          &gui_L LEFT_GUI O   &symbol_L 1 A      &shift_L LEFT_SHIFT E  &num 2 G         &kp Y                &kp LEFT_ARROW   &kp L           &nav 3 N         &shift_R RIGHT_SHIFT I  &symbol_R 1 H          &gui_R RIGHT_GUI U  &slash_caret
+&kp ENTER        &kp V               &alt_L LEFT_ALT Q  &kp J                  &ctrl_L LCTRL C  &applic_mouse 5 U    &kp RIGHT_ARROW  &kp X           &ctrl_R RCTRL D  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &apostrophe_minus   &kp LEFT_WIN
 &kp C_MUTE       &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &kp ENTER        &backslash_F5           &lt 6 LCTRL            &kp LEFT_SHIFT
             >;
 
