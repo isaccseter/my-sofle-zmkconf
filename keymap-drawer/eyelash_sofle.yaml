@@ -19,7 +19,7 @@ layers:
   - T
   - S
   - Z
-  - B
+  - J
   - $$mdi:arrow-down-bold$$
   - P
   - F
@@ -43,8 +43,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - V
   - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: '?'}
-  - J
-  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - C
+  - {t: B, h: '$$mdi:apple-keyboard-control$$'}
   - {t: U, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
   - X
