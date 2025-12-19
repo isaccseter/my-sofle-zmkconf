@@ -16,40 +16,40 @@ layers:
   - Ctl+Z
   - {t: 'Ctl+$$mdi:keyboard-space$$', h: F键和小键盘}
   - Q
-  - T
-  - S
-  - Z
-  - J
-  - $$mdi:arrow-down-bold$$
-  - P
-  - F
+  - W
+  - E
   - R
-  - M
-  - K
+  - T
+  - $$mdi:arrow-down-bold$$
+  - Y
+  - U
+  - I
+  - O
+  - P
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-tab$$
-  - {t: O, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: A, h: 符号层}
-  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: G, h: 数字层}
-  - Y
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: 符号层}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F, h: 数字层}
+  - G
   - $$mdi:arrow-left-bold$$
-  - L
-  - {t: N, h: 方向键层}
-  - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: H, h: 符号层}
+  - H
+  - {t: J, h: 方向键层}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: L, h: 符号层}
   - {t: U, h: RIGHT GUI}
   - {t: /, s: ^}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - V
-  - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: '?'}
+  - Z
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
-  - {t: B, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-control$$'}
   - {t: U, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
-  - X
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: W, h: windows_manager_Others}
+  - N
+  - {t: M, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ',', h: windows_manager_Others, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '-'}
   - LEFT WIN
