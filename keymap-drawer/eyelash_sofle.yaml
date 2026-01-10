@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - {t: 'Ctl+$$mdi:keyboard-space$$', h: F键和小键盘}
+  - {t: '-', h: F键和小键盘, s: _}
   - Q
   - W
   - E
@@ -38,8 +38,8 @@ layers:
   - {t: J, h: 方向键层}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
-  - {t: U, h: RIGHT GUI}
-  - {t: /, s: ^}
+  - {t: /, h: RIGHT GUI, s: ^}
+  - Ctl+$$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
@@ -51,7 +51,7 @@ layers:
   - {t: M, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ',', h: windows_manager_Others, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
-  - {t: '''', s: '-'}
+  - {t: '''', s: '"'}
   - LEFT WIN
   - $$mdi:volume-off$$
   - Meh+F7
