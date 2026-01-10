@@ -45,7 +45,7 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - {t: V, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: U, h: 额外功能和鼠标模拟}
+  - {t: B, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
   - N
   - {t: M, h: '$$mdi:apple-keyboard-control$$'}
@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - Meh+F7
   - F2
-  - Meh+F8
+  - Alt+$$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -458,7 +458,5 @@ layers:
 combos:
 - p: [2, 3]
   k: Sft+Ins
-  l: [默认层]
 - p: [3, 4]
   k: Ctl+Ins
-  l: [默认层]
