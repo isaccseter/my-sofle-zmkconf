@@ -45,11 +45,11 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - {t: V, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: B, h: F键和小键盘}
+  - {t: B, h: 额外功能和鼠标模拟}
   - $$mdi:arrow-right-bold$$
   - N
   - {t: M, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ',', h: 额外功能和鼠标模拟, s: '?'}
+  - {t: ',', h: windows_manager_Others, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
   - LEFT WIN
@@ -309,7 +309,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&soft_off'
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:apple-keyboard-shift$$
   - {t: windows_manager_Others, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -350,13 +350,13 @@ layers:
   - $$mdi:pan-down$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-up$$
-  - {t: F键和小键盘, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: F键和小键盘, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 额外功能和鼠标模拟, h: toggle}
+  - Alt+$$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&mkp MB4'
@@ -364,17 +364,17 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 额外功能和鼠标模拟, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - LEFT WIN
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-right$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -435,7 +435,7 @@ layers:
   - F3
   - F2
   - F1
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP PLUS
   - KP 1
