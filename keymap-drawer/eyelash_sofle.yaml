@@ -45,18 +45,18 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - {t: V, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: B, h: 额外功能和鼠标模拟}
+  - {t: B, h: F键和小键盘}
   - $$mdi:arrow-right-bold$$
   - N
   - {t: M, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ',', h: windows_manager_Others, s: '?'}
+  - {t: ',', h: 额外功能和鼠标模拟, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
   - LEFT WIN
   - $$mdi:volume-off$$
   - Meh+F7
   - F2
-  - Alt+$$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -103,7 +103,7 @@ layers:
   - (
   - )
   - {t: ;, s: ':', type: held alternate}
-  - .
+  - {t: /, s: '?'}
   - {t: 符号层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '~'
@@ -114,9 +114,9 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '@'
   - ':'
-  - {t: ',', s: <}
+  - '?'
   - '"'
-  - {t: /, s: '?'}
+  - {t: '''', s: '"'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -145,7 +145,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: 方向键层, h: toggle}
+  - {t: 数字层, h: toggle}
   - Ctl+$$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -169,7 +169,7 @@ layers:
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - '%'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 数字层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ., s: '>'}
@@ -220,9 +220,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - Ctl+$$mdi:apple-keyboard-option$$
-  - {t: windows_manager_Others, h: toggle}
+  - {t: 方向键层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 方向键层, h: toggle}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -297,7 +297,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB EFF
@@ -305,11 +305,11 @@ layers:
   - {t: Gui+4, s: Gui+$}
   - {t: Gui+5, s: Gui+%}
   - {t: Gui+6, s: Gui+^}
-  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - Meh+F8
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&soft_off'
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-shift$$
   - {t: windows_manager_Others, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -350,10 +350,10 @@ layers:
   - $$mdi:pan-down$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-up$$
-  - {t: 额外功能和鼠标模拟, h: toggle}
+  - {t: F键和小键盘, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: 额外功能和鼠标模拟, h: toggle}
+  - {t: F键和小键盘, h: toggle}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
@@ -370,11 +370,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:pan-right$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -435,7 +435,7 @@ layers:
   - F3
   - F2
   - F1
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP PLUS
   - KP 1
