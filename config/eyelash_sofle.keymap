@@ -149,7 +149,7 @@
     gui_R: gui_R {
         compatible = "zmk,behavior-hold-tap";
         label = "GUI_R";
-        bindings = <&kp>, <&kp>;
+        bindings = <&kp>, <&slash_caret>;
 
         #binding-cells = <2>;
         tapping-term-ms = <220>;
@@ -173,15 +173,6 @@
         compatible = "zmk,behavior-mod-morph";
         label = "DOT_EXCLAMATION";
         bindings = <&kp DOT>, <&kp EXCL>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
-    };
-
-    apostrophe_minus: apostrophe_minus {
-        compatible = "zmk,behavior-mod-morph";
-        label = "APOSTROPHE_MINUS";
-        bindings = <&kp APOSTROPHE>, <&kp MINUS>;
 
         #binding-cells = <0>;
         mods = <(MOD_LSFT)>;
@@ -330,11 +321,11 @@
 
         normal {
             bindings = <
-&kp LG(TAB)      &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
-&lt 6 LC(SPACE)  &kp Q               &kp W              &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y           &kp U            &kp I                   &kp O                  &kp P               &kp CAPSLOCK
-&kp TAB          &gui_L LEFT_GUI A   &symbol_L 1 S      &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H           &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &slash_caret
-&kp ENTER        &kp Z               &alt_L LEFT_ALT X  &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 U    &kp RIGHT_ARROW  &kp N           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &apostrophe_minus   &kp LEFT_WIN
-&kp C_MUTE       &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &kp ENTER        &backslash_F5           &lt 6 LCTRL            &kp RSHIFT
+&kp LG(TAB)  &kp LC(A)           &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME        &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
+&lt 6 MINUS  &kp Q               &kp W              &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y           &kp U            &kp I                   &kp O                  &kp P               &kp CAPSLOCK
+&kp TAB      &gui_L LEFT_GUI A   &symbol_L 1 S      &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H           &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp LC(SPACE)
+&kp ENTER    &kp Z               &alt_L LEFT_ALT X  &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 U    &kp RIGHT_ARROW  &kp N           &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp LEFT_WIN
+&kp C_MUTE   &kp LS(LA(LC(F7)))  &kp F2             &kp LS(LA(LC(F8)))     &kp SPACE        &kp ESCAPE           &kp ENTER        &underscore_F4  &kp ENTER        &backslash_F5           &lt 6 LCTRL            &kp RSHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
