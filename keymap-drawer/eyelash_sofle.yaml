@@ -308,9 +308,9 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&soft_off'
-  - Alt+$$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - Alt+Sft+$$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: windows_manager_Others, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -461,7 +461,4 @@ combos:
   l: [默认层]
 - p: [3, 4]
   k: Ctl+Ins
-  l: [默认层]
-- p: [48, 49]
-  k: '&ao'
   l: [默认层]
