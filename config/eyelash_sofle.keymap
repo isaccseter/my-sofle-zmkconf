@@ -235,7 +235,7 @@
     underscore_F4: underscore_F4 {
         compatible = "zmk,behavior-mod-morph";
         label = "UNDERSCORE_F4";
-        bindings = <&kp UNDERSCORE>, <&kp F4>;
+        bindings = <&kp LS(MINUS)>, <&kp F4>;
 
         #binding-cells = <0>;
         mods = <(MOD_LSFT)>;
@@ -309,6 +309,41 @@
             bindings = <&kp N0 &kp N0 &kp N0>;
             label = "ZERO3";
         };
+
+        double_tilde: double_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp TILDE>;
+            label = "DOUBLE_TILDE";
+        };
+
+        triple_minus: triple_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp MINUS &kp MINUS>;
+            label = "TRIPLE_MINUS";
+        };
+
+        triple_grave: triple_backtick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "TRIPLE_BACKTICK";
+        };
+
+        double_underscore: double_underscore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDERSCORE &kp UNDERSCORE>;
+            label = "DOUBLE_UNDERSCORE";
+        };
+
+        double_slash: double_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH &kp SLASH>;
+            label = "DOUBLE_SLASH";
+        };
     };
 
     keymap {
@@ -330,10 +365,10 @@
 
         symbol {
             bindings = <
-&none       &none            &none          &none             &none               &none            &mmv MOVE_UP     &none        &none                 &none                  &none              &none           &none
+&none       &none            &double_tilde  &triple_grave     &triple_minus       &none            &mmv MOVE_UP     &none        &none                 &double_underscore     &double_slash      &none           &none
 &none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS           &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp QUESTION    &none
 &tog 1      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL           &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp SLASH       &tog 1
-&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp QUESTION           &kp DOUBLE_QUOTES  &kp APOSTROPHE  &none
+&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp UNDERSCORE         &kp DOUBLE_QUOTES  &kp APOSTROPHE  &none
 &kp C_MUTE  &none            &none          &kp LC(LEFT_ALT)  &kp LA(LEFT_SHIFT)  &kp LS(LCTRL)    &mkp LCLK        &kp RCTRL    &kp RIGHT_SHIFT       &kp RIGHT_ALT          &none              &none
             >;
 
