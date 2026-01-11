@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - {t: '-', h: F键和小键盘, s: _}
+  - {t: '=', h: F键和小键盘, s: +}
   - Q
   - W
   - E
@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
   - {t: /, h: RIGHT GUI, s: ^}
-  - Ctl+$$mdi:keyboard-space$$
+  - {t: '-', s: _}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
