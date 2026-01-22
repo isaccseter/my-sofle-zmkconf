@@ -40,7 +40,7 @@ layers:
   - {t: L, h: 符号层}
   - {t: /, h: RIGHT GUI, s: ^}
   - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-return$$', h: F键和小键盘}
+  - {t: ':', h: F键和小键盘}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
@@ -139,9 +139,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP SLASH
+  - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP MULTIPLY
+  - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -151,7 +151,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - KP MINUS
+  - {t: '-', s: _}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -169,7 +169,7 @@ layers:
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - '%'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - _
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ., s: '>'}
@@ -177,7 +177,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - KP PLUS
+  - +
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -460,3 +460,6 @@ combos:
   k: Sft+Ins
 - p: [3, 4]
   k: Ctl+Ins
+- p: [48, 49]
+  k: {t: ;, s: ':'}
+  l: [默认层]
