@@ -210,7 +210,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&selSearch'
+  - '&select_line'
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -236,16 +236,16 @@ layers:
   - RIGHT WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&select_line'
+  - INS
   - APPLICATION
   - Sft+Ctl+$$mdi:arrow-left-bold$$
   - Sft+Ctl+$$mdi:arrow-right-bold$$
-  - Ins
+  - Ctl+C
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgDn
+  - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 方向键层, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -367,7 +367,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LEFT WIN
+  - Alt+$$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
