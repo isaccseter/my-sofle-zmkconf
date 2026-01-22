@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - Gui+$$mdi:keyboard-tab$$
+  - {t: '`', s: '~'}
   - Ctl+A
   - Ctl+V
   - Ctl+C
@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - {t: '=', s: +}
+  - Ctl+$$mdi:keyboard-space$$
   - Q
   - W
   - E
@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
   - {t: /, h: RIGHT GUI, s: ^}
-  - _
+  - {t: '-', s: _}
   - {t: '$$mdi:keyboard-return$$', h: F键和小键盘}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
@@ -56,11 +56,11 @@ layers:
   - $$mdi:volume-off$$
   - Meh+F7
   - F2
-  - $$mdi:apple-keyboard-option$$
+  - _
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '-', s: F4}
+  - {t: '&key_repeat', s: F4}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:apple-keyboard-caps$$', s: F5}
   - {t: '$$mdi:apple-keyboard-control$$', h: F键和小键盘}
@@ -220,7 +220,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - Ctl+$$mdi:apple-keyboard-option$$
-  - {t: 方向键层, h: toggle}
+  - '&tog_on 3'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
