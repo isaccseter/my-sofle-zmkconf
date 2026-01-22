@@ -240,7 +240,7 @@ layers:
   - APPLICATION
   - Sft+Ctl+$$mdi:arrow-left-bold$$
   - Sft+Ctl+$$mdi:arrow-right-bold$$
-  - Ctl+C
+  - Ctl+Z
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -367,7 +367,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Alt+$$mdi:keyboard-space$$
+  - LEFT WIN
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
@@ -405,11 +405,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&tog_on 6'
-  - F12
-  - F11
   - F10
   - F9
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F8
+  - F7
+  - F6
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP MINUS
   - KP 7
@@ -418,11 +418,11 @@ layers:
   - '&zero3'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F8
-  - F7
-  - F6
   - F5
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F4
+  - F3
+  - F2
+  - F1
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 0
   - KP 4
@@ -431,10 +431,10 @@ layers:
   - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - F4
-  - F3
-  - F2
-  - F1
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F12
+  - F11
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP PLUS
@@ -461,5 +461,8 @@ combos:
 - p: [3, 4]
   k: Ctl+Ins
 - p: [48, 49]
-  k: {t: ;, s: ':'}
+  k: Ctl+$$mdi:keyboard-space$$
   l: [默认层]
+- p: [48, 49]
+  k: Alt+$$mdi:keyboard-space$$
+  l: [符号层]
