@@ -103,7 +103,7 @@ layers:
   - (
   - )
   - {t: ;, s: ':', type: held alternate}
-  - {t: /, s: '?'}
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
@@ -114,20 +114,20 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '@'
   - ':'
-  - _
-  - '"'
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - {t: '''', s: '"'}
   - {t: 符号层, h: toggle}
   - $$mdi:volume-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+$$mdi:apple-keyboard-option$$
-  - Alt+$$mdi:apple-keyboard-shift$$
-  - Sft+$$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   数字层:
@@ -235,7 +235,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - RIGHT WIN
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&select_line'
   - APPLICATION
   - Sft+Ctl+$$mdi:arrow-left-bold$$
