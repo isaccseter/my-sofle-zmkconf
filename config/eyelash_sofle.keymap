@@ -295,19 +295,6 @@
     };
 
     macros {
-        selSearch: selSearch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(C)>,
-                <&macro_wait_time 40>,
-                <&kp LC(F)>,
-                <&macro_wait_time 60>,
-                <&kp LC(V)>;
-
-            label = "SELSEARCH";
-        };
-
         select_line: select_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -406,9 +393,9 @@
         nav {
             bindings = <
 &trans  &trans        &trans             &trans            &trans             &trans           &none  &trans  &trans  &trans            &trans             &trans         &trans
-&none   &selSearch    &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog_on 3      &trans
+&none   &select_line  &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog_on 3      &trans
 &trans  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &trans
-&none   &select_line  &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp INSERT       &none  &none   &none   &none             &none              &none          &tog 3
+&none   &kp INS       &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(C)        &none  &none   &none   &kp PAGE_DOWN     &kp PAGE_UP        &none          &tog 3
 &none   &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
             >;
 
@@ -427,11 +414,11 @@
 
         applic_mouse {
             bindings = <
-&none  &none  &none         &none          &none      &none    &none  &none      &none           &none           &none            &none  &none
-&none  &none  &none         &none          &none      &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none  &none
-&none  &none  &tog_on 5     &kp LA(LCTRL)  &kp LALT   &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &tog 5
-&none  &none  &none         &none          &none      &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &none
+&none  &none  &none          &none          &none      &none    &none  &none      &none           &none           &none            &none  &none
+&none  &none  &none          &none          &none      &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none  &none
+&none  &none  &tog_on 5      &kp LA(LCTRL)  &kp LALT   &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none  &none  &kp LA(SPACE)  &kp LSHFT      &kp LCTRL  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &tog 5
+&none  &none  &none          &none          &none      &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &none
             >;
 
             label = "额外功能和鼠标模拟";
