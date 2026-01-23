@@ -271,6 +271,20 @@
         toggle-mode = "on";
     };
 
+    alt_R2: alt_R2 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "ALT_R2";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <250>;
+        flavor = "balanced";
+        hold-trigger-on-release;
+        hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 56 57 59 60 61 62 63>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
+    };
+
     behaviors {
     };
 
@@ -371,11 +385,11 @@
 
         symbol {
             bindings = <
-&none       &none            &double_tilde  &triple_grave     &none              &none            &mmv MOVE_UP     &none        &double_underscore    &triple_minus          &double_slash  &none              &none
-&tog_on 1   &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp QUESTION       &trans
-&trans      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans      &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp DOT        &kp APOSTROPHE     &tog 1
-&kp C_MUTE  &none            &none          &trans            &trans             &trans           &mkp LCLK        &trans       &trans                &trans                 &none          &none
+&none       &none            &double_tilde         &triple_grave              &none                        &none            &mmv MOVE_UP     &none        &double_underscore    &triple_minus                           &double_slash          &none              &none
+&tog_on 1   &kp GRAVE        &kp LESS_THAN         &kp GREATER_THAN           &kp MINUS                    &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE                         &kp DOLLAR             &kp QUESTION       &trans
+&trans      &kp EXCLAMATION  &kp ASTERISK          &shift_L LEFT_SHIFT SLASH  &kp EQUAL                    &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &shift_R RIGHT_SHIFT RIGHT_PARENTHESIS  &kp SEMICOLON          &kp DOUBLE_QUOTES  &trans
+&trans      &kp TILDE        &alt_L LEFT_ALT PLUS  &kp LEFT_BRACKET           &ctrl_L LCTRL RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &ctrl_R RCTRL COLON   &kp COMMA                               &alt_R2 RIGHT_ALT DOT  &kp APOSTROPHE     &tog 1
+&kp C_MUTE  &none            &none                 &trans                     &trans                       &trans           &mkp LCLK        &trans       &trans                &trans                                  &none                  &none
             >;
 
             display-name = "layer1";
