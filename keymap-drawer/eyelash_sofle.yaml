@@ -95,27 +95,27 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - {t: '*', type: held}
-  - {t: /, s: '?'}
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: '=', s: +}
   - '&'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - '#'
   - (
-  - )
+  - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, s: ':', type: held alternate}
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
-  - +
+  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
   - '%'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '@'
-  - ':'
+  - {t: ':', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: '''', s: '"'}
   - {t: 符号层, h: toggle}
   - $$mdi:volume-off$$
