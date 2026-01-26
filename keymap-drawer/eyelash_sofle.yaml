@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - Ctl+$$mdi:keyboard-space$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -54,17 +54,17 @@ layers:
   - {t: '''', s: '"'}
   - LEFT WIN
   - $$mdi:volume-off$$
+  - $$mdi:apple-keyboard-control$$
   - Meh+F7
-  - F2
+  - Ctl+$$mdi:keyboard-space$$
   - _
   - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '&key_repeat', s: F4}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - RETURN
+  - {t: 'Ctl+$$mdi:keyboard-space$$', s: F4}
   - {t: '$$mdi:apple-keyboard-caps$$', s: F5}
   - {t: '$$mdi:apple-keyboard-control$$', h: F键和小键盘}
-  - $$mdi:apple-keyboard-shift$$
+  - F2
   符号层:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -461,8 +461,5 @@ combos:
 - p: [3, 4]
   k: Ctl+Ins
 - p: [48, 49]
-  k: Ctl+$$mdi:keyboard-space$$
-  l: [默认层]
-- p: [48, 49]
   k: Alt+$$mdi:keyboard-space$$
-  l: [符号层]
+  l: [默认层]
