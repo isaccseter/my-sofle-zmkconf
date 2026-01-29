@@ -152,7 +152,7 @@
     gui_R: gui_R {
         compatible = "zmk,behavior-hold-tap";
         label = "GUI_R";
-        bindings = <&kp>, <&slash_caret>;
+        bindings = <&kp>, <&key_repeat>;
 
         #binding-cells = <2>;
         tapping-term-ms = <250>;
@@ -264,13 +264,6 @@
         hold-trigger-on-release;
     };
 
-    tog_on: tog_on {
-        compatible = "zmk,behavior-toggle-layer";
-        label = "TOG_ON";
-        #binding-cells = <1>;
-        toggle-mode = "on";
-    };
-
     alt_R2: alt_R2 {
         compatible = "zmk,behavior-hold-tap";
         label = "ALT_R2";
@@ -367,9 +360,9 @@
             bindings = <
 &kp GRAVE    &kp LC(A)          &kp LC(V)           &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME    &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
 &kp ESCAPE   &kp Q              &kp W               &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y       &kp U            &kp I                   &kp O                  &kp P               &kp BACKSLASH
-&kp TAB      &gui_L LEFT_GUI A  &symbol_L 1 S       &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H       &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp MINUS
-&lt 6 COLON  &kp Z              &alt_L LEFT_ALT X   &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N       &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp LEFT_WIN
-&kp C_MUTE   &kp LCTRL          &kp LC(LA(LS(F7)))  &kp LC(SPACE)          &kp UNDER        &kp SPACE            &kp ENTER        &kp RETURN  &ctlSpace_F4     &CapsLock_F5            &lt 6 LCTRL            &kp F2
+&kp TAB      &gui_L LEFT_GUI A  &symbol_L 1 S       &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H       &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &slash_caret
+&lt 6 COLON  &kp Z              &alt_L LEFT_ALT X   &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N       &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp UNDER
+&kp C_MUTE   &tog 2             &kp LC(LA(LS(F7)))  &kp SEMICOLON          &kp MINUS        &kp SPACE            &kp ENTER        &kp RETURN  &ctlSpace_F4     &CapsLock_F5            &lt 6 F2               &tog 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -380,9 +373,9 @@
         symbol {
             bindings = <
 &none       &none            &double_tilde         &triple_grave              &none                        &none            &mmv MOVE_UP     &none        &double_underscore    &triple_minus                           &double_slash          &none              &none
-&tog_on 1   &kp GRAVE        &kp LESS_THAN         &kp GREATER_THAN           &kp MINUS                    &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE                         &kp DOLLAR             &kp QUESTION       &trans
+&trans      &kp GRAVE        &kp LESS_THAN         &kp GREATER_THAN           &kp MINUS                    &kp PIPE         &mmv MOVE_DOWN   &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE                         &kp DOLLAR             &kp QUESTION       &trans
 &trans      &kp EXCLAMATION  &kp ASTERISK          &shift_L LEFT_SHIFT SLASH  &kp EQUAL                    &kp AMPERSAND    &mmv MOVE_LEFT   &kp HASH     &kp LEFT_PARENTHESIS  &shift_R RIGHT_SHIFT RIGHT_PARENTHESIS  &kp SEMICOLON          &kp DOUBLE_QUOTES  &trans
-&trans      &kp TILDE        &alt_L LEFT_ALT PLUS  &kp LEFT_BRACKET           &ctrl_L LCTRL RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &ctrl_R RCTRL COLON   &kp COMMA                               &alt_R2 RIGHT_ALT DOT  &kp APOSTROPHE     &tog 1
+&trans      &kp TILDE        &alt_L LEFT_ALT PLUS  &kp LEFT_BRACKET           &ctrl_L LCTRL RIGHT_BRACKET  &kp PERCENT      &mmv MOVE_RIGHT  &kp AT_SIGN  &ctrl_R RCTRL COLON   &kp COMMA                               &alt_R2 RIGHT_ALT DOT  &kp APOSTROPHE     &trans
 &kp C_MUTE  &none            &none                 &trans                     &trans                       &trans           &mkp LCLK        &trans       &trans                &trans                                  &none                  &none
             >;
 
@@ -394,10 +387,10 @@
         num {
             bindings = <
 &none   &none         &none             &none             &none   &none     &mmv MOVE_UP     &trans     &kp SLASH  &trans  &kp STAR       &trans       &none
-&none   &tog_on 2     &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp MINUS  &kp N7     &kp N8  &kp N9         &zero3       &trans
-&trans  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0     &kp N4     &kp N5  &kp N6         &kp PERCENT  &kp UNDER
-&none   &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp PLUS   &kp N1     &kp N2  &kp N3         &kp ENTER    &tog 2
-&none   &none         &none             &trans            &trans  &trans    &mkp LCLK        &trans     &trans     &trans  &kp BACKSLASH  &kp LS(X)
+&trans  &none         &kp LC(LEFT_ALT)  &kp LEFT_ALT      &none   &none     &mmv MOVE_DOWN   &kp MINUS  &kp N7     &kp N8  &kp N9         &zero3       &trans
+&trans  &kp LEFT_WIN  &kp LEFT_SHIFT    &kp LEFT_CONTROL  &none   &none     &mmv MOVE_LEFT   &kp N0     &kp N4     &kp N5  &kp N6         &kp PERCENT  &trans
+&trans  &none         &kp DOT           &kp COMMA         &none   &none     &mmv MOVE_RIGHT  &kp PLUS   &kp N1     &kp N2  &kp N3         &kp ENTER    &trans
+&none   &tog 2        &none             &trans            &trans  &trans    &mkp LCLK        &trans     &trans     &trans  &kp BACKSLASH  &kp LS(X)
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -407,9 +400,9 @@
         nav {
             bindings = <
 &trans  &trans        &trans             &trans            &trans             &trans           &none  &trans  &trans  &trans            &trans             &trans         &trans
-&none   &select_line  &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &tog_on 3      &trans
+&trans  &select_line  &kp HOME           &kp UP_ARROW      &kp END            &kp PAGE_UP      &none  &none   &none   &kp RIGHT_ALT     &kp LC(RIGHT_ALT)  &none          &trans
 &trans  &kp DELETE    &kp LEFT           &kp DOWN          &kp RIGHT          &kp PAGE_DOWN    &none  &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT     &kp RIGHT_WIN  &trans
-&none   &kp INS       &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &kp PAGE_DOWN     &kp PAGE_UP        &none          &tog 3
+&trans  &kp INS       &kp K_APPLICATION  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LC(Z)        &none  &none   &none   &kp PAGE_DOWN     &kp PAGE_UP        &none          &trans
 &none   &none         &none              &trans            &trans             &trans           &none  &trans  &trans  &trans            &none              &none
             >;
 
@@ -418,10 +411,10 @@
 
         windows_manager_Others {
             bindings = <
-&bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4          &none  &none      &none               &none   &none           &none      &none
-&bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)             &none  &none      &none               &none   &none           &none      &none
-&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N1)         &kp LG(N2)       &kp LG(N3)    &kp LG(D)             &none  &none      &kp LA(LEFT_SHIFT)  &none   &kp LEFT_ALT    &tog_on 4  &none
-&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N4)         &kp LG(N5)       &kp LG(N6)    &kp LC(LA(LS(F8)))    &none  &soft_off  &kp LCTRL           &none   &kp LEFT_SHIFT  &none      &tog 4
+&bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4          &none  &none      &none               &none   &none           &none  &none
+&bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LG(E)             &none  &none      &none               &none   &none           &none  &none
+&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N1)         &kp LG(N2)       &kp LG(N3)    &kp LG(D)             &none  &none      &kp LA(LEFT_SHIFT)  &none   &kp LEFT_ALT    &none  &none
+&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N4)         &kp LG(N5)       &kp LG(N6)    &kp LC(LA(LS(F8)))    &none  &soft_off  &kp LCTRL           &none   &kp LEFT_SHIFT  &none  &none
 &none              &none            &none              &trans           &trans        &trans                &none  &trans     &trans              &trans  &none           &none
             >;
         };
@@ -430,8 +423,8 @@
             bindings = <
 &none  &none  &none         &none          &none      &none    &none  &none      &none           &none           &none            &none  &none
 &none  &none  &none         &none          &none      &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none  &none
-&none  &none  &tog_on 5     &kp LA(LCTRL)  &kp LALT   &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &tog 5
+&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &none
 &none  &none  &none         &none          &none      &none    &none  &mkp RCLK  &mkp LCLK       &mkp MCLK       &soft_off        &none
             >;
 
@@ -440,11 +433,11 @@
 
         Fkey-keypad {
             bindings = <
-&none      &none    &kp LS(INSERT)  &kp LC(INSERT)  &none      &none        &none  &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp BSPC         &kp KP_ASTERISK  &none         &none
-&tog_on 6  &kp F10  &kp F9          &kp F8          &kp F7     &kp F6       &none  &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &zero3        &none
-&none      &kp F5   &kp F4          &kp F3          &kp F2     &kp F1       &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT   &none
-&none      &none    &none           &kp F12         &kp F11    &none        &none  &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &tog 6
-&none      &none    &none           &kp LALT        &kp LSHFT  &kp LCTRL    &none  &none            &trans           &kp PAGE_DOWN    &none            &kp PG_UP
+&none  &none    &kp LS(INSERT)  &kp LC(INSERT)  &none      &none        &none  &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp BSPC         &kp KP_ASTERISK  &none         &none
+&none  &kp F10  &kp F9          &kp F8          &kp F7     &kp F6       &none  &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &zero3        &none
+&none  &kp F5   &kp F4          &kp F3          &kp F2     &kp F1       &none  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PERCENT   &none
+&none  &none    &none           &kp F12         &kp F11    &none        &none  &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &none
+&none  &none    &none           &kp LALT        &kp LSHFT  &kp LCTRL    &none  &trans           &trans           &kp PAGE_DOWN    &none            &kp PG_UP
             >;
 
             label = "F键和小键盘";
