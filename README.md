@@ -1,7 +1,7 @@
 
 我的 sofle 键位（使用 @睫毛外设店 改版 sofle）
 
-My *sofel* keymap (modified sofle using @Eyelash Peripheral Store)
+My *sofel* keymap (modified sofle using @睫毛外设店)
 
 ### Sofle键位图
 
