@@ -1,0 +1,468 @@
+layout: {zmk_keyboard: eyelash_sofle}
+layers:
+  默认层:
+  - '`'
+  - Ctl+A
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - '⌦'
+  - UP ARROW
+  - HOME
+  - '⇦'
+  - '⌫'
+  - '⇨'
+  - END
+  - Ctl+Z
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - DOWN ARROW
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - TAB
+  - {t: A, h: LGui}
+  - {t: S, h: 符号层}
+  - {t: D, h: LShift}
+  - {t: F, h: 数字层}
+  - G
+  - LEFT ARROW
+  - H
+  - {t: J, h: NAV层}
+  - {t: K, h: RShift}
+  - {t: L, h: 符号层}
+  - {t: 'Repeat', h: RGui}
+  - {t: '/', s: '^'}
+  - {t: ':', h: Fkey层}
+  - Z
+  - {t: X, h: LAlt}
+  - C
+  - {t: V, h: LCtrl}
+  - {t: B, h: 鼠标层}
+  - RIGHT ARROW
+  - N
+  - {t: M, h: RCtrl}
+  - {t: ',', h: WTool, s: '?'}
+  - {t: ., h: RAlt, s: '!'}
+  - ''''
+  - '_'
+  - MUTE
+  - '&tog 2'
+  - Meh+F7
+  - ';'
+  - '-'
+  - '⎵'
+  - ''
+  - '⏎'
+  - {t: EC, s: F4}
+  - {t: CAPSLOCK, s: F5}
+  - {t: F2, h: Fkey层}
+  - '&tog 3'
+  符号层:
+  - ''
+  - ''
+  - '~~'
+  - '```'
+  - ''
+  - ''
+  - '&mmv MOVE_UP'
+  - ''
+  - '__'
+  - '---'
+  - '//'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - '`'
+  - <
+  - '>'
+  - '-'
+  - '|'
+  - '&mmv MOVE_DOWN'
+  - ^
+  - '{'
+  - '}'
+  - $
+  - '?'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '!'
+  - {t: '*', type: held}
+  - {t: /, h: LShift}
+  - '='
+  - '&'
+  - '&mmv MOVE_LEFT'
+  - '#'
+  - (
+  - {t: ), h: RShift}
+  - {t: ;, type: held}
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - {t: +, h: LAlt}
+  - '['
+  - {t: ']', h: LCtrl}
+  - '%'
+  - '&mmv MOVE_RIGHT'
+  - '@'
+  - {t: ':', h: RCtrl}
+  - ','
+  - {t: ., h: RAlt}
+  - ''''
+  - {t: ▽, type: trans}
+  - MUTE
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  数字层:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mmv MOVE_UP'
+  - {t: ▽, type: trans}
+  - /
+  - {t: ▽, type: trans}
+  - '*'
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - Ctl+LAlt
+  - LAlt
+  - ''
+  - ''
+  - '&mmv MOVE_DOWN'
+  - '-'
+  - '7'
+  - '8'
+  - '9'
+  - '000'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LWin
+  - LShift
+  - LCtrl
+  - {type: held}
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - '%'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - .
+  - ','
+  - ''
+  - ''
+  - '&mmv MOVE_RIGHT'
+  - +
+  - '1'
+  - '2'
+  - '3'
+  - ENTER
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - \
+  - Sft+X
+  方向键层:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&select_line'
+  - HOME
+  - '⇧'
+  - END
+  - PG UP
+  - ''
+  - ''
+  - ''
+  - RAlt
+  - Ctl+RAlt
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DELETE
+  - '⇦'
+  - '⇩'
+  - '⇨'
+  - PG DOWN
+  - ''
+  - ''
+  - {type: held}
+  - LCtrl
+  - LShift
+  - RWin
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INS
+  - APP
+  - Sel+LEFT
+  - Sel+RIGHT
+  - Ctl+Z
+  - ''
+  - ''
+  - ''
+  - PG DOWN
+  - PG UP
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  windows_manager_Others:
+  - BT CLR ALL
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - '亮度＋'
+  - '音量＋'
+  - '音量－'
+  - '静音'
+  - {t: Gui+E, h: 资源管理器}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - EP OFF
+  - '亮度－'
+  - Gui+1
+  - Gui+2
+  - Gui+3
+  - {t: Ctl+D, h: 桌面}
+  - ''
+  - ''
+  - Alt+LShift
+  - ''
+  - LAlt
+  - '&tog_on'
+  - ''
+  - RGB EFF
+  - RGB TOG
+  - Gui+4
+  - Gui+5
+  - Gui+6
+  - Meh+F8
+  - ''
+  - '&soft_off'
+  - LCtrl
+  - {type: held}
+  - LShift
+  - ''
+  - {t: WTool, h: tog}
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  额外功能和鼠标模拟:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '5号键'
+  - '下滚'
+  - '&mmv Up'
+  - '上滚'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&tog_on'
+  - Alt+LCtrl
+  - LAlt
+  - ''
+  - ''
+  - '4号键'
+  - '&mmv Left'
+  - '&mmv Down'
+  - '&mmv Right'
+  - ''
+  - ''
+  - ''
+  - ''
+  - LWin
+  - LShift
+  - LCtrl
+  - {type: held}
+  - ''
+  - ''
+  - '左滚'
+  - ''
+  - '右滚'
+  - ''
+  - {t: 鼠标层, h: tog}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'R键'
+  - 'L键'
+  - '中键'
+  - '&soft_off'
+  - ''
+  F键和小键盘:
+  - ''
+  - ''
+  - Sft+INSERT
+  - Ctl+INSERT
+  - ''
+  - ''
+  - ''
+  - KP NUMLOCK
+  - 'KP /'
+  - '⌫'
+  - 'KP *'
+  - ''
+  - ''
+  - '&tog_on'
+  - F10
+  - F9
+  - F8
+  - F7
+  - F6
+  - ''
+  - 'KP -'
+  - KP 7
+  - KP 8
+  - KP 9
+  - '000'
+  - ''
+  - ''
+  - F5
+  - F4
+  - F3
+  - F2
+  - F1
+  - ''
+  - KP 0
+  - KP 4
+  - KP 5
+  - KP 6
+  - '%'
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - F12
+  - F11
+  - ''
+  - ''
+  - 'KP +'
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP ENTER
+  - {t: Fkey层, h: tog}
+  - ''
+  - ''
+  - ''
+  - LAlt
+  - LShift
+  - LCtrl
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - PG DOWN
+  - {type: held}
+  - PG UP
+combos:
+- p: [2, 3]
+  k: Sft+INSERT
+- p: [3, 4]
+  k: Ctl+INSERT
+- p: [48, 49]
+  k: Ctl+SPACE
+  l: [默认层]
+- p: [48, 49]
+  k: Alt+SPACE
+  l: [符号层]
