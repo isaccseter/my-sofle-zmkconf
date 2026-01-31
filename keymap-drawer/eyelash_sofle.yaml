@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - {t: \, s: '|'}
+  - {t: /, s: '?'}
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: 符号层}
@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
   - {t: '&key_repeat U', h: RIGHT GUI}
-  - {t: /, s: ^}
+  - {t: '-', s: ^}
   - {t: ':', h: F键和小键盘}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
@@ -52,12 +52,12 @@ layers:
   - {t: ',', h: windows_manager_Others, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
-  - _
+  - {t: \, s: '|'}
   - $$mdi:volume-off$$
   - {t: 数字层, h: toggle}
   - Meh+F7
   - {t: ;, s: ':'}
-  - {t: '-', s: _}
+  - _
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - RETURN
