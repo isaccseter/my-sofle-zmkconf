@@ -259,7 +259,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 方向键层, h: toggle}
   windows_manager_Others:
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
