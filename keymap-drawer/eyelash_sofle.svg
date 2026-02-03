@@ -690,7 +690,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="747" y="190" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+<text x="756" y="200" class="combo tap">
+<tspan x="756" dy="-0.6em">LEFT</tspan><tspan x="756" dy="1.2em">WIN</tspan>
+</text>
 </g>
 </g>
 </g>

@@ -461,5 +461,5 @@ combos:
 - p: [3, 4]
   k: Ctl+Ins
 - p: [48, 49]
-  k: Alt+$$mdi:keyboard-space$$
+  k: LEFT WIN
   l: [默认层]
