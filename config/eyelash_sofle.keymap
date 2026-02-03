@@ -294,8 +294,8 @@
             key-positions = <3 4>;
         };
 
-        altspace {
-            bindings = <&kp LA(SPACE)>;
+        Win {
+            bindings = <&kp LEFT_WIN>;
             key-positions = <48 49>;
             layers = <0>;
         };
