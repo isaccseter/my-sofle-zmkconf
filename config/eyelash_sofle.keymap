@@ -15,14 +15,6 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
     num: num {
         compatible = "zmk,behavior-hold-tap";
         label = "NUM";
@@ -422,7 +414,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "符号层";
         };
 
@@ -435,7 +427,7 @@
 &none   &tog 2        &none             &trans            &trans  &trans    &mkp LCLK        &trans     &trans     &trans  &kp BACKSLASH  &kp LS(X)
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "数字层";
         };
 
