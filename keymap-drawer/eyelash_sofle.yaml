@@ -404,7 +404,7 @@ layers:
   - KP ASTERISK
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - F10
   - F9
   - F8
@@ -416,8 +416,8 @@ layers:
   - KP 8
   - KP 9
   - '&zero3'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F5
   - F4
   - F3
@@ -429,8 +429,8 @@ layers:
   - KP 5
   - KP 6
   - '%'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
@@ -442,7 +442,7 @@ layers:
   - KP 2
   - KP 3
   - KP ENTER
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -504,7 +504,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - N
   - M
-  - {t: ',', s: <}
+  - {t: ',', h: F键和小键盘, s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '`', s: '~'}
