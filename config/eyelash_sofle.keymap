@@ -277,32 +277,32 @@
         bindings = <&kp LCTRL>, <&kp LCTRL>, <&tog 6>;
     };
 
-    F131415: F131415 {
+    n12: n12 {
         compatible = "zmk,behavior-tap-dance";
-        label = "F131415";
+        label = "N12";
         #binding-cells = <0>;
-        bindings = <&kp F13>, <&kp F14>, <&kp F15>;
+        bindings = <&kp LA(LC(LS(KP_NUMBER_1)))>, <&kp LS(LA(LC(KP_NUMBER_2)))>;
     };
 
-    F161718: F161718 {
+    n34: n34 {
         compatible = "zmk,behavior-tap-dance";
-        label = "F161718";
+        label = "N34";
         #binding-cells = <0>;
-        bindings = <&kp F16>, <&kp F17>, <&kp F18>;
+        bindings = <&kp LA(LC(LS(KP_NUMBER_3)))>, <&kp LS(LA(LC(KP_NUMBER_4)))>;
     };
 
-    F192021: F192021 {
+    n56: n56 {
         compatible = "zmk,behavior-tap-dance";
-        label = "F192021";
+        label = "N56";
         #binding-cells = <0>;
-        bindings = <&kp F19>, <&kp F20>, <&kp F21>;
+        bindings = <&kp LA(LC(LS(KP_NUMBER_5)))>, <&kp LS(LA(LC(KP_NUMBER_6)))>;
     };
 
-    F222324: F222324 {
+    n78: n78 {
         compatible = "zmk,behavior-tap-dance";
-        label = "F222324";
+        label = "N78";
         #binding-cells = <0>;
-        bindings = <&kp F22>, <&kp F23>, <&kp F24>;
+        bindings = <&kp LA(LC(LS(KP_NUMBER_7)))>, <&kp LS(LA(LC(KP_NUMBER_8)))>;
     };
 
     behaviors {
@@ -330,7 +330,7 @@
         layer7_to_layer6 {
             bindings = <&tog 6>;
             key-positions = <53 54>;
-            layers = <7>;
+            layers = <7 6>;
         };
 
         home {
@@ -360,6 +360,31 @@
         tog_layer7 {
             bindings = <&tog 7>;
             key-positions = <55 56>;
+            timeout-ms = <300>;
+        };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <22 23>;
+            layers = <7>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <22 21>;
+            layers = <7>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <35 34>;
+            layers = <7>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <35 36>;
+            layers = <7>;
         };
     };
 
@@ -483,10 +508,10 @@
 
         applic_mouse {
             bindings = <
-&none  &none  &none         &none          &none      &none    &none  &none           &trans          &trans          &trans           &none    &none
-&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none    &none
-&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp F24  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &F131415        &F161718        &F192021        &F222324         &none    &none
+&none  &none  &none         &none          &none      &none    &none  &none           &trans          &trans          &trans           &none                        &none
+&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none                        &none
+&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LS(LA(LC(KP_NUMBER_9)))  &none
+&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &n12            &n34            &n56            &n78             &none                        &none
 &none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK       &soft_off        &none
             >;
 
@@ -507,11 +532,11 @@
 
         iso {
             bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3      &kp N4    &kp N5       &trans  &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp BSPC
-&kp TAB    &kp Q     &kp W     &kp E       &kp R     &kp T        &trans  &kp Y      &kp U      &kp I        &kp O      &kp P      &kp BSLH
-&kp LSHFT  &kp A     &kp S     &kp D       &kp F     &kp G        &trans  &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp APOS
-&kp LCTRL  &kp Z     &kp X     &kp C       &kp V     &kp B        &trans  &kp N      &kp M      &lt 6 COMMA  &kp DOT    &kp FSLH   &kp GRAVE
-&trans     &kp LBKT  &kp RBKT  &kp DELETE  &kp LALT  &kp SPACE    &trans  &kp ENTER  &kp RCTRL  &kp RSHFT    &kp MINUS  &kp EQUAL
+&kp ESC         &kp N1    &kp N2    &kp N3      &kp N4    &kp N5       &trans  &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp BSPC
+&kp TAB         &kp Q     &kp W     &kp E       &kp R     &kp T        &trans  &kp Y      &kp U      &kp I        &kp O      &kp P      &kp BSLH
+&kp LCTRL       &kp A     &kp S     &kp D       &kp F     &kp G        &trans  &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp APOS
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C       &kp V     &kp B        &trans  &kp N      &kp M      &lt 6 COMMA  &kp DOT    &kp FSLH   &kp GRAVE
+&trans          &kp LBKT  &kp RBKT  &kp DELETE  &kp LALT  &kp SPACE    &trans  &kp ENTER  &kp RCTRL  &kp RSHFT    &kp MINUS  &kp EQUAL
             >;
 
             label = "iso布局";
