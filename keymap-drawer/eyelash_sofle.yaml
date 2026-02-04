@@ -363,7 +363,7 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - F24
+  - Meh+KP 9
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -372,10 +372,10 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&F131415'
-  - '&F161718'
-  - '&F192021'
-  - '&F222324'
+  - '&n12'
+  - '&n34'
+  - '&n56'
+  - '&n78'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -482,7 +482,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - A
   - S
   - D
@@ -495,7 +495,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -530,7 +530,7 @@ combos:
   l: [默认层]
 - p: [53, 54]
   k: {t: F键和小键盘, h: toggle}
-  l: [iso布局]
+  l: [iso布局, F键和小键盘]
 - p: [28, 29]
   k: HOME
   l: [iso布局]
@@ -545,3 +545,15 @@ combos:
   l: [iso布局]
 - p: [55, 56]
   k: {t: iso布局, h: toggle}
+- p: [22, 23]
+  k: $$mdi:arrow-up-bold$$
+  l: [iso布局]
+- p: [22, 21]
+  k: $$mdi:arrow-down-bold$$
+  l: [iso布局]
+- p: [35, 34]
+  k: $$mdi:arrow-left-bold$$
+  l: [iso布局]
+- p: [35, 36]
+  k: $$mdi:arrow-right-bold$$
+  l: [iso布局]
