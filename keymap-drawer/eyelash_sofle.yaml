@@ -511,7 +511,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - LGUI
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -528,3 +528,20 @@ combos:
 - p: [48, 49]
   k: LEFT WIN
   l: [默认层]
+- p: [53, 54]
+  k: {t: F键和小键盘, h: toggle}
+  l: [iso布局]
+- p: [28, 29]
+  k: HOME
+  l: [iso布局]
+- p: [30, 29]
+  k: END
+  l: [iso布局]
+- p: [16, 17]
+  k: PgUp
+  l: [iso布局]
+- p: [16, 15]
+  k: PgDn
+  l: [iso布局]
+- p: [55, 56]
+  k: {t: iso布局, h: toggle}
