@@ -282,15 +282,32 @@
         bindings = <&kp LCTRL>, <&kp LCTRL>, <&tog 6>;
     };
 
-    mouse: mouse {
-        compatible = "zmk,behavior-input-two-axis";
-        label = "MOUSE";
-        #binding-cells = <1>;
-        x-input-code = <100>;
-        y-input-code = <100>;
-        trigger-period-ms = <2>;
-        time-to-max-speed-ms = <100>;
-        acceleration-exponent = <0>;
+    F131415: F131415 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "F131415";
+        #binding-cells = <0>;
+        bindings = <&kp F13>, <&kp F14>, <&kp F15>;
+    };
+
+    F161718: F161718 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "F161718";
+        #binding-cells = <0>;
+        bindings = <&kp F16>, <&kp F17>, <&kp F18>;
+    };
+
+    F192021: F192021 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "F192021";
+        #binding-cells = <0>;
+        bindings = <&kp F19>, <&kp F20>, <&kp F21>;
+    };
+
+    F222324: F222324 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "F222324";
+        #binding-cells = <0>;
+        bindings = <&kp F22>, <&kp F23>, <&kp F24>;
     };
 
     behaviors {
@@ -471,11 +488,11 @@
 
         applic_mouse {
             bindings = <
-&none  &none  &none         &none          &none      &none    &none  &none           &none             &none             &none              &none  &none
-&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT    &mmv MOVE_UP      &msc SCRL_RIGHT    &none  &none
-&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &none  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &mouse MOVE_UP  &mouse MOVE_LEFT  &mouse MOVE_DOWN  &mouse MOVE_RIGHT  &none  &none
-&none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK         &mkp MCLK         &soft_off          &none
+&none  &none  &none         &none          &none      &none    &none  &none           &none           &none           &none            &none    &none
+&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none    &none
+&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp F24  &none
+&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &F131415        &F161718        &F192021        &F222324         &none    &none
+&none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK       &soft_off        &none
             >;
 
             label = "额外功能和鼠标模拟";
