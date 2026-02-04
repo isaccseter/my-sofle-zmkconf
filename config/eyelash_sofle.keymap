@@ -282,7 +282,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "CTRL_6";
         #binding-cells = <0>;
-        bindings = <&kp LCTRL>, <&tog 6>;
+        bindings = <&kp LCTRL>, <&kp LCTRL>, <&tog 6>;
     };
 
     behaviors {
