@@ -15,8 +15,6 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &mmv {
-    trigger-period-ms = <4>;
-    acceleration-exponent = <1>;
 };
 
 / {
