@@ -531,9 +531,7 @@ rect.held, rect.combo.held {
 <g transform="translate(28, 224)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#F">
-<text x="0" y="-4" class="key tap layer-activator">F键和小键盘</text>
-</a><use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-control"/>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;ctrl_6</tspan></text>
 </g>
 <g transform="translate(84, 224)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2424,12 +2422,12 @@ rect.held, rect.combo.held {
 <g transform="translate(535, 294) rotate(-30.0)" class="key keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:mouse-right-click-outline"/>
+<use href="#mdi:mouse-left-click-outline" xlink:href="#mdi:mouse-left-click-outline" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:mouse-left-click-outline"/>
 </g>
 <g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:mouse-left-click-outline" xlink:href="#mdi:mouse-left-click-outline" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:mouse-left-click-outline"/>
+<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:mouse-right-click-outline"/>
 </g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2684,10 +2682,12 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(28, 224)" class="key none keypos-39">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(28, 224)" class="key keypos-39">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<a href="#F">
+<text x="0" y="-4" class="key tap layer-activator">F键和小键盘</text>
+</a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(84, 224)" class="key none keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
