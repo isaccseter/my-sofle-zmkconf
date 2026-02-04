@@ -14,7 +14,10 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&mmv { trigger-period-ms = <4>; };
+&mmv {
+    trigger-period-ms = <4>;
+    acceleration-exponent = <0.9>;
+};
 
 / {
     num: num {
@@ -279,6 +282,17 @@
         bindings = <&kp LCTRL>, <&kp LCTRL>, <&tog 6>;
     };
 
+    mouse: mouse {
+        compatible = "zmk,behavior-input-two-axis";
+        label = "MOUSE";
+        #binding-cells = <1>;
+        x-input-code = <100>;
+        y-input-code = <100>;
+        trigger-period-ms = <2>;
+        time-to-max-speed-ms = <100>;
+        acceleration-exponent = <0>;
+    };
+
     behaviors {
     };
 
@@ -457,11 +471,11 @@
 
         applic_mouse {
             bindings = <
-&none  &none  &none         &none          &none      &none    &none  &none      &none           &none           &none            &none  &none
-&none  &none  &none         &none          &none      &none    &none  &mkp MB5   &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none  &none
-&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &none      &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &none
-&none  &none  &none         &none          &none      &none    &none  &mkp LCLK  &mkp RCLK       &mkp MCLK       &soft_off        &none
+&none  &none  &none         &none          &none      &none    &none  &none           &none             &none             &none              &none  &none
+&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT    &mmv MOVE_UP      &msc SCRL_RIGHT    &none  &none
+&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &none  &none
+&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &mouse MOVE_UP  &mouse MOVE_LEFT  &mouse MOVE_DOWN  &mouse MOVE_RIGHT  &none  &none
+&none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK         &mkp MCLK         &soft_off          &none
             >;
 
             label = "额外功能和鼠标模拟";
