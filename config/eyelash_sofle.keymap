@@ -16,7 +16,7 @@
 
 &mmv {
     trigger-period-ms = <4>;
-    acceleration-exponent = <0.9>;
+    acceleration-exponent = <1>;
 };
 
 / {
