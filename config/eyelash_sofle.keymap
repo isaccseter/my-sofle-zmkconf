@@ -14,9 +14,6 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&mmv {
-};
-
 / {
     num: num {
         compatible = "zmk,behavior-hold-tap";
