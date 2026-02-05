@@ -281,28 +281,28 @@
         compatible = "zmk,behavior-tap-dance";
         label = "N12";
         #binding-cells = <0>;
-        bindings = <&kp LA(LC(LS(KP_NUMBER_1)))>, <&kp LS(LA(LC(KP_NUMBER_2)))>;
+        bindings = <&kp LA(LC(KP_NUMBER_1))>, <&kp LA(LC(KP_NUMBER_2))>;
     };
 
     n34: n34 {
         compatible = "zmk,behavior-tap-dance";
         label = "N34";
         #binding-cells = <0>;
-        bindings = <&kp LA(LC(LS(KP_NUMBER_3)))>, <&kp LS(LA(LC(KP_NUMBER_4)))>;
+        bindings = <&kp LA(LC(KP_NUMBER_3))>, <&kp LA(LC(KP_NUMBER_4))>;
     };
 
     n56: n56 {
         compatible = "zmk,behavior-tap-dance";
         label = "N56";
         #binding-cells = <0>;
-        bindings = <&kp LA(LC(LS(KP_NUMBER_5)))>, <&kp LS(LA(LC(KP_NUMBER_6)))>;
+        bindings = <&kp LA(LC(KP_NUMBER_5))>, <&kp LA(LC(KP_NUMBER_6))>;
     };
 
     n78: n78 {
         compatible = "zmk,behavior-tap-dance";
         label = "N78";
         #binding-cells = <0>;
-        bindings = <&kp LA(LC(LS(KP_NUMBER_7)))>, <&kp LS(LA(LC(KP_NUMBER_8)))>;
+        bindings = <&kp LA(LC(KP_NUMBER_7))>, <&kp LA(LC(KP_NUMBER_8))>;
     };
 
     behaviors {
@@ -516,10 +516,10 @@
 
         applic_mouse {
             bindings = <
-&none  &none  &none         &none          &none      &none    &none  &none           &trans          &trans          &trans           &none                        &none
-&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none                        &none
-&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LS(LA(LC(KP_NUMBER_9)))  &none
-&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &n12            &n34            &n56            &n78             &none                        &none
+&none  &none  &none         &none          &none      &none    &none  &none           &trans          &trans          &trans           &none                    &none
+&none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none                    &none
+&none  &none  &none         &kp LA(LCTRL)  &kp LALT   &none    &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LA(LC(KP_NUMBER_9))  &none
+&none  &none  &kp LEFT_WIN  &kp LSHFT      &kp LCTRL  &none    &none  &n12            &n34            &n56            &n78             &none                    &none
 &none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK       &none            &none
             >;
 
