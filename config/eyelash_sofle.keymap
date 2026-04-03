@@ -391,11 +391,11 @@
 
         normal {
             bindings = <
-&lt 6 GRAVE       &kp LC(A)          &kp LC(V)           &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME    &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
-&kp ESCAPE        &kp Q              &kp W               &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y       &kp U            &kp I                   &kp O                  &kp P               &kp BACKSLASH
-&kp TAB           &gui_L LEFT_GUI A  &symbol_L 1 S       &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H       &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp SLASH
-&kp LEFT_CONTROL  &kp Z              &alt_L LEFT_ALT X   &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N       &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp COLON
-&kp C_MUTE        &tog 2             &kp LC(LA(LS(F7)))  &kp SEMICOLON          &kp UNDER        &kp SPACE            &kp ENTER        &kp RETURN  &ctlSpace_F4     &CapsLock_F5            &lt 6 F2               &tog 3
+&lt 6 GRAVE       &kp LC(A)          &kp LC(V)              &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME    &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
+&kp ESCAPE        &kp Q              &kp W                  &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y       &kp U            &kp I                   &kp O                  &kp P               &kp BACKSLASH
+&kp TAB           &gui_L LEFT_GUI A  &symbol_L 1 S          &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H       &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp SLASH
+&kp LEFT_CONTROL  &kp Z              &alt_L LEFT_ALT X      &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N       &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp COLON
+&kp C_MUTE        &tog 2             &kp LA(LC(LS(GRAVE)))  &kp SEMICOLON          &kp UNDER        &kp SPACE            &kp ENTER        &kp RETURN  &ctlSpace_F4     &CapsLock_F5            &lt 6 F2               &tog 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -442,17 +442,19 @@
             label = "方向键层";
         };
 
-        windows_manager_Others {
+        App {
             bindings = <
-&bt BT_CLR_ALL     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none      &none               &none   &none           &none  &none
-&bt BT_CLR         &kp C_BRI_UP     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &bt BT_SEL 2    &none  &none      &none               &none   &none           &none  &none
-&ext_power EP_OFF  &kp C_BRI_DN     &kp LG(N1)         &kp LG(N2)       &kp LG(N3)    &bt BT_SEL 1    &none  &none      &kp LA(LEFT_SHIFT)  &none   &kp LEFT_ALT    &none  &none
-&rgb_ug RGB_EFF    &rgb_ug RGB_TOG  &kp LG(N4)         &kp LG(N5)       &kp LG(N6)    &bt BT_SEL 0    &none  &soft_off  &kp LCTRL           &none   &kp LEFT_SHIFT  &none  &none
-&none              &none            &none              &trans           &trans        &trans          &none  &trans     &trans              &trans  &none           &none
+&kp F8             &kp F6           &kp F7             &kp F9           &kp F10     &kp F11    &none  &none      &none               &none   &none           &none  &none
+&bt BT_CLR_ALL     &bt BT_SEL 2     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &kp F12    &none  &none      &none               &none   &none           &none  &none
+&bt BT_CLR         &bt BT_SEL 1     &kp LG(N1)         &kp LG(N2)       &kp LG(N3)  &kp F3     &none  &none      &kp LA(LEFT_SHIFT)  &none   &kp LEFT_ALT    &none  &none
+&ext_power EP_OFF  &bt BT_SEL 0     &kp LG(N4)         &kp LG(N5)       &kp LG(N6)  &kp F1     &none  &soft_off  &kp LCTRL           &none   &kp LEFT_SHIFT  &none  &none
+&none              &rgb_ug RGB_EFF  &rgb_ug RGB_TOG    &trans           &trans      &trans     &none  &trans     &trans              &trans  &none           &none
             >;
+
+            label = "额外的Fkey和功能键";
         };
 
-        applic_mouse {
+        Mouse {
             bindings = <
 &none  &none  &none         &none          &none      &none    &none  &none           &trans          &trans          &trans           &none                    &none
 &none  &none  &none         &none          &none      &none    &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none                    &none
@@ -461,7 +463,7 @@
 &none  &none  &none         &none          &none      &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK       &none            &none
             >;
 
-            label = "额外功能和鼠标模拟";
+            label = "鼠标模拟";
         };
 
         Fkey-keypad {
