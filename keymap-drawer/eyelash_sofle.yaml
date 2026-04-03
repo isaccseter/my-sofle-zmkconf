@@ -45,17 +45,17 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - {t: V, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: B, h: 额外功能和鼠标模拟}
+  - {t: B, h: 鼠标模拟}
   - $$mdi:arrow-right-bold$$
   - N
   - {t: M, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ',', h: windows_manager_Others, s: '?'}
+  - {t: ',', h: 额外的Fkey和功能键, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
   - ':'
   - $$mdi:volume-off$$
   - {t: 数字层, h: toggle}
-  - Meh+F7
+  - {t: Meh+`, s: Meh+~}
   - {t: ;, s: ':'}
   - _
   - $$mdi:keyboard-space$$
@@ -260,13 +260,26 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 方向键层, h: toggle}
-  windows_manager_Others:
+  额外的Fkey和功能键:
+  - F8
+  - F6
+  - F7
+  - F9
+  - F10
+  - F11
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - $$mdi:volume-off$$
+  - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -275,24 +288,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:bluetooth-off$$
-  - $$mdi:brightness-5$$
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
-  - $$mdi:volume-off$$
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - EP OFF
-  - $$mdi:brightness-7$$
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: Gui+1, s: Gui+!}
   - {t: Gui+2, s: Gui+@}
   - {t: Gui+3, s: Gui+#}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - F3
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+$$mdi:apple-keyboard-shift$$
@@ -300,12 +300,12 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB EFF
-  - RGB TOG
+  - EP OFF
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {t: Gui+4, s: Gui+$}
   - {t: Gui+5, s: Gui+%}
   - {t: Gui+6, s: Gui+^}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - F1
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&soft_off'
   - $$mdi:apple-keyboard-control$$
@@ -314,8 +314,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB EFF
+  - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -325,7 +325,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  额外功能和鼠标模拟:
+  鼠标模拟:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -533,4 +533,4 @@ combos:
   l: [默认层]
 - p: [55, 56]
   k: {t: 默认层, h: toggle}
-  l: [符号层, 数字层, 方向键层, windows_manager_Others, 额外功能和鼠标模拟, F键和小键盘, iso布局]
+  l: [符号层, 数字层, 方向键层, 额外的Fkey和功能键, 鼠标模拟, F键和小键盘, iso布局]
