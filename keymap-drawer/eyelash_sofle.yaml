@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: 符号层}
@@ -38,8 +38,8 @@ layers:
   - {t: J, h: 方向键层}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: 符号层}
-  - {t: '&key_repeat U', h: RIGHT GUI}
-  - {t: '-', s: ^}
+  - {t: '-', h: RIGHT GUI, s: ^}
+  - {t: /, s: '?'}
   - $$mdi:apple-keyboard-control$$
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: windows_manager_Others, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
-  - {t: \, s: '|'}
+  - ':'
   - $$mdi:volume-off$$
   - {t: 数字层, h: toggle}
   - Meh+F7
@@ -70,11 +70,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&double_tilde'
   - '&triple_grave'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&double_underscore'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&double_underscore'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&triple_minus'
   - '&double_slash'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -528,39 +528,9 @@ combos:
 - p: [48, 49]
   k: LEFT WIN
   l: [默认层]
-- p: [53, 54]
-  k: {t: F键和小键盘, h: toggle}
-  l: [iso布局]
-- p: [28, 29]
-  k: HOME
-  l: [iso布局]
-- p: [30, 29]
-  k: END
-  l: [iso布局]
-- p: [16, 17]
-  k: PgUp
-  l: [iso布局]
-- p: [16, 15]
-  k: PgDn
-  l: [iso布局]
 - p: [55, 56]
   k: {t: iso布局, h: toggle}
   l: [默认层]
-- p: [22, 23]
-  k: $$mdi:arrow-up-bold$$
-  l: [iso布局]
-- p: [22, 21]
-  k: $$mdi:arrow-down-bold$$
-  l: [iso布局]
-- p: [35, 34]
-  k: $$mdi:arrow-left-bold$$
-  l: [iso布局]
-- p: [35, 36]
-  k: $$mdi:arrow-right-bold$$
-  l: [iso布局]
-- p: [56, 55]
+- p: [55, 56]
   k: {t: 默认层, h: toggle}
   l: [符号层, 数字层, 方向键层, windows_manager_Others, 额外功能和鼠标模拟, F键和小键盘, iso布局]
-- p: [43, 44]
-  k: {t: 额外功能和鼠标模拟, h: toggle}
-  l: [默认层, 额外功能和鼠标模拟]
