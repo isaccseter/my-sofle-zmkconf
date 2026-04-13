@@ -697,8 +697,12 @@ rect.held, rect.combo.held {
 </a><text x="756" y="266" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-5">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -1064,8 +1068,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -1447,8 +1455,12 @@ rect.held, rect.combo.held {
 </a><text x="756" y="266" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-5">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -1798,8 +1810,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -2162,8 +2178,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -2517,8 +2537,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -2906,8 +2930,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>
@@ -3276,8 +3304,12 @@ rect.held, rect.combo.held {
 </a><text x="283" y="282" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="210" y="242" width="28" height="26" class="combo"/>
-<text x="224" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;en_cn_un…</tspan></text>
+<rect rx="6" ry="6" x="798" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="803" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="98" y="201" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="103" y="205" height="18" width="18.0" class="combo tap glyph mdi:keyboard-space"/>
 </g>
 </g>
 </g>

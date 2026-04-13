@@ -537,5 +537,7 @@ combos:
 - p: [63, 62]
   k: {t: 方向键层, h: toggle}
   l: [默认层, 数字层]
-- p: [54, 55]
-  k: '&en_cn_under'
+- p: [49, 50]
+  k: Ctl+$$mdi:keyboard-space$$
+- p: [41, 40]
+  k: Ctl+$$mdi:keyboard-space$$
