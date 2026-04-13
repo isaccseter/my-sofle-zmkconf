@@ -314,12 +314,6 @@
             key-positions = <3 4>;
         };
 
-        Win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <48 49>;
-            layers = <0>;
-        };
-
         to_layer7 {
             bindings = <&to 7>;
             key-positions = <55 56>;
@@ -331,6 +325,23 @@
             bindings = <&to 0>;
             key-positions = <55 56>;
             layers = <1 2 3 4 5 6 7>;
+        };
+
+        num_tog {
+            bindings = <&tog 2>;
+            key-positions = <54 53>;
+            layers = <0 2>;
+        };
+
+        nav_tog {
+            bindings = <&tog 3>;
+            key-positions = <63 62>;
+            layers = <0 2>;
+        };
+
+        en_cn_under {
+            bindings = <&en_cn_under>;
+            key-positions = <54 55>;
         };
     };
 
@@ -384,6 +395,18 @@
             bindings = <&kp SLASH &kp SLASH>;
             label = "DOUBLE_SLASH";
         };
+
+        en_cn_under: en_cn_under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(SPACE)>,
+                <&macro_wait_time 25>,
+                <&kp UNDER>,
+                <&macro_press>;
+
+            label = "EN_CN_UNDER";
+        };
     };
 
     keymap {
@@ -391,11 +414,11 @@
 
         normal {
             bindings = <
-&lt 6 GRAVE       &kp LC(A)          &kp LC(V)              &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME      &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
-&kp ESCAPE        &kp Q              &kp W                  &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y         &kp U            &kp I                   &kp O                  &kp P               &kp BACKSLASH
-&kp TAB           &gui_L LEFT_GUI A  &symbol_L 1 S          &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H         &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp SLASH
-&kp LEFT_CONTROL  &kp Z              &alt_L LEFT_ALT X      &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N         &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp COLON
-&kp C_MUTE        &tog 2             &kp LA(LC(LS(GRAVE)))  &kp SEMICOLON          &kp UNDER        &kp SPACE            &kp ENTER        &ctlSpace_F4  &kp ENTER        &CapsLock_F5            &lt 6 F2               &tog 3
+&lt 6 GRAVE       &kp LC(A)          &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE           &kp UP_ARROW     &kp HOME      &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END             &kp LC(Z)
+&kp ESCAPE        &kp Q              &kp W              &kp E                  &kp R            &kp T                &kp DOWN_ARROW   &kp Y         &kp U            &kp I                   &kp O                  &kp P               &kp BACKSLASH
+&kp TAB           &gui_L LEFT_GUI A  &symbol_L 1 S      &shift_L LEFT_SHIFT D  &num 2 F         &kp G                &kp LEFT_ARROW   &kp H         &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI U  &kp SLASH
+&kp LEFT_CONTROL  &kp Z              &alt_L LEFT_ALT X  &kp C                  &ctrl_L LCTRL V  &applic_mouse 5 B    &kp RIGHT_ARROW  &kp N         &ctrl_R RCTRL M  &windows_manager 4 W    &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE      &kp COLON
+&kp C_MUTE        &kp DOWN           &kp LEFT_WIN       &kp SEMICOLON          &kp UNDER        &kp SPACE            &kp ENTER        &CapsLock_F5  &kp ENTER        &ctlSpace_F4            &lt 6 F2               &kp UP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -412,7 +435,7 @@
 &kp C_MUTE  &none            &none                 &trans                     &trans                       &trans           &mkp LCLK        &trans       &trans                &trans                                  &none                  &none
             >;
 
-            display-name = "layer1";
+            display-name = "符号层";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "符号层";
         };
