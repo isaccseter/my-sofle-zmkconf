@@ -60,8 +60,8 @@ layers:
   - _
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - RETURN
   - {t: 'Ctl+$$mdi:keyboard-space$$', s: F4}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:apple-keyboard-caps$$', s: F5}
   - {t: F2, h: F键和小键盘}
   - {t: 方向键层, h: toggle}
