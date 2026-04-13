@@ -54,17 +54,17 @@ layers:
   - {t: '''', s: '"'}
   - ':'
   - $$mdi:volume-off$$
-  - {t: 数字层, h: toggle}
-  - {t: Meh+`, s: Meh+~}
+  - $$mdi:arrow-down-bold$$
+  - LEFT WIN
   - {t: ;, s: ':'}
   - _
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: 'Ctl+$$mdi:keyboard-space$$', s: F4}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:apple-keyboard-caps$$', s: F5}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: 'Ctl+$$mdi:keyboard-space$$', s: F4}
   - {t: F2, h: F键和小键盘}
-  - {t: 方向键层, h: toggle}
+  - $$mdi:arrow-up-bold$$
   符号层:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -525,12 +525,17 @@ combos:
   k: Sft+Ins
 - p: [3, 4]
   k: Ctl+Ins
-- p: [48, 49]
-  k: LEFT WIN
-  l: [默认层]
 - p: [55, 56]
   k: {t: iso布局, h: toggle}
   l: [默认层]
 - p: [55, 56]
   k: {t: 默认层, h: toggle}
   l: [符号层, 数字层, 方向键层, 额外的Fkey和功能键, 鼠标模拟, F键和小键盘, iso布局]
+- p: [54, 53]
+  k: {t: 数字层, h: toggle}
+  l: [默认层, 数字层]
+- p: [63, 62]
+  k: {t: 方向键层, h: toggle}
+  l: [默认层, 数字层]
+- p: [54, 55]
+  k: '&en_cn_under'
