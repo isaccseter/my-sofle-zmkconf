@@ -339,9 +339,14 @@
             layers = <0 2>;
         };
 
-        en_cn_under {
-            bindings = <&en_cn_under>;
-            key-positions = <54 55>;
+        cn_en_R {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <49 50>;
+        };
+
+        cn_en_L {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <41 40>;
         };
     };
 
