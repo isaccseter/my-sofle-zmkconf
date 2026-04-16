@@ -224,9 +224,9 @@
         require-prior-idle-ms = <150>;
     };
 
-    Fkey: Fkey {
+    Fkey_Keypad: Fkey_Keypad {
         compatible = "zmk,behavior-hold-tap";
-        label = "FKEY";
+        label = "FKEY_KEYPAD";
         bindings = <&mo>, <&kp>;
 
         #binding-cells = <2>;
@@ -255,7 +255,7 @@
         };
 
         to_layer7 {
-            bindings = <&to 6>;
+            bindings = <&to 0>;
             key-positions = <55 56>;
             timeout-ms = <500>;
             layers = <0>;
@@ -264,7 +264,7 @@
         back_to_normal {
             bindings = <&to 0>;
             key-positions = <55 56>;
-            layers = <1 2 3 4 5 6>;
+            layers = <1 2 3 4 5>;
         };
 
         num_tog {
@@ -357,7 +357,7 @@
 &kp UNDER         &kp LC(A)  &kp LC(V)          &kp LC(C)              &kp LC(X)        &kp DELETE    &kp UP_ARROW     &kp HOME      &kp LEFT         &kp BACKSPACE           &kp RIGHT              &kp END                 &kp LC(Z)
 &kp ESCAPE        &kp Q      &kp W              &kp E                  &kp R            &kp T         &kp DOWN_ARROW   &kp Y         &kp U            &kp I                   &kp O                  &kp P                   &kp SLASH
 &kp TAB           &kp A      &symbol_L 1 S      &shift_L LEFT_SHIFT D  &num 2 F         &kp G         &kp LEFT_ARROW   &kp H         &nav 3 J         &shift_R RIGHT_SHIFT K  &symbol_R 1 L          &gui_R RIGHT_GUI ENTER  &minus_caret
-&kp LEFT_CONTROL  &kp Z      &alt_L LEFT_ALT X  &Fkey 5 C              &ctrl_L LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N         &ctrl_R RCTRL M  &App 4 W                &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE          &kp COLON
+&kp LEFT_CONTROL  &kp Z      &alt_L LEFT_ALT X  &Fkey_Keypad 5 C       &ctrl_L LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N         &ctrl_R RCTRL M  &App 4 W                &alt_R RIGHT_ALT SEMI  &kp APOSTROPHE          &kp COLON
 &kp C_MUTE        &kp DOWN   &kp LEFT_WIN       &kp LEFT_SHIFT         &kp GRAVE        &kp SPACE     &kp ENTER        &kp CAPSLOCK  &kp LC(SPACE)    &none                   &lt 5 F2               &kp UP
             >;
 
@@ -417,28 +417,16 @@
             label = "额外的Fkey和功能键";
         };
 
-        Fkey {
+        Fkey_Keypad {
             bindings = <
-&trans  &none  &none      &none   &none         &none     &none  &none    &none   &none          &none    &none      &trans
-&trans  &none  &none      &none   &none         &none     &none  &kp F5   &kp F9  &kp F10        &kp F11  &kp F12    &trans
-&trans  &none  &kp LALT   &none   &kp LS(LALT)  &none     &none  &kp F4   &kp F5  &kp F6         &kp F7   &kp F8     &trans
-&trans  &none  &kp LSHFT  &none   &kp LCTRL     &none     &none  &kp F12  &kp F1  &kp F2         &kp F3   &kp F4     &trans
-&none   &none  &none      &trans  &trans        &trans    &none  &trans   &trans  &kp PAGE_DOWN  &tog 5   &kp PG_UP
+&trans  &none  &none      &none   &none         &none     &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&trans  &none  &none      &none   &none         &none     &none  &kp F5           &kp F9           &kp F10          &kp F11          &kp F12          &kp KP_NUMBER_7
+&trans  &none  &kp LALT   &none   &kp LS(LALT)  &none     &none  &kp F4           &kp F5           &kp F6           &kp F7           &kp F8           &kp KP_NUMBER_8
+&trans  &none  &kp LSHFT  &none   &kp LCTRL     &none     &none  &kp F12          &kp F1           &kp F2           &kp F3           &kp F4           &kp KP_NUMBER_9
+&none   &none  &none      &trans  &trans        &trans    &none  &trans           &trans           &kp PAGE_DOWN    &kp KP_NUMBER_0  &kp PG_UP
             >;
 
-            label = "F键";
-        };
-
-        iso {
-            bindings = <
-&kp ESC         &kp N1    &kp N2    &kp N3      &kp N4    &kp N5       &trans  &kp N6     &kp N7     &kp N8       &kp N9     &kp N0     &kp BSPC
-&kp TAB         &kp Q     &kp W     &kp E       &kp R     &kp T        &trans  &kp Y      &kp U      &kp I        &kp O      &kp P      &kp BSLH
-&kp LCTRL       &kp A     &kp S     &kp D       &kp F     &kp G        &trans  &kp H      &kp J      &kp K        &kp L      &kp SEMI   &kp APOS
-&kp LEFT_SHIFT  &kp Z     &kp X     &kp C       &kp V     &kp B        &trans  &kp N      &kp M      &lt 5 COMMA  &kp DOT    &kp FSLH   &kp GRAVE
-&trans          &kp LBKT  &kp RBKT  &kp DELETE  &kp LALT  &kp SPACE    &trans  &kp ENTER  &kp RCTRL  &kp RSHFT    &kp MINUS  &kp EQUAL
-            >;
-
-            label = "iso布局";
+            label = "F键和小键盘";
         };
     };
 };
