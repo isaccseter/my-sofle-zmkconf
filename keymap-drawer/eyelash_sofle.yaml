@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - $$mdi:apple-keyboard-caps$$
+  - Ctl+Z
   - Ctl+A
   - Ctl+V
   - Ctl+C
@@ -13,7 +13,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:arrow-right-bold$$
   - END
-  - Ctl+Z
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-tab$$
   - Q
   - W
