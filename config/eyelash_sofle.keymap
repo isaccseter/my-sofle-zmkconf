@@ -254,13 +254,6 @@
             key-positions = <3 4>;
         };
 
-        to_layer7 {
-            bindings = <&to 0>;
-            key-positions = <55 56>;
-            timeout-ms = <500>;
-            layers = <0>;
-        };
-
         back_to_normal {
             bindings = <&to 0>;
             key-positions = <55 56>;
