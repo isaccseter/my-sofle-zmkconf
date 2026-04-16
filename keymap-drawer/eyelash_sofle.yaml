@@ -60,9 +60,9 @@ layers:
   - {t: '`', s: '~'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - Ctl+$$mdi:keyboard-space$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: \, s: '|'}
   - {t: F2, h: F键和小键盘}
   - $$mdi:arrow-up-bold$$
   符号层:
@@ -408,4 +408,4 @@ combos:
   k: {t: 方向键层, h: toggle}
   l: [默认层, 数字层]
 - p: [48, 49]
-  k: {t: \, s: '|'}
+  k: $$mdi:apple-keyboard-caps$$
