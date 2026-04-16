@@ -652,24 +652,18 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="269" y="258" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="283" y="271" class="combo tap layer-activator">默认层</text>
-</a><text x="283" y="282" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-3">
 <rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
 <a href="#x_x">
 <text x="168" y="256" class="combo tap layer-activator">数字层</text>
 </a><text x="168" y="266" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="742" y="242" width="28" height="26" class="combo"/>
 <a href="#x_x">
 <text x="756" y="256" class="combo tap layer-activator">方向键层</text>
 </a><text x="756" y="266" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <text x="756" y="200" class="combo tap">_</text>
 </g>

@@ -397,9 +397,6 @@ combos:
   k: Ctl+Ins
 - p: [55, 56]
   k: {t: 默认层, h: toggle}
-  l: [默认层]
-- p: [55, 56]
-  k: {t: 默认层, h: toggle}
   l: [符号层, 数字层, 方向键层, 额外的Fkey和功能键, F键和小键盘]
 - p: [54, 53]
   k: {t: 数字层, h: toggle}
