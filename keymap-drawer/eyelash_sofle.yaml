@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - _
+  - $$mdi:apple-keyboard-caps$$
   - Ctl+A
   - Ctl+V
   - Ctl+C
@@ -14,7 +14,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - END
   - Ctl+Z
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: /, s: '?'}
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - A
   - {t: S, h: 符号层}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
@@ -408,4 +408,4 @@ combos:
   k: {t: 方向键层, h: toggle}
   l: [默认层, 数字层]
 - p: [48, 49]
-  k: $$mdi:apple-keyboard-caps$$
+  k: _
