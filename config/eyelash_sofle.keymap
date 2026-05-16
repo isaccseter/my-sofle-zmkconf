@@ -146,5 +146,17 @@
 
             label = "数字层";
         };
+
+        Nav {
+            bindings = <
+&trans  &trans  &trans     &trans     &trans  &trans    &trans  &trans     &trans            &trans             &trans     &trans      &trans
+&trans  &trans  &kp LALT   &kp LC(F)  &trans  &trans    &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END    &trans      &trans
+&trans  &trans  &kp LSHFT  &kp LCTRL  &trans  &trans    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT  &kp DELETE  &trans
+&trans  &trans  &trans     &trans     &trans  &trans    &trans  &kp LC(Z)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp K_APP  &kp INS     &trans
+&trans  &trans  &trans     &trans     &trans  &trans    &trans  &trans     &trans            &trans             &trans     &trans
+            >;
+
+            label = "导航层";
+        };
     };
 };
