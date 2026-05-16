@@ -159,6 +159,17 @@
 
             label = "SEMICOLON_ENTER";
         };
+
+        Pair_Quotes: Pair_Quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES>,
+                <&macro_wait_time 15>,
+                <&kp LEFT>;
+
+            label = "PAIR_QUOTES";
+        };
     };
 
     keymap {
@@ -170,7 +181,7 @@
 &kp ESCAPE   &kp Q          &kp W        &kp E      &kp R      &kp T         &kp DOWN_ARROW   &kp Y     &kp U          &kp I            &kp O             &kp P      &kp SLASH
 &kp TAB      &kp A          &kp S        &kp D      &kp F      &kp G         &kp LEFT_ARROW   &kp H     &kp J          &kp K            &kp L             &kp ENTER  &minus_caret
 &kp COLON    &kp Z          &kp X        &kp C      &kp V      &kp B         &kp RIGHT_ARROW  &kp N     &kp M          &comma_question  &dot_exclamation  &kp SQT    &kp CAPSLOCK
-&kp C_MUTE   &kp PAGE_DOWN  &kp PAGE_UP  &kp LCTRL  &kp SPACE  &mo 3         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &mo 0            &kp BACKSLASH     &kp GRAVE
+&kp C_MUTE   &kp PAGE_DOWN  &kp PAGE_UP  &kp LCTRL  &kp SPACE  &mo 6         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &mo 0            &kp BACKSLASH     &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -178,12 +189,24 @@
             label = "默认层";
         };
 
+        Sym {
+            bindings = <
+&trans  &trans     &trans         &trans            &trans             &trans           &trans    &trans       &trans                &trans                 &trans         &trans             &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp BSLH  &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &Pair_Quotes       &trans
+&trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &trans    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &trans    &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SQT            &trans
+&trans  &trans     &trans         &trans            &trans             &trans           &trans    &trans       &trans                &trans                 &trans         &trans
+            >;
+
+            label = "符号层";
+        };
+
         Num {
             bindings = <
 &trans  &trans     &kp E   &kp COMMA  &kp PERCENT  &trans      &trans  &trans  &trans  &trans     &trans     &trans  &trans
-&trans  &kp FSLH   &kp N7  &kp N8     &kp N9       &kp STAR    &trans  &trans  &trans  &kp DOT    &kp RALT   &trans  &trans
-&trans  &kp MINUS  &kp N4  &kp N5     &kp N6       &kp N0      &trans  &trans  &trans  &kp RCTRL  &kp RSHFT  &trans  &trans
-&trans  &kp X      &kp N1  &kp N2     &kp N3       &kp PLUS    &trans  &trans  &trans  &trans     &trans     &trans  &trans
+&trans  &kp FSLH   &kp N9  &kp N8     &kp N7       &kp STAR    &trans  &trans  &trans  &kp DOT    &kp RALT   &trans  &trans
+&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &trans  &trans  &kp RCTRL  &kp RSHFT  &trans  &trans
+&trans  &kp X      &kp N3  &kp N2     &kp N1       &kp PLUS    &trans  &trans  &trans  &trans     &trans     &trans  &trans
 &trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans     &trans     &trans
             >;
 
@@ -200,6 +223,30 @@
             >;
 
             label = "导航层";
+        };
+
+        Fkey {
+            bindings = <
+&trans  &trans   &trans  &trans  &trans  &trans                &trans  &trans  &trans         &trans  &trans     &trans  &trans
+&trans  &trans   &kp F9  &kp F8  &kp F7  &kp F12               &trans  &trans  &trans         &trans  &trans     &trans  &trans
+&trans  &kp F10  &kp F6  &kp F5  &kp F4  &kp LS(LC(LA(F8)))    &trans  &trans  &kp LS(LCTRL)  &trans  &kp LALT   &trans  &trans
+&trans  &trans   &kp F3  &kp F2  &kp F1  &kp F11               &trans  &trans  &kp LCTRL      &trans  &kp LSHFT  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans                &trans  &trans  &trans         &trans  &trans     &trans
+            >;
+
+            label = "功能区";
+        };
+
+        WinApp {
+            bindings = <
+&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp                &kp             &kp             &kp             &kp  &kp
+&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp  &kp
+&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp  &kp
+&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &kp  &kp
+&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp                &kp             &kp             &kp             &kp
+            >;
+
+            label = "窗口功能";
         };
 
         Others {
