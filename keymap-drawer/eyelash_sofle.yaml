@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - {t: '`', s: '~'}
+  - Alt+$$mdi:keyboard-tab$$
   - {t: '`', s: '~'}
   - Ctl+V
   - Ctl+C
@@ -13,8 +13,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - END
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:keyboard-tab$$
+  - PLAY PAUSE
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -38,7 +38,7 @@ layers:
   - J
   - K
   - L
-  - {t: ;, s: ':'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '-', s: ^}
   - ':'
   - Z
@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: '?'}
   - {t: ., s: '!'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
   - PgDn
   - PgUp
@@ -61,9 +61,9 @@ layers:
   - 额外层
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LGUI
-  - $$mdi:keyboard-space$$
+  - Ctl+$$mdi:keyboard-space$$
   - 默认层
-  - Meh+F8
+  - {t: \, s: '|'}
   - {t: '`', s: '~'}
   数字层:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -260,3 +260,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [48, 49]
+  k: _
+- p: [36, 37]
+  k: '&Semicolon_Return'
+  l: [默认层]
+- p: [2, 3]
+  k: Ctl+X
+  l: [默认层]
