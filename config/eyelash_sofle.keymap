@@ -165,10 +165,10 @@
             layers = <0>;
         };
 
-        Quote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <47 48>;
-            layers = <0>;
+        Sp.C-X {
+            bindings = <&kp LC(X)>;
+            key-positions = <8 9>;
+            layers = <3>;
         };
     };
 
@@ -244,11 +244,11 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans     &trans             &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP  &kp HOME  &kp UP     &kp END            &sel_line  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT          &kp DEL    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LC(Z)  &kp LEFT  &kp RIGHT  &kp K_APPLICATION  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans     &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp LC(V)  &kp LC(C)  &trans             &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_UP  &kp HOME   &kp UP     &kp END            &sel_line   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT          &kp DEL     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LC(Z)  &kp LEFT   &kp RIGHT  &kp K_APPLICATION  &kp INSERT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans             &trans
             >;
 
             label = "导航层";
