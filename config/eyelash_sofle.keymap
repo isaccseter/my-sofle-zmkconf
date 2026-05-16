@@ -135,6 +135,12 @@
             key-positions = <2 3>;
             layers = <0>;
         };
+
+        Quote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <47 48>;
+            layers = <0>;
+        };
     };
 
     macros {
