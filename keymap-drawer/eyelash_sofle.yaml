@@ -425,8 +425,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&Pair_Quotes'
-  - '&Escape_punctuation'
-  - '&En_punctuation'
+  - '&Toen_Escape'
+  - '&Escape'
   - '&En_backslash'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
