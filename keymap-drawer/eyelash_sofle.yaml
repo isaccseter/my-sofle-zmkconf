@@ -2,7 +2,7 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
   - Ctl+Z
-  - $$mdi:apple-keyboard-caps$$
+  - Ctl+X
   - Ctl+V
   - Ctl+C
   - Ctl+A
@@ -52,7 +52,7 @@ layers:
   - {t: ',', h: 功能区, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
-  - {t: \, s: '|'}
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
   - PgDn
   - PgUp
@@ -63,7 +63,7 @@ layers:
   - LGUI
   - Ctl+$$mdi:keyboard-space$$
   - Ctl+END
-  - _
+  - {t: \, s: '|'}
   - {t: '`', s: '~'}
   符号层:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -90,7 +90,7 @@ layers:
   - '{'
   - '}'
   - $
-  - '&Pair_Quotes'
+  - _
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -461,9 +461,6 @@ combos:
 - p: [36, 37]
   k: '&Semicolon_Return'
   l: [默认层]
-- p: [2, 3]
-  k: Ctl+X
-  l: [默认层, 符号层, 导航层, 功能区, 快符层和keypad层]
 - p: [8, 9]
   k: Ctl+X
   l: [导航层]
@@ -471,3 +468,9 @@ combos:
   k: '&Double_Return'
 - p: [56, 60]
   k: '&EC_doubleSpace'
+- p: [3, 2]
+  k: Ctl+Sft+C
+  l: [默认层]
+- p: [3, 4]
+  k: Ctl+Sft+V
+  l: [默认层]
