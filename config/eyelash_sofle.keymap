@@ -349,7 +349,7 @@
 
         Default {
             bindings = <
-&kp LC(Z)        &kp GRAVE      &kp LC(V)        &kp LC(C)          &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT       &kp RIGHT           &kp BACKSPACE         &kp END    &kp C_PLAY_PAUSE
+&kp LC(Z)        &kp CAPSLOCK   &kp LC(V)        &kp LC(C)          &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT       &kp RIGHT           &kp BACKSPACE         &kp END    &kp C_PLAY_PAUSE
 &kp ESCAPE       &kp Q          &Llt 6 W         &kp E              &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &kp U          &Rlt 6 I            &kp O                 &kp P      &kp SLASH
 &mt LA(TAB) TAB  &kp A          &Llt 1 S         &Lmt LEFT_SHIFT D  &Llt 2 F      &kp G         &kp LEFT_ARROW   &kp H     &Rlt 3 J       &Rmt RIGHT_SHIFT K  &Rlt 1 L              &kp ENTER  &minus_caret
 &kp COLON        &kp Z          &Lmt LEFT_ALT X  &Llt 5 C           &Lmt LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RCTRL M   &comma_Rlt 4 0      &dot_Rmt RIGHT_ALT 0  &kp SQT    &kp BACKSLASH
