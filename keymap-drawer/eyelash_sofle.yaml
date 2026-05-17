@@ -52,18 +52,18 @@ layers:
   - {t: ',', h: 功能区, s: '?'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '!'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: \, s: '|'}
   - $$mdi:volume-off$$
   - PgDn
   - PgUp
   - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
-  - 窗口功能
+  - {t: 窗口功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LGUI
   - Ctl+$$mdi:keyboard-space$$
   - Ctl+END
-  - {t: \, s: '|'}
+  - _
   - {t: '`', s: '~'}
   符号层:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -344,7 +344,7 @@ layers:
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - F5
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&Rename_CA'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-high$$
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
@@ -352,12 +352,12 @@ layers:
   - {t: Gui+Ctl+6, s: Gui+Ctl+^}
   - RGB TOG
   - RGB EFF
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-option$$
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
   - {t: Gui+Ctl+2, s: Gui+Ctl+@}
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&Rename_CA_CC'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-low$$
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
@@ -365,7 +365,7 @@ layers:
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - EP OFF
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held}
@@ -381,8 +381,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -390,15 +390,84 @@ layers:
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  快符层和keypad层:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - KP 9
+  - KP 8
+  - KP 7
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - KP 6
+  - KP 5
+  - KP 4
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - KP 3
+  - KP 2
+  - KP 1
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [48, 49]
-  k: _
+  k: '&En_under'
 - p: [36, 37]
   k: '&Semicolon_Return'
   l: [默认层]
 - p: [2, 3]
   k: Ctl+X
-  l: [默认层]
+  l: [默认层, 符号层, 导航层, 功能区, 快符层和keypad层]
 - p: [8, 9]
   k: Ctl+X
   l: [导航层]
+- p: [47, 48]
+  k: '&Double_Return'
+- p: [56, 60]
+  k: '&EC_doubleSpace'
