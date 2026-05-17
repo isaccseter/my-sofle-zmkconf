@@ -28,7 +28,16 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&sl { release-after-ms = <2000>; };
+&sl {
+    release-after-ms = <2000>;
+    lazy;
+    ignore-modifiers;
+};
+
+&sk {
+    quick-release;
+    lazy;
+};
 
 / {
     scroll_encoder: scroll_encoder {
