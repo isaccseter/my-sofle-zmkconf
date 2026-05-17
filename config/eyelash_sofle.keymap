@@ -148,8 +148,8 @@
     combos {
         compatible = "zmk,combos";
 
-        Under {
-            bindings = <&kp UNDER>;
+        En_under {
+            bindings = <&En_under>;
             key-positions = <48 49>;
         };
 
@@ -162,13 +162,23 @@
         C-X {
             bindings = <&kp LC(X)>;
             key-positions = <2 3>;
-            layers = <0>;
+            layers = <0 1 2 4 6>;
         };
 
         Sp.C-X {
             bindings = <&kp LC(X)>;
             key-positions = <8 9>;
             layers = <2>;
+        };
+
+        Double_Return {
+            bindings = <&Double_Return>;
+            key-positions = <47 48>;
+        };
+
+        EC_doubleSpace {
+            bindings = <&EC_doubleSpace>;
+            key-positions = <56 60>;
         };
     };
 
@@ -199,6 +209,70 @@
 
             label = "PAIR_QUOTES";
         };
+
+        Double_Return: Double_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RETURN &kp RETURN>;
+            label = "DOUBLE_RETURN";
+        };
+
+        En_under: En_under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&caps_word &kp UNDER>;
+            label = "EN_UNDER";
+        };
+
+        Rename_CA_CC: Rename_CA_CC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F2>,
+                <&macro_wait_time 15>,
+                <&kp LC(A)>,
+                <&macro_wait_time 15>,
+                <&kp LC(C)>;
+
+            label = "RENAME_CA_CC";
+        };
+
+        Rename_CA: Rename_CA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F2>, <&macro_wait_time 15>, <&kp LC(A)>;
+
+            label = "RENAME_CA";
+        };
+
+        EC_doubleSpace: EC_doubleSpace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp LC(SPACE)>;
+            label = "EC_DOUBLESPACE";
+        };
+
+        Escape_punctuation: Escape_punctuation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&caps_word &kp BACKSLASH>,
+                <&macro_wait_time 15>,
+                <&caps_word &sl 1>;
+
+            label = "ESCAPE_PUNCTUATION";
+        };
+
+        Escape_letter: Escape_letter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(SPACE)>,
+                <&macro_wait_time 15>,
+                <&kp BACKSLASH &to 0>;
+
+            label = "ESCAPE_LETTER";
+        };
     };
 
     keymap {
@@ -209,8 +283,8 @@
 &kp LC(Z)        &kp GRAVE      &kp LC(V)        &kp LC(C)          &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT       &kp RIGHT           &kp BACKSPACE         &kp END    &kp C_PLAY_PAUSE
 &kp ESCAPE       &kp Q          &kp W            &kp E              &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &kp U          &kp I               &kp O                 &kp P      &kp SLASH
 &mt LA(TAB) TAB  &kp A          &Llt 1 S         &Lmt LEFT_SHIFT D  &Llt 2 F      &kp G         &kp LEFT_ARROW   &kp H     &Rlt 3 J       &Rmt RIGHT_SHIFT K  &Rlt 1 L              &kp ENTER  &minus_caret
-&kp COLON        &kp Z          &Lmt LEFT_ALT X  &Llt 5 C           &Lmt LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RCTRL M   &comma_Rlt 4 0      &dot_Rmt RIGHT_ALT 0  &kp SQT    &kp CAPSLOCK
-&kp C_MUTE       &kp PAGE_DOWN  &kp PAGE_UP      &kp LCTRL          &kp SPACE     &mo 5         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &kp LC(END)         &kp BACKSLASH         &kp GRAVE
+&kp COLON        &kp Z          &Lmt LEFT_ALT X  &Llt 5 C           &Lmt LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RCTRL M   &comma_Rlt 4 0      &dot_Rmt RIGHT_ALT 0  &kp SQT    &kp BACKSLASH
+&kp C_MUTE       &kp PAGE_DOWN  &kp PAGE_UP      &kp LCTRL          &kp SPACE     &sl 5         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &kp LC(END)         &kp UNDER             &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -268,14 +342,26 @@
 
         WinApp {
             bindings = <
-&trans  &tog 1          &tog 2          &tog 3          &tog 4          &trans    &trans  &trans             &trans          &trans          &trans          &trans             &trans
-&trans  &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &trans    &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
-&trans  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &trans    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
-&trans  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans    &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &soft_off
-&trans  &trans          &trans          &kp LALT        &kp LSHFT       &trans    &trans  &trans             &trans          &to 0           &trans          &trans
+&trans          &tog 1          &tog 2          &tog 3          &tog 4          &trans           &trans  &trans             &trans          &trans          &trans          &trans             &trans
+&trans          &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &Rename_CA       &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
+&kp LEFT_ALT    &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &Rename_CA_CC    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
+&kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &soft_off
+&trans          &trans          &trans          &trans          &trans          &trans           &trans  &trans             &trans          &to 0           &trans          &trans
             >;
 
             label = "窗口功能";
+        };
+
+        Flash_Keypad {
+            bindings = <
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "快符层和keypad层";
         };
     };
 };
