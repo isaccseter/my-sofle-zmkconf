@@ -313,7 +313,7 @@
             label = "EN_DOUBLE_BRACKET";
         };
 
-        Escape_dot: En_dot {
+        Toen_dot: En_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(SPACE) &kp DOT>;
@@ -435,11 +435,11 @@
 
         Flash_Keypad {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans        &trans              &trans               &trans            &trans
-&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &comma_quotes     &dot_quotes   &question_quotes    &exclamation_quotes  &ellipsis_quotes  &trans
-&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Pair_Quotes      &Toen_Escape  &Escape             &En_backslash        &trans            &trans
-&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave     &En_double_bracket  &Escape_dot          &trans            &trans
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans        &to 0               &trans               &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans            &trans              &trans               &trans        &trans
+&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &Escape           &ellipsis_quotes  &question_quotes    &exclamation_quotes  &Toen_Escape  &trans
+&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &En_backslash     &Pair_Quotes      &comma_quotes       &dot_quotes          &trans        &trans
+&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave         &En_double_bracket  &Toen_dot            &trans        &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans            &to 0               &trans               &trans
             >;
 
             label = "快符层和keypad层";
