@@ -2,7 +2,7 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
   - Ctl+Z
-  - {t: '`', s: '~'}
+  - $$mdi:apple-keyboard-caps$$
   - Ctl+V
   - Ctl+C
   - Ctl+A
