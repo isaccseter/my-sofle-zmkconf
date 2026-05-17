@@ -2565,12 +2565,12 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 91)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;comma_qu…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;Escape</tspan></text>
 </g>
 <g transform="translate(672, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;dot_quot…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;ellipsis…</tspan></text>
 </g>
 <g transform="translate(728, 84)" class="key held alternate keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate side"/>
@@ -2585,7 +2585,7 @@ rect.held, rect.combo.held {
 <g transform="translate(840, 112)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;ellipsis…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;Toen_Esc…</tspan></text>
 </g>
 <g transform="translate(896, 112)" class="key trans keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2636,22 +2636,22 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 147)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;Pair_Quo…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;En_backs…</tspan></text>
 </g>
 <g transform="translate(672, 147)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;Toen_Esc…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;Pair_Quo…</tspan></text>
 </g>
 <g transform="translate(728, 140)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;Escape</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;comma_qu…</tspan></text>
 </g>
 <g transform="translate(784, 147)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;En_backs…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;dot_quot…</tspan></text>
 </g>
 <g transform="translate(840, 168)" class="key trans keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2722,7 +2722,7 @@ rect.held, rect.combo.held {
 <g transform="translate(784, 203)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;Escape_d…</tspan></text>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;Toen_dot</tspan></text>
 </g>
 <g transform="translate(840, 224)" class="key trans keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
