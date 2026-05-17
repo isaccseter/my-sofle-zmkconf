@@ -159,13 +159,13 @@
             layers = <0>;
         };
 
-        C-X {
+        Cut {
             bindings = <&kp LC(X)>;
             key-positions = <2 3>;
             layers = <0 1 2 4 6>;
         };
 
-        Sp.C-X {
+        Sp_Cut {
             bindings = <&kp LC(X)>;
             key-positions = <8 9>;
             layers = <2>;
