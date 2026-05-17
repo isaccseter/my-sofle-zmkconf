@@ -28,16 +28,7 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&sl {
-    release-after-ms = <2000>;
-    lazy;
-    ignore-modifiers;
-};
-
-&sk {
-    quick-release;
-    lazy;
-};
+&sl { release-after-ms = <2000>; };
 
 / {
     scroll_encoder: scroll_encoder {
@@ -190,6 +181,7 @@
         EC_doubleSpace {
             bindings = <&EC_doubleSpace>;
             key-positions = <56 60>;
+            timeout-ms = <300>;
         };
     };
 
@@ -231,7 +223,7 @@
         En_under: En_under {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk CAPSLOCK &kp UNDER>;
+            bindings = <&kp CAPSLOCK &kp UNDER &kp CAPSLOCK>;
             label = "EN_UNDER";
         };
 
@@ -267,32 +259,31 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&sk CAPSLOCK &kp BACKSLASH>,
+                <&kp LC(SPACE)>,
                 <&macro_wait_time 15>,
-                <&sk CAPSLOCK &sl 1>;
+                <&kp BACKSLASH &sl 1>;
 
             label = "ESCAPE_PUNCTUATION";
         };
 
-        Escape_letter: Escape_letter {
+        En_punctuation: Escape_letter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&macro_wait_time 15>, <&kp BACKSLASH>;
-
+            bindings = <&kp BACKSLASH &sl 1>;
             label = "ESCAPE_LETTER";
         };
 
         En_backslash: En_backslash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk CAPSLOCK &kp BACKSLASH>;
+            bindings = <&kp CAPSLOCK &kp BACKSLASH &kp CAPSLOCK>;
             label = "EN_BACKSLASH";
         };
 
         En_grave: En_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk CAPSLOCK &kp GRAVE>;
+            bindings = <&kp CAPSLOCK &kp GRAVE &kp CAPSLOCK>;
             label = "EN_GRAVE";
         };
 
@@ -434,7 +425,7 @@
             bindings = <
 &trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans               &trans              &trans               &trans            &trans
 &trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &comma_quotes     &dot_quotes          &question_quotes    &exclamation_quotes  &ellipsis_quotes  &trans
-&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Pair_Quotes      &Escape_punctuation  &Escape_letter      &En_backslash        &trans            &trans
+&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Pair_Quotes      &Escape_punctuation  &En_punctuation     &En_backslash        &trans            &trans
 &trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave            &En_double_bracket  &Escape_dot          &trans            &trans
 &trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans               &to 0               &trans               &trans
             >;
