@@ -167,12 +167,6 @@
             layers = <0>;
         };
 
-        Cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <2 3>;
-            layers = <0 1 2 4 6>;
-        };
-
         Sp_Cut {
             bindings = <&kp LC(X)>;
             key-positions = <8 9>;
@@ -188,6 +182,18 @@
             bindings = <&EC_doubleSpace>;
             key-positions = <56 60>;
             timeout-ms = <300>;
+        };
+
+        Copy {
+            bindings = <&kp LC(LS(C))>;
+            key-positions = <3 2>;
+            layers = <0>;
+        };
+
+        Paste {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <3 4>;
+            layers = <0>;
         };
     };
 
@@ -355,11 +361,11 @@
 
         Default {
             bindings = <
-&kp LC(Z)        &kp CAPSLOCK   &kp LC(V)        &kp LC(C)          &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT       &kp RIGHT           &kp BACKSPACE         &kp END    &kp C_PLAY_PAUSE
+&kp LC(Z)        &kp LC(X)      &kp LC(V)        &kp LC(C)          &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT       &kp RIGHT           &kp BACKSPACE         &kp END    &kp C_PLAY_PAUSE
 &kp ESCAPE       &kp Q          &Llt 6 W         &kp E              &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &kp U          &Rlt 6 I            &kp O                 &kp P      &kp SLASH
 &mt LA(TAB) TAB  &kp A          &Llt 1 S         &Lmt LEFT_SHIFT D  &Llt 2 F      &kp G         &kp LEFT_ARROW   &kp H     &Rlt 3 J       &Rmt RIGHT_SHIFT K  &Rlt 1 L              &kp ENTER  &minus_caret
-&kp COLON        &kp Z          &Lmt LEFT_ALT X  &Llt 5 C           &Lmt LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RCTRL M   &comma_Rlt 4 0      &dot_Rmt RIGHT_ALT 0  &kp SQT    &kp BACKSLASH
-&kp C_MUTE       &kp PAGE_DOWN  &kp PAGE_UP      &kp LCTRL          &kp SPACE     &sl 5         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &kp LC(END)         &kp UNDER             &kp GRAVE
+&kp COLON        &kp Z          &Lmt LEFT_ALT X  &Llt 5 C           &Lmt LCTRL V  &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RCTRL M   &comma_Rlt 4 0      &dot_Rmt RIGHT_ALT 0  &kp SQT    &kp CAPSLOCK
+&kp C_MUTE       &kp PAGE_DOWN  &kp PAGE_UP      &kp LCTRL          &kp SPACE     &sl 5         &kp ENTER        &kp LGUI  &kp LC(SPACE)  &kp LC(END)         &kp BACKSLASH         &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -370,7 +376,7 @@
         Sym {
             bindings = <
 &trans  &trans     &trans         &trans            &trans             &trans           &trans    &trans       &trans                &trans                 &trans         &trans             &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp BSLH  &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &Pair_Quotes       &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp BSLH  &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp UNDER          &trans
 &trans  &kp EXCL   &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &trans    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &trans    &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SQT            &trans
 &trans  &trans     &trans         &trans            &trans             &trans           &trans    &trans       &trans                &to 0                  &trans         &trans
