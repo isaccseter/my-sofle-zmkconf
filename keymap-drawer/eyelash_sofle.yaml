@@ -16,14 +16,14 @@ layers:
   - PLAY PAUSE
   - $$mdi:keyboard-esc$$
   - Q
-  - W
+  - {t: W, h: 快符层和keypad层}
   - E
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
   - U
-  - I
+  - {t: I, h: 快符层和keypad层}
   - O
   - P
   - {t: /, s: '?'}
@@ -331,7 +331,7 @@ layers:
   - {t: 导航层, h: toggle}
   - {t: 数字层, h: toggle}
   - {t: 功能区, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 快符层和keypad层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -406,16 +406,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 9
+  - {t: KP 9, type: held}
   - KP 8
   - KP 7
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&comma_quotes'
+  - '&dot_quotes'
+  - {t: '&question_quotes', type: held alternate}
+  - '&exclamation_quotes'
+  - '&ellipsis_quotes'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -424,10 +424,10 @@ layers:
   - KP 4
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&Pair_Quotes'
+  - '&Escape_punctuation'
+  - '&Escape_letter'
+  - '&En_backslash'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -437,6 +437,10 @@ layers:
   - KP 1
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '&En_triple_grave'
+  - '&En_grave'
+  - '&En_double_bracket'
+  - '&Escape_dot'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -448,11 +452,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
