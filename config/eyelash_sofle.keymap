@@ -77,6 +77,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51 60 61 62 63 59>;
+        hold-trigger-on-release;
     };
 
     Rlt: Rlt {
@@ -90,6 +91,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
+        hold-trigger-on-release;
     };
 
     Lmt: Lmt {
@@ -103,6 +105,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51 60 61 62 63 59>;
+        hold-trigger-on-release;
     };
 
     Rmt: Rmt {
@@ -116,6 +119,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
+        hold-trigger-on-release;
     };
 
     dot_Rmt: dot_Rmt {
@@ -129,6 +133,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
+        hold-trigger-on-release;
     };
 
     comma_Rlt: comma_Rlt {
@@ -142,6 +147,7 @@
         require-prior-idle-ms = <125>;
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
+        hold-trigger-on-release;
     };
 
     behaviors {
@@ -255,7 +261,7 @@
             label = "EC_DOUBLESPACE";
         };
 
-        Escape_punctuation: Escape_punctuation {
+        Toen_Escape: Escape_punctuation {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -266,7 +272,7 @@
             label = "ESCAPE_PUNCTUATION";
         };
 
-        En_punctuation: Escape_letter {
+        Escape: Escape_letter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH &sl 1>;
@@ -423,11 +429,11 @@
 
         Flash_Keypad {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans               &trans              &trans               &trans            &trans
-&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &comma_quotes     &dot_quotes          &question_quotes    &exclamation_quotes  &ellipsis_quotes  &trans
-&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Pair_Quotes      &Escape_punctuation  &En_punctuation     &En_backslash        &trans            &trans
-&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave            &En_double_bracket  &Escape_dot          &trans            &trans
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans               &to 0               &trans               &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans        &trans              &trans               &trans            &trans
+&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &comma_quotes     &dot_quotes   &question_quotes    &exclamation_quotes  &ellipsis_quotes  &trans
+&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Pair_Quotes      &Toen_Escape  &Escape             &En_backslash        &trans            &trans
+&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave     &En_double_bracket  &Escape_dot          &trans            &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans        &to 0               &trans               &trans
             >;
 
             label = "快符层和keypad层";
