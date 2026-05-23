@@ -441,7 +441,7 @@ layers:
   - Sft+Ins
   - '&Pair_Quotes'
   - '&Toen_dot'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&triple_grave'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
