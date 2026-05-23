@@ -345,6 +345,13 @@
             bindings = <&kp END &kp RETURN>;
             label = "HOME_RETURN";
         };
+
+        triple_grave: triple_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "TRIPLE_GRAVE";
+        };
     };
 
     keymap {
@@ -426,10 +433,10 @@
 
         Flash_Keypad {
             bindings = <
-&none  &none          &kp E            &kp COMMA        &kp PERCENT      &kp KP_NUMLOCK     &none  &none           &none             &none             &none                &none         &none
-&none  &kp KP_DIVIDE  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_ASTERISK    &none  &Escape         &ellipsis_quotes  &question_quotes  &exclamation_quotes  &Toen_Escape  &none
-&none  &kp KP_MINUS   &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &kp KP_N0          &none  &Return_quotes  &colon_quotes     &comma_quotes     &dot_quotes          &End_Return   &none
-&none  &kp X          &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &kp KP_PLUS        &none  &kp LC(INS)     &kp LS(INSERT)    &Pair_Quotes      &Toen_dot            &none         &none
+&none  &none          &kp E            &kp COMMA        &kp PERCENT      &kp KP_NUMLOCK     &none  &none           &none             &none             &none                &none          &none
+&none  &kp KP_DIVIDE  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_ASTERISK    &none  &Escape         &ellipsis_quotes  &question_quotes  &exclamation_quotes  &Toen_Escape   &none
+&none  &kp KP_MINUS   &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &kp KP_N0          &none  &Return_quotes  &colon_quotes     &comma_quotes     &dot_quotes          &End_Return    &none
+&none  &kp X          &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &kp KP_PLUS        &none  &kp LC(INS)     &kp LS(INSERT)    &Pair_Quotes      &Toen_dot            &triple_grave  &none
 &none  &none          &none            &none            &none            &none              &none  &none           &none             &to 0             &none                &none
             >;
 
