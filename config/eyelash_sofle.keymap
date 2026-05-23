@@ -156,8 +156,8 @@
     combos {
         compatible = "zmk,combos";
 
-        En_under {
-            bindings = <&En_under>;
+        under {
+            bindings = <&kp UNDER>;
             key-positions = <48 49>;
         };
 
@@ -232,13 +232,6 @@
             label = "DOUBLE_RETURN";
         };
 
-        En_under: En_under {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp UNDER &kp CAPSLOCK>;
-            label = "EN_UNDER";
-        };
-
         Rename_CA_CC: Rename_CA_CC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -285,34 +278,6 @@
             label = "ESCAPE_LETTER";
         };
 
-        En_backslash: En_backslash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp BACKSLASH &kp CAPSLOCK>;
-            label = "EN_BACKSLASH";
-        };
-
-        En_grave: En_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp GRAVE &kp CAPSLOCK>;
-            label = "EN_GRAVE";
-        };
-
-        En_triple_grave: En_triple_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp GRAVE &kp GRAVE &kp GRAVE &kp CAPSLOCK>;
-            label = "EN_TRIPLE_GRAVE";
-        };
-
-        En_double_bracket: En_double_bracket {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp LEFT_BRACKET &kp LEFT_BRACKET &kp CAPSLOCK>;
-            label = "EN_DOUBLE_BRACKET";
-        };
-
         Toen_dot: En_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -353,6 +318,27 @@
             #binding-cells = <0>;
             bindings = <&kp CARET &kp DOUBLE_QUOTES>;
             label = "ELLIPSIS_QUOTES";
+        };
+
+        Return_quotes: Return_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp DQT>;
+            label = "RETURN_QUOTES";
+        };
+
+        colon_quotes: semicolon_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp DQT>;
+            label = "SEMICOLON_QUOTES";
+        };
+
+        home_Return: home_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp RETURN>;
+            label = "HOME_RETURN";
         };
     };
 
@@ -411,11 +397,11 @@
 
         Fkey {
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans                &trans  &trans  &trans         &trans  &trans     &trans  &trans
-&trans  &trans   &kp F9  &kp F8  &kp F7  &kp F12               &trans  &trans  &trans         &trans  &trans     &trans  &trans
-&trans  &kp F10  &kp F6  &kp F5  &kp F4  &kp LS(LC(LA(F8)))    &trans  &trans  &kp LS(LCTRL)  &trans  &kp LALT   &trans  &trans
-&trans  &trans   &kp F3  &kp F2  &kp F1  &kp F11               &trans  &trans  &kp LCTRL      &trans  &kp LSHFT  &trans  &trans
-&trans  &trans   &trans  &trans  &trans  &trans                &trans  &trans  &trans         &to 0   &trans     &trans
+&trans  &kp SCROLLLOCK  &kp INS  &kp SYSREQ  &kp PRINTSCREEN  &trans                &trans  &trans  &trans         &trans  &trans     &trans  &trans
+&trans  &trans          &kp F9   &kp F8      &kp F7           &kp F12               &trans  &trans  &trans         &trans  &trans     &trans  &trans
+&trans  &kp F10         &kp F6   &kp F5      &kp F4           &kp LS(LC(LA(F8)))    &trans  &trans  &kp LS(LCTRL)  &trans  &kp LALT   &trans  &trans
+&trans  &trans          &kp F3   &kp F2      &kp F1           &kp F11               &trans  &trans  &kp LCTRL      &trans  &kp LSHFT  &trans  &trans
+&trans  &trans          &trans   &trans      &trans           &trans                &trans  &trans  &trans         &to 0   &trans     &trans
             >;
 
             label = "功能区";
@@ -427,7 +413,7 @@
 &trans          &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &Rename_CA       &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
 &kp LEFT_ALT    &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &Rename_CA_CC    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
 &kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &soft_off
-&trans          &trans          &trans          &trans          &trans          &trans           &trans  &trans             &trans          &to 0           &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans           &trans  &tog 7             &trans          &to 0           &trans          &trans
             >;
 
             label = "窗口功能";
@@ -435,14 +421,26 @@
 
         Flash_Keypad {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans            &trans              &trans               &trans        &trans
-&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &Escape           &ellipsis_quotes  &question_quotes    &exclamation_quotes  &Toen_Escape  &trans
-&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &En_backslash     &Pair_Quotes      &comma_quotes       &dot_quotes          &trans        &trans
-&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &En_triple_grave  &En_grave         &En_double_bracket  &Toen_dot            &trans        &trans
-&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans            &trans            &to 0               &trans               &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans          &trans            &trans            &trans               &trans        &trans
+&trans  &trans  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &trans    &trans  &Escape         &ellipsis_quotes  &question_quotes  &exclamation_quotes  &Toen_Escape  &trans
+&trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4  &trans    &trans  &Return_quotes  &colon_quotes     &comma_quotes     &dot_quotes          &home_Return  &trans
+&trans  &trans  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1  &trans    &trans  &kp LC(INS)     &kp LS(INSERT)    &Pair_Quotes      &Toen_dot            &trans        &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans  &trans          &trans            &to 0             &trans               &trans
             >;
 
             label = "快符层和keypad层";
+        };
+
+        Empty {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SPACE  &to 0   &trans  &trans
+            >;
+
+            label = "空层，仅作双空格用";
         };
     };
 };
