@@ -159,6 +159,7 @@
         under {
             bindings = <&kp UNDER>;
             key-positions = <48 49>;
+            timeout-ms = <300>;
         };
 
         Semicolon_Return {
@@ -199,6 +200,11 @@
         Undo {
             bindings = <&kp LC(Z)>;
             key-positions = <13 14>;
+        };
+
+        double_click {
+            bindings = <&double_click>;
+            key-positions = <53 54>;
         };
     };
 
@@ -351,6 +357,13 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "TRIPLE_GRAVE";
+        };
+
+        double_click: double_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &mkp LCLK>;
+            label = "DOUBLE_CLICK";
         };
     };
 
