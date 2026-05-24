@@ -478,3 +478,9 @@ combos:
   k: Ctl+Z
 - p: [53, 54]
   k: '&double_click'
+- p: [55, 41]
+  k: $$mdi:pan-down$$
+  l: [默认层]
+- p: [55, 42]
+  k: $$mdi:pan-up$$
+  l: [默认层]
