@@ -14,18 +14,6 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
-};
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
-};
-
 &soft_off { hold-time-ms = <2000>; };
 
 &sl { release-after-ms = <2000>; };
@@ -205,6 +193,22 @@
         double_click {
             bindings = <&double_click>;
             key-positions = <53 54>;
+        };
+
+        scroll_down {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <55 41>;
+            layers = <0>;
+            timeout-ms = <450>;
+            slow-release;
+        };
+
+        scroll_up {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <55 42>;
+            timeout-ms = <450>;
+            layers = <0>;
+            slow-release;
         };
     };
 
