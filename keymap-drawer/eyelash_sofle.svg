@@ -672,6 +672,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
 </g>
+<g class="combo combopos-7">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 388)" class="layer-符号层">
@@ -1027,6 +1031,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 776)" class="layer-导航层">
@@ -1378,6 +1386,10 @@ rect.held, rect.combo.held {
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
 </g>
 </g>
 </g>
@@ -1737,6 +1749,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1553)" class="layer-功能区">
@@ -2080,6 +2096,10 @@ rect.held, rect.combo.held {
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
 </g>
 </g>
 </g>
@@ -2486,6 +2506,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
 </g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2329)" class="layer-快符层和keypad层">
@@ -2865,6 +2889,10 @@ rect.held, rect.combo.held {
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="42" y="99" width="28" height="26" class="combo"/>
 <text x="56" y="112" class="combo tap">Ctl+Z</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="154" y="242" width="28" height="26" class="combo"/>
+<text x="168" y="256" class="combo tap"><tspan style="font-size: 60%">&amp;double_c…</tspan></text>
 </g>
 </g>
 </g>

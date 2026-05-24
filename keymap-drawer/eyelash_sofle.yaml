@@ -476,3 +476,5 @@ combos:
   l: [默认层]
 - p: [13, 14]
   k: Ctl+Z
+- p: [53, 54]
+  k: '&double_click'
