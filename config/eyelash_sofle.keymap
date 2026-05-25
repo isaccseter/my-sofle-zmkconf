@@ -190,25 +190,9 @@
             key-positions = <13 14>;
         };
 
-        double_click {
-            bindings = <&double_click>;
-            key-positions = <53 54>;
-        };
-
-        scroll_down {
-            bindings = <&msc SCRL_DOWN>;
-            key-positions = <55 41>;
-            layers = <0>;
-            timeout-ms = <450>;
-            slow-release;
-        };
-
-        scroll_up {
-            bindings = <&msc SCRL_UP>;
-            key-positions = <55 42>;
-            timeout-ms = <450>;
-            layers = <0>;
-            slow-release;
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <56 57>;
         };
     };
 
@@ -441,7 +425,7 @@
 &trans          &tog 1          &tog 2          &tog 3          &tog 4          &tog 6           &trans  &trans             &trans          &trans          &trans          &trans             &trans
 &trans          &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &Rename_CA       &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
 &kp LEFT_ALT    &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &Rename_CA_CC    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
-&kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &soft_off
+&kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
 &trans          &trans          &trans          &trans          &trans          &trans           &trans  &trans             &trans          &to 0           &trans          &trans
             >;
 
