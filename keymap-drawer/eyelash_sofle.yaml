@@ -377,7 +377,7 @@ layers:
   - {t: Gui+Ctl+8, s: Gui+Ctl+*}
   - {t: Gui+Ctl+9, s: Gui+Ctl+(}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&soft_off'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -476,11 +476,5 @@ combos:
   l: [默认层]
 - p: [13, 14]
   k: Ctl+Z
-- p: [53, 54]
-  k: '&double_click'
-- p: [55, 41]
-  k: $$mdi:pan-down$$
-  l: [默认层]
-- p: [55, 42]
-  k: $$mdi:pan-up$$
-  l: [默认层]
+- p: [56, 57]
+  k: '&soft_off'
