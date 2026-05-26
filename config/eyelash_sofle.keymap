@@ -121,12 +121,6 @@
             key-positions = <47 48>;
         };
 
-        EC_doubleSpace {
-            bindings = <&EC_doubleSpace>;
-            key-positions = <56 60>;
-            timeout-ms = <300>;
-        };
-
         Copy {
             bindings = <&kp LC(LS(C))>;
             key-positions = <3 2>;
@@ -147,6 +141,11 @@
         soft_off {
             bindings = <&soft_off>;
             key-positions = <56 57>;
+        };
+
+        Nav_mouse {
+            bindings = <&tog 2>;
+            key-positions = <0 1>;
         };
     };
 
@@ -299,13 +298,6 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "TRIPLE_GRAVE";
-        };
-
-        double_click: double_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK &mkp LCLK>;
-            label = "DOUBLE_CLICK";
         };
     };
 
