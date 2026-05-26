@@ -147,6 +147,11 @@
             bindings = <&tog 2>;
             key-positions = <0 1>;
         };
+
+        Nav_mouse2 {
+            bindings = <&tog 2>;
+            key-positions = <53 54>;
+        };
     };
 
     macros {
@@ -307,7 +312,7 @@
         Default {
             bindings = <
 &mkp LCLK        &kp LC(X)       &kp LC(V)                &kp LC(C)  &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BACKSPACE               &kp END       &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q           &Llt 6 W                 &Llt 1 E   &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &Rlt 6 U      &Rlt 1 I      &Rlt 6 O                    &kp P         &kp SLASH
+&mt LA(TAB) TAB  &kp Q           &Llt 6 W                 &Llt 1 E   &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &Rlt 6 U      &Rlt 1 I      &Rlt 5 O                    &kp P         &kp SLASH
 &kp LC(SPACE)    &kp A           &Lmt LSHIFT S            &Llt 2 D   &Lmt LCTRL F  &kp G         &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L               &kp ENTER     &kp MINUS
 &kp ESCAPE       &kp Z           &Lmt LA(LEFT_CONTROL) X  &Llt 5 C   &Lmt LALT V   &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 4 COMMA  &Rmt RA(RIGHT_CONTROL) DOT  &quote_caret  &kp CAPSLOCK
 &kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP             &kp LCTRL  &kp SPACE     &sl 6         &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH               &kp GRAVE
@@ -320,11 +325,11 @@
 
         Sym {
             bindings = <
-&trans  &trans     &trans               &trans            &trans                  &trans           &trans    &trans       &trans                      &trans                 &trans                &trans             &trans
-&trans  &kp GRAVE  &kp LESS_THAN        &kp GREATER_THAN  &kp MINUS               &kp PIPE         &kp BSLH  &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DOLLAR            &kp UNDER          &trans
-&trans  &kp EXCL   &mt LSHIFT ASTERISK  &kp SLASH         &mt LCTRL EQUAL         &kp AMPERSAND    &trans    &kp HASH     &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE  &mt LA(LCTRL) PLUS   &kp LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp PERCENT      &trans    &kp AT_SIGN  &mt RALT COLON              &kp COMMA              &mt RA(RCTRL) PERIOD  &kp SQT            &trans
-&trans  &trans     &trans               &trans            &trans                  &trans           &trans    &trans       &trans                      &to 0                  &trans                &trans
+&trans  &trans     &trans               &trans            &trans                  &trans           &trans    &trans       &trans                      &trans                 &trans                     &trans             &trans
+&trans  &kp GRAVE  &kp LESS_THAN        &kp GREATER_THAN  &kp MINUS               &kp PIPE         &kp BSLH  &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DOLLAR                 &kp UNDER          &trans
+&trans  &kp EXCL   &mt LSHIFT ASTERISK  &kp SLASH         &mt LCTRL EQUAL         &kp AMPERSAND    &trans    &kp HASH     &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMICOLON       &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE  &mt LA(LCTRL) PLUS   &kp LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp PERCENT      &trans    &kp AT_SIGN  &mt RALT COLON              &kp QUESTION           &mt RA(RCTRL) EXCLAMATION  &kp SQT            &trans
+&trans  &trans     &trans               &trans            &trans                  &trans           &trans    &trans       &trans                      &to 0                  &trans                     &trans
             >;
 
             label = "符号层";
