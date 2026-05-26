@@ -326,7 +326,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   窗口功能:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB TOG
   - {t: 符号层, h: toggle}
   - {t: 导航层, h: toggle}
   - {t: 数字层, h: toggle}
@@ -339,12 +339,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - RGB EFF
+  - {t: Gui+Ctl+9, s: Gui+Ctl+(}
   - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - F5
-  - '&Rename_CA'
+  - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-high$$
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
@@ -353,11 +353,11 @@ layers:
   - RGB TOG
   - RGB EFF
   - $$mdi:apple-keyboard-option$$
-  - {t: Gui+Ctl+1, s: Gui+Ctl+!}
-  - {t: Gui+Ctl+2, s: Gui+Ctl+@}
-  - {t: Gui+Ctl+3, s: Gui+Ctl+#}
-  - {t: Gui+Ctl+4, s: Gui+Ctl+$}
-  - '&Rename_CA_CC'
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: Ctl+Gui+1, s: Ctl+Gui+!}
+  - {t: Ctl+Gui+2, s: Ctl+Gui+@}
+  - {t: Ctl+Gui+3, s: Ctl+Gui+#}
+  - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-low$$
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
@@ -366,11 +366,11 @@ layers:
   - EP OFF
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - BT CLR ALL
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held alternate}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&Rename_CA_CC'
+  - {t: Ctl+Gui+4, s: Ctl+Gui+$}
+  - {t: Ctl+Gui+5, s: Ctl+Gui+%, type: held alternate}
+  - {t: Ctl+Gui+6, s: Ctl+Gui+^}
+  - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: Gui+Ctl+7, s: Gui+Ctl+&}
@@ -379,10 +379,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
