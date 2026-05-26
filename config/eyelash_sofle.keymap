@@ -202,14 +202,6 @@
             label = "RENAME_CA_CC";
         };
 
-        Rename_CA: Rename_CA {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F2>, <&macro_wait_time 15>, <&kp LC(A)>;
-
-            label = "RENAME_CA";
-        };
-
         EC_doubleSpace: EC_doubleSpace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -373,11 +365,11 @@
 
         WinApp {
             bindings = <
-&trans          &tog 1          &tog 2          &tog 3          &tog 5          &tog 6           &trans  &trans             &trans          &trans          &trans          &trans             &trans
-&trans          &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &Rename_CA       &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
-&kp LEFT_ALT    &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &Rename_CA_CC    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
-&kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
-&trans          &trans          &trans          &trans          &trans          &trans           &trans  &trans             &trans          &to 0           &trans          &trans
+&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 5          &tog 6               &trans  &trans             &trans          &trans          &trans          &trans             &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
+&kp LEFT_ALT     &kp LG(D)       &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))  &kp C_VOLUME_DOWN    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
+&kp LEFT_SHIFT   &Rename_CA_CC   &kp LC(LG(N4))  &kp LC(LG(N5))  &kp LC(LG(N6))  &kp C_MUTE           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans          &to 0           &trans          &trans
             >;
 
             label = "窗口功能";
