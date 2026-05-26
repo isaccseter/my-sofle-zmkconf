@@ -314,11 +314,11 @@
 
         Default {
             bindings = <
-&kp LEFT_SHIFT   &kp LC(X)  &kp LC(V)                &kp LC(C)  &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BACKSPACE               &kp END       &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q      &Llt 6 W                 &Llt 1 E   &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &Rlt 6 O                    &kp P         &kp SLASH
-&kp LC(SPACE)    &kp A      &Lmt LSHIFT S            &Llt 2 D   &Lmt LCTRL F  &kp G         &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L               &kp ENTER     &kp MINUS
-&kp ESCAPE       &kp Z      &Lmt LA(LEFT_CONTROL) X  &Llt 5 C   &Lmt LALT V   &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 5 COMMA  &Rmt RA(RIGHT_CONTROL) DOT  &quote_caret  &kp CAPSLOCK
-&kp C_MUTE       &mkp LCLK  &mkp RCLK                &kp LCTRL  &kp SPACE     &sl 5         &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH               &kp GRAVE
+&mkp LCLK        &kp LC(X)       &kp LC(V)                &kp LC(C)  &kp LC(A)     &kp DELETE    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BACKSPACE               &kp END       &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 6 W                 &Llt 1 E   &kp R         &kp T         &kp DOWN_ARROW   &kp Y     &Rlt 6 U      &Rlt 1 I      &Rlt 6 O                    &kp P         &kp SLASH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S            &Llt 2 D   &Lmt LCTRL F  &kp G         &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L               &kp ENTER     &kp MINUS
+&kp ESCAPE       &kp Z           &Lmt LA(LEFT_CONTROL) X  &Llt 6 C   &Lmt LALT V   &kp B         &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 5 COMMA  &Rmt RA(RIGHT_CONTROL) DOT  &quote_caret  &kp CAPSLOCK
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP             &kp LCTRL  &kp SPACE     &sl 6         &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH               &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -340,11 +340,11 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans         &trans  &trans     &trans     &trans  &sel_line  &kp LC(V)         &kp LC(C)          &trans             &trans      &trans
-&trans  &trans  &trans         &trans  &trans     &trans     &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)   &trans
-&trans  &trans  &kp LSHFT      &trans  &kp LCTRL  &kp DEL    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans      &trans
-&trans  &trans  &kp LA(LCTRL)  &trans  &kp LALT   &trans     &trans  &kp LC(Z)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp K_APPLICATION  &kp INSERT  &trans
-&trans  &trans  &trans         &trans  &trans     &trans     &trans  &trans     &trans            &to 0              &trans             &trans
+&trans  &trans  &trans          &trans        &trans     &trans     &trans  &sel_line  &kp LC(V)         &kp LC(C)          &trans             &trans      &trans
+&trans  &trans  &msc SCRL_DOWN  &msc SCRL_UP  &mkp MCLK  &trans     &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)   &trans
+&trans  &trans  &kp LSHFT       &mkp LCLK     &kp LCTRL  &kp DEL    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans      &trans
+&trans  &trans  &kp LA(LCTRL)   &mkp RCLK     &kp LALT   &trans     &trans  &kp LC(Z)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp K_APPLICATION  &kp INSERT  &trans
+&trans  &trans  &trans          &trans        &trans     &trans     &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
             label = "导航层";
@@ -364,11 +364,11 @@
 
         Fkey {
             bindings = <
-&trans  &kp SCROLLLOCK  &kp INS  &kp SYSREQ  &kp PRINTSCREEN  &trans                &trans  &trans  &trans         &trans  &trans     &trans  &trans
-&trans  &trans          &kp F9   &kp F8      &kp F7           &kp F12               &trans  &trans  &trans         &trans  &trans     &trans  &trans
-&trans  &kp F10         &kp F6   &kp F5      &kp F4           &kp LS(LC(LA(F8)))    &trans  &trans  &kp LS(LCTRL)  &trans  &kp LALT   &trans  &trans
-&trans  &trans          &kp F3   &kp F2      &kp F1           &kp F11               &trans  &trans  &kp LCTRL      &trans  &kp LSHFT  &trans  &trans
-&trans  &trans          &trans   &trans      &trans           &trans                &trans  &trans  &trans         &to 0   &trans     &trans
+&trans  &kp SCROLLLOCK  &kp INS  &kp SYSREQ  &kp PRINTSCREEN  &trans                &trans  &trans  &trans        &trans  &trans        &trans  &trans
+&trans  &trans          &kp F9   &kp F8      &kp F7           &kp F12               &trans  &trans  &trans        &trans  &trans        &trans  &trans
+&trans  &kp F10         &kp F6   &kp F5      &kp F4           &kp LS(LC(LA(F8)))    &trans  &trans  &kp LEFT_ALT  &trans  &kp LC(LALT)  &trans  &trans
+&trans  &trans          &kp F3   &kp F2      &kp F1           &kp F11               &trans  &trans  &kp LCTRL     &trans  &kp LSHFT     &trans  &trans
+&trans  &trans          &trans   &trans      &trans           &trans                &trans  &trans  &trans        &to 0   &trans        &trans
             >;
 
             label = "功能区";
@@ -376,7 +376,7 @@
 
         WinApp {
             bindings = <
-&trans          &tog 1          &tog 2          &tog 3          &tog 4          &tog 6           &trans  &trans             &trans          &trans          &trans          &trans             &trans
+&trans          &tog 1          &tog 2          &tog 3          &tog 5          &tog 6           &trans  &trans             &trans          &trans          &trans          &trans             &trans
 &trans          &kp LG(D)       &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &Rename_CA       &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
 &kp LEFT_ALT    &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &Rename_CA_CC    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
 &kp LEFT_SHIFT  &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
