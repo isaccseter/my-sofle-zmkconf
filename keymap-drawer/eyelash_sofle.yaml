@@ -466,8 +466,6 @@ combos:
   l: [导航层]
 - p: [47, 48]
   k: '&Double_Return'
-- p: [56, 60]
-  k: '&EC_doubleSpace'
 - p: [3, 2]
   k: Ctl+Sft+C
   l: [默认层]
@@ -478,3 +476,5 @@ combos:
   k: Ctl+Z
 - p: [56, 57]
   k: '&soft_off'
+- p: [0, 1]
+  k: {t: 导航层, h: toggle}
