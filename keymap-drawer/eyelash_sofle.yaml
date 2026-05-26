@@ -16,15 +16,15 @@ layers:
   - PLAY PAUSE
   - {t: '$$mdi:keyboard-tab$$', h: 'Alt+$$mdi:keyboard-tab$$'}
   - Q
-  - {t: W, h: 快符层和keypad层}
+  - {t: W, h: 数字小键盘_快符}
   - {t: E, h: 符号层}
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
-  - {t: U, h: 快符层和keypad层}
+  - {t: U, h: 数字小键盘_快符}
   - {t: I, h: 符号层}
-  - {t: O, h: 窗口功能}
+  - {t: O, h: 系统功能_快速导航}
   - P
   - {t: /, s: '?'}
   - Ctl+$$mdi:keyboard-space$$
@@ -43,7 +43,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - Z
   - {t: X, h: 'Alt+$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: 窗口功能}
+  - {t: C, h: 系统功能_快速导航}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - $$mdi:arrow-right-bold$$
@@ -58,7 +58,7 @@ layers:
   - $$mdi:pan-up$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
-  - {t: 快符层和keypad层, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: 数字小键盘_快符, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LGUI
   - $$mdi:keyboard-space$$
@@ -325,13 +325,13 @@ layers:
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  窗口功能:
+  系统功能_快速导航:
   - RGB TOG
   - {t: 符号层, h: toggle}
   - {t: 导航层, h: toggle}
   - {t: 数字层, h: toggle}
-  - {t: 窗口功能, h: toggle}
-  - {t: 快符层和keypad层, h: toggle}
+  - {t: 系统功能_快速导航, h: toggle}
+  - {t: 数字小键盘_快符, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -346,10 +346,10 @@ layers:
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-high$$
-  - {t: Gui+Ctl+4, s: Gui+Ctl+$}
-  - {t: Gui+Ctl+5, s: Gui+Ctl+%}
-  - {t: Gui+Ctl+6, s: Gui+Ctl+^, type: held}
+  - PG UP
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - {t: END, type: held}
   - RGB TOG
   - RGB EFF
   - $$mdi:apple-keyboard-option$$
@@ -359,10 +359,10 @@ layers:
   - {t: Ctl+Gui+3, s: Ctl+Gui+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-low$$
-  - {t: Gui+Ctl+1, s: Gui+Ctl+!}
-  - {t: Gui+Ctl+2, s: Gui+Ctl+@}
-  - {t: Gui+Ctl+3, s: Gui+Ctl+#}
+  - PG DN
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - EP OFF
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
@@ -390,7 +390,7 @@ layers:
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  快符层和keypad层:
+  数字小键盘_快符:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - E

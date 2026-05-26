@@ -371,8 +371,8 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">W</text>
-<a href="#keypad">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 60%">快符层和keypa…</tspan></text>
+<a href="#x_x">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 75%">数字小键盘_快符</tspan></text>
 </a></g>
 <g transform="translate(196, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -405,8 +405,8 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">U</text>
-<a href="#keypad">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 60%">快符层和keypa…</tspan></text>
+<a href="#x_x">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 75%">数字小键盘_快符</tspan></text>
 </a></g>
 <g transform="translate(728, 84)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -420,7 +420,7 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">O</text>
 <a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator">窗口功能</text>
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 67%">系统功能_快速导航</tspan></text>
 </a></g>
 <g transform="translate(840, 112)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -528,7 +528,7 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">C</text>
 <a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator">窗口功能</text>
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 67%">系统功能_快速导航</tspan></text>
 </a></g>
 <g transform="translate(252, 203)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -611,8 +611,8 @@ rect.held, rect.combo.held {
 <g transform="translate(389, 294) rotate(30.0)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#keypad">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 60%">快符层和keypa…</tspan></text>
+<a href="#x_x">
+<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 75%">数字小键盘_快符</tspan></text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g transform="translate(462, 91)" class="key enter keypos-58">
@@ -2152,8 +2152,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1941)" class="layer-窗口功能">
-<text x="0" y="28" class="label" id="x_x">窗口功能:</text>
+<g transform="translate(40, 1941)" class="layer-系统功能_快速导航">
+<text x="0" y="28" class="label" id="x_x">系统功能_快速导航:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2187,14 +2187,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#x_x">
-<text x="0" y="-4" class="key tap layer-activator">窗口功能</text>
+<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 67%">系统功能_快速导航</tspan></text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(308, 35)" class="key keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#keypad">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 60%">快符层和keypa…</tspan></text>
+<a href="#x_x">
+<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 75%">数字小键盘_快符</tspan></text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(462, 35)" class="key trans keypos-6">
@@ -2275,31 +2275,24 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 91)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:volume-high" xlink:href="#mdi:volume-high" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:volume-high"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">PG</tspan><tspan x="0" dy="1.2em">UP</tspan>
+</text>
 </g>
 <g transform="translate(672, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+4</tspan>
-</text>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 67%">Gui+Ctl+$</tspan></text>
+<text x="0" y="-4" class="key tap">HOME</text>
 </g>
 <g transform="translate(728, 84)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+5</tspan>
-</text>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 67%">Gui+Ctl+%</tspan></text>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-up-bold"/>
 </g>
 <g transform="translate(784, 91)" class="key held keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
-<text x="0" y="-4" class="key held tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+6</tspan>
-</text>
-<text x="0" y="-24" class="key held shifted"><tspan style="font-size: 67%">Gui+Ctl+^</tspan></text>
+<text x="0" y="-4" class="key held tap">END</text>
 </g>
 <g transform="translate(840, 112)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2363,31 +2356,24 @@ rect.held, rect.combo.held {
 <g transform="translate(616, 147)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:volume-low" xlink:href="#mdi:volume-low" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:volume-low"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">PG</tspan><tspan x="0" dy="1.2em">DN</tspan>
+</text>
 </g>
 <g transform="translate(672, 147)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+1</tspan>
-</text>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 67%">Gui+Ctl+!</tspan></text>
+<use href="#mdi:arrow-left-bold" xlink:href="#mdi:arrow-left-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-left-bold"/>
 </g>
 <g transform="translate(728, 140)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+2</tspan>
-</text>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 67%">Gui+Ctl+@</tspan></text>
+<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-down-bold"/>
 </g>
 <g transform="translate(784, 147)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.3em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+3</tspan>
-</text>
-<text x="0" y="-24" class="key shifted"><tspan style="font-size: 67%">Gui+Ctl+#</tspan></text>
+<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-right-bold"/>
 </g>
 <g transform="translate(840, 168)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -2581,8 +2567,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 2329)" class="layer-快符层和keypad层">
-<text x="0" y="28" class="label" id="keypad">快符层和keypad层:</text>
+<g transform="translate(40, 2329)" class="layer-数字小键盘_快符">
+<text x="0" y="28" class="label" id="x_x">数字小键盘_快符:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
