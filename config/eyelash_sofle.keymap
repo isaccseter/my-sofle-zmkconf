@@ -331,7 +331,7 @@
             bindings = <
 &trans  &trans  &trans          &trans        &trans     &trans     &trans  &sel_line  &kp LC(V)         &kp LC(C)          &trans             &trans      &trans
 &trans  &trans  &msc SCRL_DOWN  &msc SCRL_UP  &mkp MCLK  &trans     &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)   &trans
-&trans  &trans  &kp LSHFT       &mkp LCLK     &kp LCTRL  &kp DEL    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans      &trans
+&trans  &trans  &kp LSHIFT      &mkp LCLK     &kp LCTRL  &kp DEL    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans      &trans
 &trans  &trans  &kp LA(LCTRL)   &mkp RCLK     &kp LALT   &trans     &trans  &kp LC(Z)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp K_APPLICATION  &kp INSERT  &trans
 &trans  &trans  &trans          &trans        &trans     &trans     &trans  &trans     &trans            &to 0              &trans             &trans
             >;
@@ -343,7 +343,7 @@
             bindings = <
 &trans  &trans     &kp E   &kp COMMA  &kp PERCENT  &trans      &trans  &trans   &trans     &trans  &trans         &trans  &trans
 &trans  &kp FSLH   &kp N9  &kp N8     &kp N7       &kp STAR    &trans  &trans   &trans     &trans  &trans         &trans  &trans
-&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHFT      &trans  &trans
+&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHIFT     &trans  &trans
 &trans  &kp X      &kp N3  &kp N2     &kp N1       &kp PLUS    &trans  &trans   &kp RALT   &trans  &kp RA(RCTRL)  &trans  &trans
 &trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans   &trans     &to 0   &trans         &trans
             >;
@@ -356,7 +356,7 @@
 &trans  &kp SCROLLLOCK  &kp INS  &kp SYSREQ  &kp PRINTSCREEN  &trans                &trans  &trans  &trans        &trans  &trans        &trans  &trans
 &trans  &trans          &kp F9   &kp F8      &kp F7           &kp F12               &trans  &trans  &trans        &trans  &trans        &trans  &trans
 &trans  &kp F10         &kp F6   &kp F5      &kp F4           &kp LS(LC(LA(F8)))    &trans  &trans  &kp LEFT_ALT  &trans  &kp LC(LALT)  &trans  &trans
-&trans  &trans          &kp F3   &kp F2      &kp F1           &kp F11               &trans  &trans  &kp LCTRL     &trans  &kp LSHFT     &trans  &trans
+&trans  &trans          &kp F3   &kp F2      &kp F1           &kp F11               &trans  &trans  &kp LCTRL     &trans  &kp LSHIFT    &trans  &trans
 &trans  &trans          &trans   &trans      &trans           &trans                &trans  &trans  &trans        &to 0   &trans        &trans
             >;
 
