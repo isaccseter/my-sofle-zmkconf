@@ -24,7 +24,7 @@ layers:
   - Y
   - {t: U, h: 快符层和keypad层}
   - {t: I, h: 符号层}
-  - {t: O, h: 快符层和keypad层}
+  - {t: O, h: 窗口功能}
   - P
   - {t: /, s: '?'}
   - Ctl+$$mdi:keyboard-space$$
@@ -114,8 +114,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '@'
   - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ',', s: <}
-  - {t: ., h: 'AltGr+$$mdi:apple-keyboard-control$$'}
+  - '?'
+  - {t: '!', h: 'AltGr+$$mdi:apple-keyboard-control$$'}
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -349,7 +349,7 @@ layers:
   - $$mdi:volume-high$$
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
   - {t: Gui+Ctl+5, s: Gui+Ctl+%}
-  - {t: Gui+Ctl+6, s: Gui+Ctl+^}
+  - {t: Gui+Ctl+6, s: Gui+Ctl+^, type: held}
   - RGB TOG
   - RGB EFF
   - $$mdi:apple-keyboard-option$$
@@ -368,7 +368,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held alternate}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -414,7 +414,7 @@ layers:
   - '&Escape'
   - {t: '&ellipsis_quotes', type: held alternate}
   - '&question_quotes'
-  - {t: '&exclamation_quotes', type: held alternate}
+  - '&exclamation_quotes'
   - '&Toen_Escape'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -477,4 +477,6 @@ combos:
 - p: [56, 57]
   k: '&soft_off'
 - p: [0, 1]
+  k: {t: 导航层, h: toggle}
+- p: [53, 54]
   k: {t: 导航层, h: toggle}
