@@ -363,19 +363,19 @@
             label = "功能区";
         };
 
-        WinApp {
+        WinApp_flashNav {
             bindings = <
-&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 5          &tog 6               &trans  &trans             &trans          &trans          &trans          &trans             &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &kp C_VOLUME_UP    &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
-&kp LEFT_ALT     &kp LG(D)       &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))  &kp C_VOLUME_DOWN    &trans  &kp C_VOLUME_DOWN  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &ext_power EP_OFF  &trans
-&kp LEFT_SHIFT   &Rename_CA_CC   &kp LC(LG(N4))  &kp LC(LG(N5))  &kp LC(LG(N6))  &kp C_MUTE           &trans  &kp C_MUTE         &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans          &to 0           &trans          &trans
+&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 5          &tog 6               &trans  &trans      &trans          &trans          &trans          &trans             &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &kp PG_UP   &kp HOME        &kp UP          &kp END         &rgb_ug RGB_TOG    &rgb_ug RGB_EFF
+&kp LEFT_ALT     &kp LG(D)       &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))  &kp C_VOLUME_DOWN    &trans  &kp PG_DN   &kp LEFT        &kp DOWN        &kp RIGHT       &ext_power EP_OFF  &trans
+&kp LEFT_SHIFT   &Rename_CA_CC   &kp LC(LG(N4))  &kp LC(LG(N5))  &kp LC(LG(N6))  &kp C_MUTE           &trans  &kp C_MUTE  &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans             &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans      &trans          &to 0           &trans          &trans
             >;
 
-            label = "窗口功能";
+            label = "系统功能_快速导航";
         };
 
-        Flash_Keypad {
+        KeyPad_flashSymbol {
             bindings = <
 &none  &none          &kp E            &kp COMMA        &kp PERCENT      &kp KP_NUMLOCK     &none  &none           &none             &none             &none                &none          &none
 &none  &kp KP_DIVIDE  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_ASTERISK    &none  &Escape         &ellipsis_quotes  &question_quotes  &exclamation_quotes  &Toen_Escape   &none
@@ -384,7 +384,7 @@
 &none  &none          &none            &none            &none            &none              &none  &none           &none             &to 0             &none                &none
             >;
 
-            label = "快符层和keypad层";
+            label = "数字小键盘_快符";
         };
     };
 };
