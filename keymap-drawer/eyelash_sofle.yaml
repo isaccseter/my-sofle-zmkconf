@@ -43,13 +43,13 @@ layers:
   - $$mdi:keyboard-esc$$
   - Z
   - {t: X, h: 'Alt+$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: 快符层和keypad层}
+  - {t: C, h: 窗口功能}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - $$mdi:arrow-right-bold$$
   - N
   - {t: M, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ',', h: 窗口功能, s: <}
+  - {t: ',', h: 功能区, s: <}
   - {t: ., h: 'AltGr+$$mdi:apple-keyboard-control$$', s: '>'}
   - {t: '''', s: ^}
   - $$mdi:apple-keyboard-caps$$
@@ -309,7 +309,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -368,13 +368,13 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: Gui+Ctl+7, s: Gui+Ctl+&}
-  - {t: Gui+Ctl+8, s: Gui+Ctl+*, type: held}
+  - {t: Gui+Ctl+8, s: Gui+Ctl+*}
   - {t: Gui+Ctl+9, s: Gui+Ctl+(}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -433,7 +433,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - X
   - KP 3
-  - {t: KP 2, type: held alternate}
+  - KP 2
   - KP 1
   - KP PLUS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
