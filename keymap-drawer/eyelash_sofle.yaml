@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:mouse-left-click-outline$$
   - Ctl+X
   - Ctl+V
   - Ctl+C
@@ -22,7 +22,7 @@ layers:
   - T
   - $$mdi:arrow-down-bold$$
   - Y
-  - U
+  - {t: U, h: 快符层和keypad层}
   - {t: I, h: 符号层}
   - {t: O, h: 快符层和keypad层}
   - P
@@ -43,7 +43,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - Z
   - {t: X, h: 'Alt+$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: 窗口功能}
+  - {t: C, h: 快符层和keypad层}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - $$mdi:arrow-right-bold$$
@@ -54,11 +54,11 @@ layers:
   - {t: '''', s: ^}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
-  - {t: 窗口功能, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: 快符层和keypad层, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LGUI
   - $$mdi:keyboard-space$$
@@ -146,9 +146,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
+  - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
@@ -160,7 +160,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {type: held}
+  - {t: '$$mdi:mouse-left-click-outline$$', type: held}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -173,7 +173,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Alt+$$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-right-click-outline$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -295,9 +295,9 @@ layers:
   - Meh+F8
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+$$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -330,7 +330,7 @@ layers:
   - {t: 符号层, h: toggle}
   - {t: 导航层, h: toggle}
   - {t: 数字层, h: toggle}
-  - {t: 功能区, h: toggle}
+  - {t: 窗口功能, h: toggle}
   - {t: 快符层和keypad层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -368,13 +368,13 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$', type: held}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: Gui+Ctl+7, s: Gui+Ctl+&}
-  - {t: Gui+Ctl+8, s: Gui+Ctl+*, type: held alternate}
+  - {t: Gui+Ctl+8, s: Gui+Ctl+*, type: held}
   - {t: Gui+Ctl+9, s: Gui+Ctl+(}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -383,7 +383,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -412,7 +412,7 @@ layers:
   - KP ASTERISK
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&Escape'
-  - '&ellipsis_quotes'
+  - {t: '&ellipsis_quotes', type: held alternate}
   - '&question_quotes'
   - {t: '&exclamation_quotes', type: held alternate}
   - '&Toen_Escape'
@@ -433,7 +433,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - X
   - KP 3
-  - KP 2
+  - {t: KP 2, type: held alternate}
   - KP 1
   - KP PLUS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -448,7 +448,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
