@@ -212,6 +212,13 @@
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "TRIPLE_GRAVE";
         };
+
+        sel_row: sel_row {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SEL_ROW";
+        };
     };
 
     keymap {
@@ -245,11 +252,11 @@
 
         Navigation {
             bindings = <
-&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp        &kp LC(INS)       &kp LS(INS)        &kp                &kp        &kp
-&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &kp
-&kp  &kp  &kp LSHFT     &kp  &kp LCTRL  &kp    &kp  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &kp        &kp
-&kp  &kp  &kp LC(LALT)  &kp  &kp LALT   &kp    &kp  &kp Z      &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &kp
-&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp        &kp               &kp                &kp                &kp
+&trans  &trans  &trans        &trans  &trans     &trans    &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
+&trans  &trans  &mo 5         &trans  &trans     &trans    &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT     &trans  &kp LCTRL  &trans    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
+&trans  &trans  &kp LC(LALT)  &trans  &kp LALT   &trans    &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &trans        &trans  &trans     &trans    &trans  &trans     &trans            &trans             &trans             &trans
             >;
 
             label = "导航";
