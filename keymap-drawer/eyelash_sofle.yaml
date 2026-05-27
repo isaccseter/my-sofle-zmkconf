@@ -17,13 +17,13 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: 'Alt+$$mdi:keyboard-tab$$'}
   - Q
   - {t: W, h: 窗口和快捷功能}
-  - {t: E, h: 字符}
+  - {t: E, h: 符号}
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
   - U
-  - {t: I, h: 字符}
+  - {t: I, h: 符号}
   - O
   - P
   - {t: /, s: '?'}
@@ -65,7 +65,7 @@ layers:
   - Ctl+END
   - {t: \, s: '|'}
   - {t: '`', s: '~'}
-  字符:
+  符号:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -327,7 +327,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   窗口和快捷功能:
   - RGB TOG
-  - {t: 字符, h: toggle}
+  - {t: 符号, h: toggle}
   - {t: 导航, h: toggle}
   - {t: 数字, h: toggle}
   - {t: 功能区和鼠标, h: toggle}
