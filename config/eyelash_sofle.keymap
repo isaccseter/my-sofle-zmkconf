@@ -92,15 +92,6 @@
         hold-trigger-on-release;
     };
 
-    quote_caret: quote_caret {
-        compatible = "zmk,behavior-mod-morph";
-        label = "QUOTE_CARET";
-        bindings = <&kp SINGLE_QUOTE>, <&kp CARET>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
-    };
-
     behaviors {
     };
 
@@ -214,6 +205,13 @@
             bindings = <&mkp MCLK &tog 4>;
             label = "TOG_MCLICK";
         };
+
+        triple_grave: triple_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "TRIPLE_GRAVE";
+        };
     };
 
     keymap {
@@ -221,10 +219,10 @@
 
         Default {
             bindings = <
-&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC       &kp END       &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O          &kp P         &kp FSLH
-&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER     &kp MINUS
-&kp ESC          &kp Z           &kp LC(LALT)   &Llt 4 C   &kp LALT      &kp B       &kp RIGHT_ARROW  &kp N     &kp RALT      &Llt 5 COMMA  &kp LC(RALT)   &quote_caret  &kp CAPS
+&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
+&kp ESC          &kp Z           &kp LC(LALT)   &Llt 4 C   &kp LALT      &kp B       &kp RIGHT_ARROW  &kp N     &kp RALT      &Llt 5 COMMA  &kp LC(RALT)   &kp SINGLE_QUOTE  &kp CAPS
 &kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
@@ -235,11 +233,11 @@
 
         Symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans         &kp BACKSLASH     &trans     &trans           &trans  &trans       &trans                &kp BACKSLASH          &trans           &trans             &trans
+&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS  &kp PIPE         &trans  &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DLLR         &triple_grave      &trans
+&trans  &kp EXCLAMATION  &kp STAR       &kp FSLH          &kp EQUAL  &kp AMPERSAND    &trans  &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI         &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE        &kp PLUS       &kp LBKT          &kp RBKT   &kp PERCENT      &trans  &kp AT_SIGN  &kp COLON             &kp QUESTION           &kp EXCLAMATION  &kp SQT            &trans
+&trans  &trans           &trans         &trans            &trans     &trans           &trans  &trans       &trans                &trans                 &trans           &trans
             >;
 
             label = "字符";
