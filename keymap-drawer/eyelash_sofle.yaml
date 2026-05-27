@@ -2,10 +2,10 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
   - $$mdi:mouse-left-click-outline$$
-  - X
-  - V
-  - C
-  - A
+  - Ctl+X
+  - Ctl+V
+  - Ctl+C
+  - Ctl+A
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:arrow-up-bold$$
   - HOME
