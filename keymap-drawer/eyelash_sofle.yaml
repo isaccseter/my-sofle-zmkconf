@@ -14,43 +14,43 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - END
   - PLAY PAUSE
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: 'Alt+$$mdi:keyboard-tab$$'}
   - Q
-  - W
-  - E
+  - {t: W, h: 窗口和快捷功能}
+  - {t: E, h: 字符}
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
   - U
-  - I
+  - {t: I, h: 字符}
   - O
   - P
   - {t: /, s: '?'}
-  - $$mdi:keyboard-space$$
+  - Ctl+$$mdi:keyboard-space$$
   - A
-  - S
-  - D
-  - F
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: D, h: 导航}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - H
-  - J
-  - K
-  - L
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: 数字}
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '-', s: _}
   - $$mdi:keyboard-esc$$
   - Z
-  - X
-  - C
-  - V
+  - Ctl+$$mdi:apple-keyboard-option$$
+  - {t: C, h: 功能区和鼠标}
+  - $$mdi:apple-keyboard-option$$
   - B
   - $$mdi:arrow-right-bold$$
   - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - $$mdi:apple-keyboard-option$$
+  - {t: ',', h: 窗口和快捷功能, s: <}
+  - Ctl+$$mdi:apple-keyboard-option$$
   - {t: '''', s: ^}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
@@ -82,13 +82,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -160,7 +160,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -231,6 +231,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -259,8 +260,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  功能区和鼠标:
   - {t: '$$mdi:transfer$$', type: trans}
-  功能区:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -302,8 +303,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -341,6 +341,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -373,6 +374,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -388,5 +390,34 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [2, 3]
+  k: Ctl+Sft+C
+- p: [3, 4]
+  k: Ctl+Sft+V
+- p: [13, 14]
+  k: Ctl+Z
+- p: [36, 37]
+  k: '&semicolon_return'
+  l: [默认层]
+- p: [39, 40]
+  k: '&soft_off'
+  l: [默认层]
+- p: [47, 48]
+  k: '&double_return'
+- p: [48, 49]
+  k: _
+- p: [55, 54]
+  k: $$mdi:apple-keyboard-shift$$
+  l: [默认层]
+- p: [53, 55]
+  k: $$mdi:apple-keyboard-option$$
+  l: [默认层]
+- p: [56, 60]
+  k: '&CE_space'
+- p: [55, 42]
+  k: '&tog_Lclick'
+  l: [默认层]
+- p: [55, 44]
+  k: '&tog_Mclick'
+  l: [默认层]
