@@ -343,7 +343,7 @@
 &mt LA(TAB) TAB  &kp Q           &Llt 5 W         &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O              &kp P             &kp FSLH
 &kp LC(SPACE)    &kp A           &Lmt LSHIFT S    &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L      &kp ENTER         &kp MINUS
 &kp ESC          &kp Z           &Lmt LC(LALT) X  &Llt 4 C   &Lmt LALT V   &kp B       &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 5 COMMA  &Rmt RC(RALT) DOT  &kp SINGLE_QUOTE  &kp CAPS
-&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP     &kp LCTRL  &kp SPACE     &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH      &kp GRAVE
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP     &kp LCTRL  &kp SPACE     &sl 5       &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH      &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
