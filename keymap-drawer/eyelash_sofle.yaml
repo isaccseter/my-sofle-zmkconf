@@ -211,9 +211,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: /, s: '?'}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
   - {t: '9', s: (}
+  - {t: '8', s: '*'}
+  - {t: '7', s: '&'}
   - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -224,9 +224,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
   - {t: '6', s: ^}
+  - {t: '5', s: '%'}
+  - {t: '4', s: $}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ., s: '>'}
@@ -237,9 +237,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - X
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
   - {t: '3', s: '#'}
+  - {t: '2', s: '@'}
+  - {t: '1', s: '!'}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -289,9 +289,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - Ctl+$$mdi:apple-keyboard-option$$
   - $$mdi:mouse-right-click-outline$$
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Meh+F8
@@ -302,9 +302,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 功能区和鼠标, h: toggle}
-  - Ctl+$$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:mouse-left-click-outline$$', type: held}
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:transfer$$', type: trans}
   - F11
@@ -341,8 +341,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
   - {t: Gui+Ctl+9, s: Gui+Ctl+(}
-  - {t: '$$mdi:arrow-left-bold$$', type: held}
-  - $$mdi:arrow-right-bold$$
+  - {t: 'Alt+$$mdi:arrow-left-bold$$', type: held}
+  - Alt+$$mdi:arrow-right-bold$$
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -355,7 +355,7 @@ layers:
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
-  - {t: Gui+Ctl+2, s: Gui+Ctl+@, type: held alternate}
+  - {t: Gui+Ctl+2, h: 导航, s: Gui+Ctl+@, type: held alternate}
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
