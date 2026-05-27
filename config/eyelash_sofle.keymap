@@ -4,8 +4,10 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -122,7 +124,6 @@
         soft_off {
             bindings = <&soft_off>;
             key-positions = <39 40>;
-            layers = <0>;
         };
 
         double_return {
@@ -219,6 +220,13 @@
             bindings = <&kp HOME &kp LS(END)>;
             label = "SEL_ROW";
         };
+
+        rename_Ca_Cc: rename_Ca_Cc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F2 &kp LC(A) &kp LC(C)>;
+            label = "RENAME_CA_CC";
+        };
     };
 
     keymap {
@@ -244,7 +252,7 @@
 &trans  &kp GRAVE        &kp LESS_THAN      &kp GREATER_THAN  &kp MINUS        &kp PIPE         &trans  &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR           &triple_grave      &trans
 &trans  &kp EXCLAMATION  &mt LSHIFT STAR    &kp FSLH          &mt LCTRL EQUAL  &kp AMPERSAND    &trans  &kp HASH     &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI    &kp DOUBLE_QUOTES  &trans
 &trans  &kp TILDE        &mt LC(LALT) PLUS  &kp LBKT          &mt LALT RBKT    &kp PERCENT      &trans  &kp AT_SIGN  &mt RALT COLON              &kp QUESTION           &mt RC(RALT) EXCL  &kp SQT            &trans
-&trans  &trans           &trans             &trans            &trans           &trans           &trans  &trans       &trans                      &trans                 &trans             &trans
+&trans  &trans           &trans             &trans            &trans           &trans           &trans  &trans       &trans                      &to 0                  &trans             &trans
             >;
 
             label = "字符";
@@ -256,7 +264,7 @@
 &trans  &trans  &mo 5         &trans  &trans     &trans      &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
 &trans  &trans  &kp LSHFT     &trans  &kp LCTRL  &kp BSPC    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
 &trans  &trans  &kp LC(LALT)  &trans  &kp LALT   &trans      &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
-&trans  &trans  &trans        &trans  &trans     &trans      &trans  &trans     &trans            &trans             &trans             &trans
+&trans  &trans  &trans        &trans  &trans     &trans      &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
             label = "导航";
@@ -268,7 +276,7 @@
 &trans  &kp FSLH   &kp N7  &kp N8     &kp N9       &kp STAR    &trans  &trans   &trans     &trans  &trans        &trans  &trans
 &trans  &kp MINUS  &kp N4  &kp N5     &kp N6       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHFT     &trans  &trans
 &trans  &kp X      &kp N1  &kp N2     &kp N3       &kp PLUS    &trans  &trans   &kp RALT   &trans  &kp RC(RALT)  &trans  &trans
-&trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans   &trans     &trans  &trans        &trans
+&trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans   &trans     &to 0   &trans        &trans
             >;
 
             label = "数字";
@@ -276,11 +284,11 @@
 
         Fkey_mouse {
             bindings = <
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &kp F12             &kp F7  &kp F8  &kp F9  &trans   &trans
-&trans  &trans  &kp LSHFT     &mkp RCLK  &kp LCTRL  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4  &kp F5  &kp F6  &kp F10  &trans
-&trans  &tog 4  &kp LC(LALT)  &mkp LCLK  &kp LALT   &mkp MCLK    &trans  &kp F11             &kp F1  &kp F2  &kp F3  &trans   &trans
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
+&trans  &trans  &trans        &trans     &trans     &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
+&trans  &trans  &kp LSHFT     &mkp RCLK  &kp LCTRL  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
+&trans  &tog 4  &kp LC(LALT)  &mkp LCLK  &kp LALT   &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
+&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &trans           &to 0       &trans   &trans
             >;
 
             label = "功能区和鼠标";
@@ -288,11 +296,11 @@
 
         APP_flash {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 4          &tog 5               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LEFT        &kp RIGHT       &kp F5          &kp C_VOLUME_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans  &trans  &to 0   &trans  &trans
             >;
 
             label = "窗口和快捷功能";
