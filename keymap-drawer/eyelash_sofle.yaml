@@ -58,7 +58,7 @@ layers:
   - $$mdi:pan-up$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
-  - RGUI
+  - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LGUI
   - $$mdi:keyboard-space$$
@@ -383,7 +383,7 @@ layers:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - BT CLR ALL
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
