@@ -245,11 +245,11 @@
 
         Navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp        &kp LC(INS)       &kp LS(INS)        &kp                &kp        &kp
+&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &kp
+&kp  &kp  &kp LSHFT     &kp  &kp LCTRL  &kp    &kp  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &kp        &kp
+&kp  &kp  &kp LC(LALT)  &kp  &kp LALT   &kp    &kp  &kp Z      &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &kp
+&kp  &kp  &kp           &kp  &kp        &kp    &kp  &kp        &kp               &kp                &kp                &kp
             >;
 
             label = "导航";
