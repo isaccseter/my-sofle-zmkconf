@@ -42,15 +42,15 @@ layers:
   - {t: '-', s: _}
   - $$mdi:keyboard-esc$$
   - Z
-  - Ctl+$$mdi:apple-keyboard-option$$
+  - {t: X, h: 'Ctl+$$mdi:apple-keyboard-option$$'}
   - {t: C, h: 功能区和鼠标}
-  - $$mdi:apple-keyboard-option$$
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - $$mdi:arrow-right-bold$$
   - N
-  - $$mdi:apple-keyboard-option$$
+  - {t: M, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ',', h: 窗口和快捷功能, s: <}
-  - Ctl+$$mdi:apple-keyboard-option$$
+  - {t: ., h: 'Ctl+$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
@@ -94,28 +94,28 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
-  - '*'
+  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: /, s: '?'}
-  - {t: '=', s: +}
+  - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
   - '&'
   - {t: '$$mdi:transfer$$', type: trans}
   - '#'
-  - (
+  - {t: (, h: '$$mdi:apple-keyboard-control$$'}
   - )
-  - {t: ;, s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
-  - +
+  - {t: +, h: 'Ctl+$$mdi:apple-keyboard-option$$'}
   - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - {t: ']', h: '$$mdi:apple-keyboard-option$$', s: '}'}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - '@'
-  - ':'
+  - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
   - '?'
-  - '!'
+  - {t: '!', h: 'Ctl+$$mdi:apple-keyboard-option$$'}
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
