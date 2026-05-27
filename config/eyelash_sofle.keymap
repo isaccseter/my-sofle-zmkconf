@@ -378,9 +378,9 @@
         Number {
             bindings = <
 &trans  &trans     &kp E   &kp COMMA  &kp PERCENT  &trans      &trans  &trans   &trans     &trans  &trans        &trans  &trans
-&trans  &kp FSLH   &kp N7  &kp N8     &kp N9       &kp STAR    &trans  &trans   &trans     &trans  &trans        &trans  &trans
-&trans  &kp MINUS  &kp N4  &kp N5     &kp N6       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHFT     &trans  &trans
-&trans  &kp X      &kp N1  &kp N2     &kp N3       &kp PLUS    &trans  &trans   &kp RALT   &trans  &kp RC(RALT)  &trans  &trans
+&trans  &kp FSLH   &kp N9  &kp N8     &kp N7       &kp STAR    &trans  &trans   &trans     &trans  &trans        &trans  &trans
+&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHFT     &trans  &trans
+&trans  &kp X      &kp N3  &kp N2     &kp N1       &kp PLUS    &trans  &trans   &kp RALT   &trans  &kp RC(RALT)  &trans  &trans
 &trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans   &trans     &to 0   &trans        &trans
             >;
 
@@ -389,11 +389,11 @@
 
         Fkey_mouse {
             bindings = <
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
-&trans  &trans  &kp LSHFT     &mkp RCLK  &kp LCTRL  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
-&trans  &tog 4  &kp LC(LALT)  &mkp LCLK  &kp LALT   &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
-&trans  &trans  &trans        &trans     &trans     &trans       &trans  &trans              &trans           &to 0       &trans   &trans
+&trans  &trans  &trans            &trans     &trans        &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
+&trans  &trans  &trans            &trans     &trans        &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
+&trans  &trans  &kp LC(LEFT_ALT)  &mkp RCLK  &kp LEFT_ALT  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
+&trans  &tog 4  &kp LSHIFT        &mkp LCLK  &kp LCTRL     &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
+&trans  &trans  &trans            &trans     &trans        &trans       &trans  &trans              &trans           &to 0       &trans   &trans
             >;
 
             label = "功能区和鼠标";
@@ -401,11 +401,11 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 4          &tog 5               &trans  &trans             &trans         &trans            &trans               &trans                 &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LEFT        &kp RIGHT       &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
-&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
-&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
+&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3            &tog 4          &tog 5               &trans  &trans             &trans         &trans            &trans               &trans                 &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)     &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &lt 2 LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))    &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
             >;
 
             label = "窗口和快捷功能";
