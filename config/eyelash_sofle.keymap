@@ -353,11 +353,11 @@
 
         Fkey {
             bindings = <
-&kp  &kp  &kp            &kp  &kp           &kp    &kp  &kp      &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &kp
-&kp  &kp  &kp            &kp  &kp           &kp    &kp  &kp F12  &kp F7           &kp F8      &kp F9   &kp             &kp
-&kp  &kp  &kp LA(LCTRL)  &kp  &kp LEFT_ALT  &kp    &kp  &kp F8   &kp F4           &kp F5      &kp F6   &kp F10         &kp
-&kp  &kp  &kp LSHIFT     &kp  &kp LCTRL     &kp    &kp  &kp F11  &kp F1           &kp F2      &kp F3   &kp             &kp
-&kp  &kp  &kp            &kp  &kp           &kp    &kp  &kp      &kp              &kp         &kp      &kp
+&trans  &trans  &trans         &trans  &trans        &trans    &trans  &trans   &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
+&trans  &trans  &trans         &trans  &trans        &trans    &trans  &kp F12  &kp F7           &kp F8      &kp F9   &trans          &trans
+&trans  &trans  &kp LA(LCTRL)  &trans  &kp LEFT_ALT  &trans    &trans  &kp F8   &kp F4           &kp F5      &kp F6   &kp F10         &trans
+&trans  &trans  &kp LSHIFT     &trans  &kp LCTRL     &trans    &trans  &kp F11  &kp F1           &kp F2      &kp F3   &trans          &trans
+&trans  &trans  &trans         &trans  &trans        &trans    &trans  &trans   &trans           &trans      &trans   &trans
             >;
 
             label = "功能区";
