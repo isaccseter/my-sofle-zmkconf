@@ -227,6 +227,111 @@
             bindings = <&kp F2 &kp LC(A) &kp LC(C)>;
             label = "RENAME_CA_CC";
         };
+
+        pair_doubleQuote: pair_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "PAIR_COLON";
+        };
+
+        pair_singleQuote: pair_singleQuote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "PAIR_SINGLEQUOTE";
+        };
+
+        caret_quotes: caret_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp DQT>;
+            label = "CARET_COLON";
+        };
+
+        question_quotes: question_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK &kp DOUBLE_QUOTES>;
+            label = "QUESTION_COLON";
+        };
+
+        exclamation_quotes: exclamation_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp DQT>;
+            label = "EXCLAMATION_QUOTES";
+        };
+
+        colon_quotes: colon_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp DQT>;
+            label = "COLON_QUOTES";
+        };
+
+        comma_quotes: comma_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp DQT>;
+            label = "COMMA_QUOTES";
+        };
+
+        dot_quotes: dot_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DQT>;
+            label = "DOT_QUOTES";
+        };
+
+        return_quotes: return_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp DQT>;
+            label = "RETURN_QUOTES";
+        };
+
+        end_return: end_return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp RETURN>;
+            label = "END_RETURN";
+        };
+
+        end_semicolon_return: end_semicolon_return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp SEMI &kp RET>;
+            label = "END_SEMICOLON_RETURN";
+        };
+
+        triple_up: trple_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            label = "TRPLE_UP";
+        };
+
+        triple_down: triple_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN &kp DOWN &kp DOWN>;
+            label = "TRIPLE_DOWN";
+        };
+
+        five_left: five_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            label = "FIVE_LEFT";
+        };
+
+        five_right: five_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+            label = "FIVE_RIGHT";
+        };
     };
 
     keymap {
@@ -296,11 +401,11 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 4          &tog 5               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LEFT        &kp RIGHT       &kp F5          &kp C_VOLUME_UP      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans  &trans  &to 0   &trans  &trans
+&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3          &tog 4          &tog 5               &trans  &trans             &trans         &trans            &trans               &trans                 &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LEFT        &kp RIGHT       &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
             >;
 
             label = "窗口和快捷功能";
