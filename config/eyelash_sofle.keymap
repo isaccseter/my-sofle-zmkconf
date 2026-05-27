@@ -219,11 +219,11 @@
 
         Default {
             bindings = <
-&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
-&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
-&kp ESC          &kp Z           &kp LC(LALT)   &Llt 4 C   &kp LALT      &kp B       &kp RIGHT_ARROW  &kp N     &kp RALT      &Llt 5 COMMA  &kp LC(RALT)   &kp SINGLE_QUOTE  &kp CAPS
-&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
+&mkp LCLK        &kp LC(X)       &kp LC(V)        &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC           &kp END           &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 5 W         &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O              &kp P             &kp FSLH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S    &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L      &kp ENTER         &kp MINUS
+&kp ESC          &kp Z           &Lmt LC(LALT) X  &Llt 4 C   &Lmt LALT V   &kp B       &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 5 COMMA  &Rmt RC(RALT) DOT  &kp SINGLE_QUOTE  &kp CAPS
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP     &kp LCTRL  &kp SPACE     &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH      &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -233,11 +233,11 @@
 
         Symbols {
             bindings = <
-&trans  &trans           &trans         &kp BACKSLASH     &trans     &trans           &trans  &trans       &trans                &kp BACKSLASH          &trans           &trans             &trans
-&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS  &kp PIPE         &trans  &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DLLR         &triple_grave      &trans
-&trans  &kp EXCLAMATION  &kp STAR       &kp FSLH          &kp EQUAL  &kp AMPERSAND    &trans  &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI         &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE        &kp PLUS       &kp LBKT          &kp RBKT   &kp PERCENT      &trans  &kp AT_SIGN  &kp COLON             &kp QUESTION           &kp EXCLAMATION  &kp SQT            &trans
-&trans  &trans           &trans         &trans            &trans     &trans           &trans  &trans       &trans                &trans                 &trans           &trans
+&trans  &trans           &trans             &kp BACKSLASH     &trans           &trans           &trans  &trans       &trans                      &kp BACKSLASH          &trans             &trans             &trans
+&trans  &kp GRAVE        &kp LESS_THAN      &kp GREATER_THAN  &kp MINUS        &kp PIPE         &trans  &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR           &triple_grave      &trans
+&trans  &kp EXCLAMATION  &mt LSHIFT STAR    &kp FSLH          &mt LCTRL EQUAL  &kp AMPERSAND    &trans  &kp HASH     &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI    &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE        &mt LC(LALT) PLUS  &kp LBKT          &mt LALT RBKT    &kp PERCENT      &trans  &kp AT_SIGN  &mt RALT COLON              &kp QUESTION           &mt RC(RALT) EXCL  &kp SQT            &trans
+&trans  &trans           &trans             &trans            &trans           &trans           &trans  &trans       &trans                      &trans                 &trans             &trans
             >;
 
             label = "字符";
