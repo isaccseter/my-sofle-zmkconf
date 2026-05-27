@@ -360,7 +360,7 @@
 &trans  &trans           &trans             &trans            &trans           &trans           &trans  &trans       &trans                      &to 0                  &trans             &trans
             >;
 
-            label = "字符";
+            label = "符号";
         };
 
         Navigation {
