@@ -15,6 +15,18 @@
 
 &sl { release-after-ms = <2000>; };
 
+&mt {
+    flavor = "balanced";
+    hold-trigger-on-release;
+    tapping-term-ms = <250>;
+};
+
+&lt {
+    flavor = "balanced";
+    hold-trigger-on-release;
+    tapping-term-ms = <250>;
+};
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -92,18 +104,128 @@
     behaviors {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Copy {
+            bindings = <&kp LC(LS(C))>;
+            key-positions = <2 3>;
+        };
+
+        Paste {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <3 4>;
+        };
+
+        Undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <13 14>;
+        };
+
+        semicolon_return {
+            bindings = <&semicolon_return>;
+            key-positions = <36 37>;
+            layers = <0>;
+        };
+
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <39 40>;
+            layers = <0>;
+        };
+
+        double_return {
+            bindings = <&double_return>;
+            key-positions = <47 48>;
+        };
+
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <48 49>;
+        };
+
+        shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <55 54>;
+            layers = <0>;
+            timeout-ms = <500>;
+        };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <53 55>;
+            timeout-ms = <500>;
+            layers = <0>;
+        };
+
+        CE_space {
+            bindings = <&CE_space>;
+            key-positions = <56 60>;
+            timeout-ms = <300>;
+        };
+
+        tog_Lclick {
+            bindings = <&tog_Lclick>;
+            key-positions = <55 42>;
+            layers = <0>;
+            timeout-ms = <500>;
+        };
+
+        tog_Mclick {
+            bindings = <&tog_Mclick>;
+            key-positions = <55 44>;
+            timeout-ms = <500>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        semicolon_return: semicolon_return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI &kp RETURN>;
+            label = "SEMICOLON_RETURN";
+        };
+
+        double_return: double_return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RETURN &kp RETURN>;
+            label = "DOUBLE_RETURN";
+        };
+
+        CE_space: CE_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp LC(SPACE)>;
+            label = "CE_SPACE";
+        };
+
+        tog_Lclick: tog_Lclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &tog 4>;
+            label = "TOG_LCLICK";
+        };
+
+        tog_Mclick: tog_Mclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MCLK &tog 4>;
+            label = "TOG_MCLICK";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         Default {
             bindings = <
-&mkp LCLK   &kp LC(X)       &kp LC(V)     &kp LC(C)  &kp LC(A)  &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT   &kp RIGHT    &kp BSPC       &kp END       &kp C_PLAY_PAUSE
-&kp TAB     &kp Q           &kp W         &kp E      &kp R      &kp T       &kp DOWN_ARROW   &kp Y     &kp U      &kp I        &kp O          &kp P         &kp FSLH
-&kp SPACE   &kp A           &kp S         &kp D      &kp F      &kp G       &kp LEFT_ARROW   &kp H     &kp J      &kp K        &kp L          &kp ENTER     &kp MINUS
-&kp ESC     &kp Z           &kp X         &kp C      &kp V      &kp B       &kp RIGHT_ARROW  &kp N     &kp M      &kp COMMA    &kp DOT        &quote_caret  &kp CAPS
-&kp C_MUTE  &msc SCRL_DOWN  &msc SCRL_UP  &kp LCTRL  &kp SPACE  &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE  &kp LC(END)  &kp BACKSLASH  &kp GRAVE
+&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC       &kp END       &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O          &kp P         &kp FSLH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER     &kp MINUS
+&kp ESC          &kp Z           &kp LC(LALT)   &Llt 4 C   &kp LALT      &kp B       &kp RIGHT_ARROW  &kp N     &kp RALT      &Llt 5 COMMA  &kp LC(RALT)   &quote_caret  &kp CAPS
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -147,7 +269,7 @@
             label = "数字";
         };
 
-        Fkey {
+        Fkey_mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -156,7 +278,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "功能区";
+            label = "功能区和鼠标";
         };
 
         APP_flash {
