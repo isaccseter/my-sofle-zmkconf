@@ -346,11 +346,11 @@ layers:
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&pair_doubleQuote'
+  - '&caret_quotes'
+  - '&question_quotes'
+  - '&exclamation_quotes'
+  - '&end_semicolon_return'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
@@ -359,11 +359,11 @@ layers:
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&return_quotes'
+  - '&colon_quotes'
+  - '&comma_quotes'
+  - '&dot_quotes'
+  - '&end_return'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-7$$
   - '&rename_Ca_Cc'
@@ -372,11 +372,11 @@ layers:
   - {t: Gui+Ctl+6, s: Gui+Ctl+^}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&triple_down'
+  - '&five_left'
+  - {t: '&triple_up', type: held alternate}
+  - '&five_right'
+  - '&pair_singleQuote'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
