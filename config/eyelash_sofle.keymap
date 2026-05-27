@@ -92,223 +92,83 @@
     behaviors {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        under {
-            bindings = <&kp UNDER>;
-            key-positions = <48 49>;
-            timeout-ms = <300>;
-        };
-
-        Semicolon_Return {
-            bindings = <&Semicolon_Return>;
-            key-positions = <36 37>;
-            layers = <0>;
-        };
-
-        Sp_Cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <8 9>;
-        };
-
-        Double_Return {
-            bindings = <&Double_Return>;
-            key-positions = <47 48>;
-        };
-
-        Copy {
-            bindings = <&kp LC(LS(C))>;
-            key-positions = <3 2>;
-            layers = <0>;
-        };
-
-        Paste {
-            bindings = <&kp LC(LS(V))>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
-        Undo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <13 14>;
-        };
-
-        soft_off {
-            bindings = <&soft_off>;
-            key-positions = <56 57>;
-        };
-
-        Nav_mouse {
-            bindings = <&tog 0>;
-            key-positions = <0 1>;
-        };
-
-        Nav_mouse2 {
-            bindings = <&tog 0>;
-            key-positions = <53 54>;
-        };
-    };
-
-    macros {
-        sel_line: sel_line {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME>, <&macro_wait_time 20>, <&kp LS(END)>;
-
-            label = "SEL_LINE";
-        };
-
-        Semicolon_Return: semicolon_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&macro_wait_time 20>, <&kp ENTER>;
-
-            label = "SEMICOLON_ENTER";
-        };
-
-        Pair_Quotes: Pair_Quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES>,
-                <&macro_wait_time 15>,
-                <&kp LEFT>;
-
-            label = "PAIR_QUOTES";
-        };
-
-        Double_Return: Double_Return {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RETURN &kp RETURN>;
-            label = "DOUBLE_RETURN";
-        };
-
-        Rename_CA_CC: Rename_CA_CC {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp F2>,
-                <&macro_wait_time 15>,
-                <&kp LC(A)>,
-                <&macro_wait_time 15>,
-                <&kp LC(C)>;
-
-            label = "RENAME_CA_CC";
-        };
-
-        EC_doubleSpace: EC_doubleSpace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp LC(SPACE)>;
-            label = "EC_DOUBLESPACE";
-        };
-
-        Toen_Escape: Escape_punctuation {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(SPACE)>,
-                <&macro_wait_time 15>,
-                <&kp BACKSLASH &sl 0>;
-
-            label = "ESCAPE_PUNCTUATION";
-        };
-
-        Escape: Escape_letter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSLASH &sl 0>;
-            label = "ESCAPE_LETTER";
-        };
-
-        Toen_dot: En_dot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp DOT>;
-            label = "EN_DOT";
-        };
-
-        comma_quotes: comma_quote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &kp DOUBLE_QUOTES>;
-            label = "COMMA_QUOTE";
-        };
-
-        dot_quotes: dot_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp DOUBLE_QUOTES>;
-            label = "DOT_QUOTES";
-        };
-
-        question_quotes: question_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION &kp DOUBLE_QUOTES>;
-            label = "QUESTION_QUOTES";
-        };
-
-        exclamation_quotes: examination_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp DOUBLE_QUOTES>;
-            label = "EXAMINATION_QUOTES";
-        };
-
-        ellipsis_quotes: ellipsis_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp DOUBLE_QUOTES>;
-            label = "ELLIPSIS_QUOTES";
-        };
-
-        Return_quotes: Return_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &kp DQT>;
-            label = "RETURN_QUOTES";
-        };
-
-        colon_quotes: semicolon_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp DQT>;
-            label = "SEMICOLON_QUOTES";
-        };
-
-        End_Return: home_Return {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp RETURN>;
-            label = "HOME_RETURN";
-        };
-
-        triple_grave: triple_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
-            label = "TRIPLE_GRAVE";
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         Default {
             bindings = <
-&kp N1      &kp N2     &kp N3    &kp N4    &kp N5     &kp MINUS    &kp UP_ARROW     &kp EQUAL  &kp N6     &kp N7       &kp N8         &kp N9     &kp N0
-&kp TAB     &kp Q      &kp W     &kp E     &kp R      &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I        &kp O          &kp P      &kp LBKT
-&kp CAPS    &kp A      &kp S     &kp D     &kp F      &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K        &kp L          &kp SEMI   &kp APOS
-&kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA    &kp DOT        &kp FSLH   &kp RSHFT
-&kp C_MUTE  &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp RGUI     &kp ENTER        &kp LGUI   &kp SPACE  &kp LC(END)  &kp BACKSLASH  &kp GRAVE
+&mkp LCLK   &kp X           &kp V         &kp C      &kp A      &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT   &kp RIGHT    &kp BSPC       &kp END       &kp C_PLAY_PAUSE
+&kp TAB     &kp Q           &kp W         &kp E      &kp R      &kp T       &kp DOWN_ARROW   &kp Y     &kp U      &kp I        &kp O          &kp P         &kp FSLH
+&kp SPACE   &kp A           &kp S         &kp D      &kp F      &kp G       &kp LEFT_ARROW   &kp H     &kp J      &kp K        &kp L          &kp ENTER     &kp MINUS
+&kp ESC     &kp Z           &kp X         &kp C      &kp V      &kp B       &kp RIGHT_ARROW  &kp N     &kp M      &kp COMMA    &kp DOT        &quote_caret  &kp CAPS
+&kp C_MUTE  &msc SCRL_DOWN  &msc SCRL_UP  &kp LCTRL  &kp SPACE  &kp RGUI    &kp ENTER        &kp LGUI  &kp SPACE  &kp LC(END)  &kp BACKSLASH  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "LAYER0";
             label = "默认层";
+        };
+
+        Symbols {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "字符";
+        };
+
+        Navigation {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "导航";
+        };
+
+        Number {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "数字";
+        };
+
+        Fkey {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "功能区";
+        };
+
+        APP_flash {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "窗口和快捷功能";
         };
     };
 };
