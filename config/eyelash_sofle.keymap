@@ -23,6 +23,8 @@
     tapping-term-ms = <250>;
 };
 
+&msc { time-to-max-speed-ms = <0>; };
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -419,11 +421,11 @@
 
         Fkey_mouse {
             bindings = <
-&trans  &trans  &trans        &trans     &trans        &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
-&trans  &trans  &trans        &trans     &trans        &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
-&trans  &trans  &kp LEFT_ALT  &mkp RCLK  &kp LS(LALT)  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
-&trans  &tog 4  &kp LSHIFT    &mkp LCLK  &kp LCTRL     &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
-&trans  &trans  &trans        &trans     &trans        &trans       &trans  &trans              &trans           &to 0       &trans   &trans
+&trans  &trans     &trans        &trans     &trans        &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
+&trans  &trans     &trans        &trans     &trans        &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
+&trans  &trans     &kp LEFT_ALT  &mkp RCLK  &kp LS(LALT)  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
+&trans  &mkp MCLK  &kp LSHIFT    &mkp LCLK  &kp LCTRL     &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
+&trans  &trans     &trans        &tog 4     &trans        &trans       &trans  &trans              &trans           &to 0       &trans   &trans
             >;
 
             label = "功能区和鼠标";
