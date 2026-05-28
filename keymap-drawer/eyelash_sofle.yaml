@@ -32,9 +32,9 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: 导航}
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-  - G
+  - {t: G, h: 'Sft+$$mdi:apple-keyboard-option$$'}
   - $$mdi:arrow-left-bold$$
-  - H
+  - {t: H, h: 'Sft+$$mdi:apple-keyboard-option$$'}
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: 数字}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
@@ -42,15 +42,15 @@ layers:
   - {t: '-', s: _}
   - $$mdi:keyboard-esc$$
   - Z
-  - {t: X, h: 'Ctl+$$mdi:apple-keyboard-option$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: 功能区和鼠标}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - $$mdi:arrow-right-bold$$
   - N
-  - {t: M, h: '$$mdi:apple-keyboard-option$$'}
+  - M
   - {t: ',', h: 窗口和快捷功能, s: <}
-  - {t: ., h: 'Ctl+$$mdi:apple-keyboard-option$$', s: '>'}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
@@ -97,9 +97,9 @@ layers:
   - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: /, s: '?'}
   - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
-  - '&'
+  - {t: '&', h: 'Sft+$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '#'
+  - {t: '#', h: 'Sft+$$mdi:apple-keyboard-option$$'}
   - {t: (, h: '$$mdi:apple-keyboard-control$$'}
   - )
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
@@ -107,15 +107,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
-  - {t: +, h: 'Ctl+$$mdi:apple-keyboard-option$$'}
+  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '[', s: '{'}
-  - {t: ']', h: '$$mdi:apple-keyboard-option$$', s: '}'}
+  - {t: ']', s: '}'}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - '@'
-  - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
+  - ':'
   - '?'
-  - {t: '!', h: 'Ctl+$$mdi:apple-keyboard-option$$'}
+  - {t: '!', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -146,14 +146,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - 窗口和快捷功能
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:arrow-up-bold$$', s: '&triple_up'}
   - END
   - Ctl+F
   - {t: '$$mdi:transfer$$', type: trans}
@@ -162,17 +162,17 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:arrow-left-bold$$', s: '&five_left'}
+  - {t: '$$mdi:arrow-down-bold$$', s: '&triple_down'}
+  - {t: '$$mdi:arrow-right-bold$$', s: '&five_right'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -229,7 +229,7 @@ layers:
   - {t: '4', s: $}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ., s: '>'}
+  - Sft+$$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - {type: held}
   - $$mdi:apple-keyboard-shift$$
@@ -243,9 +243,9 @@ layers:
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
+  - {t: ., s: '>'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -289,9 +289,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+$$mdi:apple-keyboard-option$$
-  - $$mdi:mouse-right-click-outline$$
   - $$mdi:apple-keyboard-option$$
+  - $$mdi:mouse-right-click-outline$$
+  - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Meh+F8
@@ -355,7 +355,7 @@ layers:
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
-  - {t: Gui+Ctl+2, h: 导航, s: Gui+Ctl+@, type: held alternate}
+  - {t: Gui+Ctl+2, s: Gui+Ctl+@}
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
