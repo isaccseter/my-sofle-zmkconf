@@ -23,7 +23,10 @@
     tapping-term-ms = <250>;
 };
 
-&msc { time-to-max-speed-ms = <0>; };
+&msc {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <3>;
+};
 
 / {
     scroll_encoder: scroll_encoder {
@@ -88,42 +91,6 @@
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
         hold-trigger-on-release;
-    };
-
-    left_five_left: left_five_left {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_FIVE_LEFT";
-        bindings = <&kp LEFT>, <&five_left>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RALT)>;
-    };
-
-    right_five_right: right_five_right {
-        compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_FIVE_RIGHT";
-        bindings = <&kp RIGHT>, <&five_right>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RALT)>;
-    };
-
-    up_triple_up: up_triple_up {
-        compatible = "zmk,behavior-mod-morph";
-        label = "UP_TRIPLE_UP";
-        bindings = <&kp UP_ARROW>, <&triple_up>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RALT)>;
-    };
-
-    down_triple_down: down_triple_down {
-        compatible = "zmk,behavior-mod-morph";
-        label = "DOWN_TRIPLE_DOWN";
-        bindings = <&kp DOWN>, <&triple_down>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RALT)>;
     };
 
     behaviors {
@@ -374,7 +341,7 @@
 &mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC           &kp UP_ARROW     &kp HOME         &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
 &mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T              &kp DOWN_ARROW   &kp Y            &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
 &kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H  &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
-&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C   &Lmt RALT V   &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
+&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C   &Llt 6 V      &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
 &kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
@@ -398,9 +365,9 @@
         Navigation {
             bindings = <
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &up_triple_up      &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &trans  &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &left_five_left   &down_triple_down  &right_five_right  &trans     &trans
-&trans  &trans  &kp LALT    &trans  &kp RALT   &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &mo 2   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
+&trans  &trans  &kp LALT    &trans  &mo 6      &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
@@ -441,6 +408,18 @@
             >;
 
             label = "窗口和快捷功能";
+        };
+
+        spNav {
+            bindings = <
+&trans  &trans  &trans     &trans  &trans     &trans          &trans  &trans  &trans      &trans        &trans       &trans  &trans
+&trans  &trans  &trans     &trans  &trans     &trans          &trans  &trans  &trans      &triple_up    &trans       &trans  &trans
+&trans  &trans  &kp LSHFT  &mo 2   &kp LCTRL  &kp LS(LALT)    &trans  &trans  &five_left  &triple_down  &five_right  &trans  &trans
+&trans  &trans  &kp LALT   &trans  &mo 6      &trans          &trans  &trans  &trans      &trans        &trans       &trans  &trans
+&trans  &trans  &trans     &trans  &trans     &trans          &trans  &trans  &trans      &trans        &trans       &trans
+            >;
+
+            label = "特殊导航";
         };
     };
 };
