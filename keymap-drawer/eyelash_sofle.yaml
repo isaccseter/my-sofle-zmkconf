@@ -6,7 +6,7 @@ layers:
   - Ctl+V
   - Ctl+C
   - Ctl+A
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
   - HOME
   - $$mdi:arrow-left-bold$$
