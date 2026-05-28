@@ -24,8 +24,8 @@
 };
 
 &msc {
-    time-to-max-speed-ms = <0>;
-    acceleration-exponent = <3>;
+    y-input-code = <5>;
+    x-input-code = <5>;
 };
 
 / {
@@ -93,6 +93,17 @@
         hold-trigger-on-release;
     };
 
+    tog_ctrl: tog_ctrl {
+        compatible = "zmk,behavior-hold-tap";
+        label = "TOG_CTRL";
+        bindings = <&kp>, <&tog>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <250>;
+        flavor = "tap-preferred";
+        hold-while-undecided;
+    };
+
     behaviors {
     };
 
@@ -135,38 +146,10 @@
             key-positions = <48 49>;
         };
 
-        shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <55 54>;
-            layers = <0>;
-            timeout-ms = <500>;
-        };
-
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <53 55>;
-            timeout-ms = <500>;
-            layers = <0>;
-        };
-
         CE_space {
             bindings = <&CE_space>;
             key-positions = <56 60>;
             timeout-ms = <300>;
-        };
-
-        tog_Lclick {
-            bindings = <&tog_Lclick>;
-            key-positions = <55 42>;
-            layers = <0>;
-            timeout-ms = <500>;
-        };
-
-        tog_Mclick {
-            bindings = <&tog_Mclick>;
-            key-positions = <55 44>;
-            timeout-ms = <500>;
-            layers = <0>;
         };
     };
 
@@ -338,11 +321,11 @@
 
         Default {
             bindings = <
-&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp DELETE         &kp UP_ARROW     &kp HOME         &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T              &kp DOWN_ARROW   &kp Y            &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
-&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H  &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
-&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C   &Llt 6 V      &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
-&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
+&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)          &kp LC(A)     &kp DELETE         &kp UP_ARROW     &kp HOME         &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E           &kp R         &kp T              &kp DOWN_ARROW   &kp Y            &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D           &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H  &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
+&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C           &Llt 6 V      &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &tog_ctrl LCTRL 4  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
