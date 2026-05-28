@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:pan-down$$
   - $$mdi:pan-up$$
-  - $$mdi:apple-keyboard-control$$
+  - {t: 功能区和鼠标, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
   - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -471,17 +471,5 @@ combos:
   k: '&double_return'
 - p: [48, 49]
   k: _
-- p: [55, 54]
-  k: $$mdi:apple-keyboard-shift$$
-  l: [默认层]
-- p: [53, 55]
-  k: $$mdi:apple-keyboard-option$$
-  l: [默认层]
 - p: [56, 60]
   k: '&CE_space'
-- p: [55, 42]
-  k: '&tog_Lclick'
-  l: [默认层]
-- p: [55, 44]
-  k: '&tog_Mclick'
-  l: [默认层]
