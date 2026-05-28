@@ -331,7 +331,7 @@ layers:
   - {t: 导航, h: toggle}
   - {t: 数字, h: toggle}
   - {t: 功能区和鼠标, h: toggle}
-  - {t: 窗口和快捷功能, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
