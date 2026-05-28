@@ -23,12 +23,6 @@
     tapping-term-ms = <250>;
 };
 
-&lt {
-    flavor = "balanced";
-    hold-trigger-on-release;
-    tapping-term-ms = <250>;
-};
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -92,6 +86,42 @@
         flavor = "balanced";
         hold-trigger-key-positions = <53 54 55 56 57 59 0 1 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 2 3 4 5 60 61 62 63>;
         hold-trigger-on-release;
+    };
+
+    left_five_left: left_five_left {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_FIVE_LEFT";
+        bindings = <&kp LEFT>, <&five_left>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RALT)>;
+    };
+
+    right_five_right: right_five_right {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_FIVE_RIGHT";
+        bindings = <&kp RIGHT>, <&five_right>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RALT)>;
+    };
+
+    up_triple_up: up_triple_up {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UP_TRIPLE_UP";
+        bindings = <&kp UP_ARROW>, <&triple_up>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RALT)>;
+    };
+
+    down_triple_down: down_triple_down {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOWN_TRIPLE_DOWN";
+        bindings = <&kp DOWN>, <&triple_down>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RALT)>;
     };
 
     behaviors {
@@ -339,11 +369,11 @@
 
         Default {
             bindings = <
-&mkp LCLK        &kp LC(X)       &kp LC(V)        &kp LC(C)  &kp LC(A)     &kp BSPC    &kp UP_ARROW     &kp HOME  &kp LEFT      &kp RIGHT     &kp BSPC           &kp END           &kp C_PLAY_PAUSE
-&mt LA(TAB) TAB  &kp Q           &Llt 5 W         &Llt 1 E   &kp R         &kp T       &kp DOWN_ARROW   &kp Y     &kp U         &Rlt 1 I      &kp O              &kp P             &kp FSLH
-&kp LC(SPACE)    &kp A           &Lmt LSHIFT S    &Llt 2 D   &Lmt LCTRL F  &kp G       &kp LEFT_ARROW   &kp H     &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L      &kp ENTER         &kp MINUS
-&kp ESC          &kp Z           &Lmt LC(LALT) X  &Llt 4 C   &Lmt LALT V   &kp B       &kp RIGHT_ARROW  &kp N     &Rmt RALT M   &Rlt 5 COMMA  &Rmt RC(RALT) DOT  &kp SINGLE_QUOTE  &kp CAPS
-&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP     &kp LCTRL  &kp SPACE     &sl 5       &kp ENTER        &kp LGUI  &kp SPACE     &kp LC(END)   &kp BACKSLASH      &kp GRAVE
+&mkp LCLK        &kp LC(X)       &kp LC(V)      &kp LC(C)  &kp LC(A)     &kp BSPC           &kp UP_ARROW     &kp HOME         &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
+&mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E   &kp R         &kp T              &kp DOWN_ARROW   &kp Y            &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D   &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H  &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
+&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C   &Lmt RALT V   &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &kp LCTRL  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -353,11 +383,11 @@
 
         Symbols {
             bindings = <
-&trans  &trans           &trans             &kp BACKSLASH     &trans           &trans           &trans  &trans       &trans                      &kp BACKSLASH          &trans             &trans             &trans
-&trans  &kp GRAVE        &kp LESS_THAN      &kp GREATER_THAN  &kp MINUS        &kp PIPE         &trans  &kp CARET    &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR           &triple_grave      &trans
-&trans  &kp EXCLAMATION  &mt LSHIFT STAR    &kp FSLH          &mt LCTRL EQUAL  &kp AMPERSAND    &trans  &kp HASH     &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI    &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE        &mt LC(LALT) PLUS  &kp LBKT          &mt LALT RBKT    &kp PERCENT      &trans  &kp AT_SIGN  &mt RALT COLON              &kp QUESTION           &mt RC(RALT) EXCL  &kp SQT            &trans
-&trans  &trans           &trans             &trans            &trans           &trans           &trans  &trans       &trans                      &to 0                  &trans             &trans
+&trans  &trans           &trans           &kp BACKSLASH     &trans             &trans                    &trans  &trans             &trans                      &kp BACKSLASH          &trans           &trans             &trans
+&trans  &kp GRAVE        &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp CARET          &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &triple_grave      &trans
+&trans  &kp EXCLAMATION  &mt LSHIFT STAR  &kp FSLH          &mt LCTRL EQUAL    &mt LS(LALT) AMPERSAND    &trans  &mt RS(RALT) HASH  &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE        &mt LALT PLUS    &kp LBKT          &kp RIGHT_BRACKET  &kp PERCENT               &trans  &kp AT_SIGN        &kp COLON                   &kp QUESTION           &mt RALT EXCL    &kp SQT            &trans
+&trans  &trans           &trans           &trans            &trans             &trans                    &trans  &trans             &trans                      &to 0                  &trans           &trans
             >;
 
             label = "符号";
@@ -365,11 +395,11 @@
 
         Navigation {
             bindings = <
-&trans  &trans  &trans        &trans  &trans     &trans      &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &mo 5         &trans  &trans     &trans      &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT     &trans  &kp LCTRL  &kp BSPC    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
-&trans  &trans  &kp LC(LALT)  &trans  &kp LALT   &trans      &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
-&trans  &trans  &trans        &trans  &trans     &trans      &trans  &trans     &trans            &to 0              &trans             &trans
+&trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
+&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &up_triple_up      &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &trans  &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &left_five_left   &down_triple_down  &right_five_right  &trans     &trans
+&trans  &trans  &kp LALT    &trans  &kp RALT   &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
             label = "导航";
@@ -377,11 +407,11 @@
 
         Number {
             bindings = <
-&trans  &trans     &kp E   &kp COMMA  &kp PERCENT  &trans      &trans  &trans   &trans     &trans  &trans        &trans  &trans
-&trans  &kp FSLH   &kp N9  &kp N8     &kp N7       &kp STAR    &trans  &trans   &trans     &trans  &trans        &trans  &trans
-&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &kp DOT  &kp RCTRL  &trans  &kp RSHFT     &trans  &trans
-&trans  &kp X      &kp N3  &kp N2     &kp N1       &kp PLUS    &trans  &trans   &kp RALT   &trans  &kp RC(RALT)  &trans  &trans
-&trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans   &trans     &to 0   &trans        &trans
+&trans  &trans     &kp E   &kp COMMA  &kp PERCENT  &trans      &trans  &trans        &trans     &trans  &trans     &trans  &trans
+&trans  &kp FSLH   &kp N9  &kp N8     &kp N7       &kp STAR    &trans  &trans        &trans     &trans  &trans     &trans  &trans
+&trans  &kp MINUS  &kp N6  &kp N5     &kp N4       &kp N0      &trans  &kp RS(RALT)  &kp RCTRL  &trans  &kp RSHFT  &trans  &trans
+&trans  &kp X      &kp N3  &kp N2     &kp N1       &kp PLUS    &trans  &trans        &kp DOT    &trans  &kp RALT   &trans  &trans
+&trans  &trans     &trans  &trans     &trans       &trans      &trans  &trans        &trans     &to 0   &trans     &trans
             >;
 
             label = "数字";
@@ -389,11 +419,11 @@
 
         Fkey_mouse {
             bindings = <
-&trans  &trans  &trans            &trans     &trans        &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
-&trans  &trans  &trans            &trans     &trans        &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
-&trans  &trans  &kp LC(LEFT_ALT)  &mkp RCLK  &kp LEFT_ALT  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
-&trans  &tog 4  &kp LSHIFT        &mkp LCLK  &kp LCTRL     &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
-&trans  &trans  &trans            &trans     &trans        &trans       &trans  &trans              &trans           &to 0       &trans   &trans
+&trans  &trans  &trans        &trans     &trans        &trans       &trans  &trans              &kp PRINTSCREEN  &kp SYSREQ  &kp INS  &kp SCROLLLOCK  &trans
+&trans  &trans  &trans        &trans     &trans        &trans       &trans  &kp F12             &kp F7           &kp F8      &kp F9   &trans          &trans
+&trans  &trans  &kp LEFT_ALT  &mkp RCLK  &kp LS(LALT)  &trans       &trans  &kp LC(LA(LS(F8)))  &kp F4           &kp F5      &kp F6   &kp F10         &trans
+&trans  &tog 4  &kp LSHIFT    &mkp LCLK  &kp LCTRL     &mkp MCLK    &trans  &kp F11             &kp F1           &kp F2      &kp F3   &trans          &trans
+&trans  &trans  &trans        &trans     &trans        &trans       &trans  &trans              &trans           &to 0       &trans   &trans
             >;
 
             label = "功能区和鼠标";
@@ -401,11 +431,11 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &tog 1          &tog 2          &tog 3            &tog 4          &tog 5               &trans  &trans             &trans         &trans            &trans               &trans                 &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)     &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
-&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &lt 2 LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
-&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))    &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
+&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &to 5                &trans  &trans             &trans         &trans            &trans               &trans                 &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
             >;
 
             label = "窗口和快捷功能";
