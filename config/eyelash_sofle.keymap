@@ -23,11 +23,6 @@
     tapping-term-ms = <250>;
 };
 
-&msc {
-    y-input-code = <5>;
-    x-input-code = <5>;
-};
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
