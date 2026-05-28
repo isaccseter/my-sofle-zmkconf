@@ -301,7 +301,7 @@ layers:
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 功能区和鼠标, h: toggle}
+  - $$mdi:mouse-scroll-wheel$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:mouse-left-click-outline$$', type: held}
   - $$mdi:apple-keyboard-control$$
@@ -316,7 +316,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 功能区和鼠标, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
