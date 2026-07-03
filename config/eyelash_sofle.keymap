@@ -120,12 +120,6 @@
             key-positions = <13 14>;
         };
 
-        semicolon_return {
-            bindings = <&semicolon_return>;
-            key-positions = <36 37>;
-            layers = <0>;
-        };
-
         soft_off {
             bindings = <&soft_off>;
             key-positions = <39 40>;
@@ -379,11 +373,11 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &trans               &trans  &trans             &trans         &trans            &trans               &trans                 &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &pair_doubleQuote  &caret_quotes  &question_quotes  &exclamation_quotes  &end_semicolon_return  &trans
-&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &return_quotes     &colon_quotes  &comma_quotes     &dot_quotes          &end_return            &trans
-&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down       &five_left     &triple_up        &five_right          &pair_singleQuote      &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans             &trans         &to 0             &trans               &trans
+&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &trans               &trans  &trans                 &trans         &trans             &trans               &trans                 &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &end_semicolon_return  &caret_quotes  &question_quotes   &exclamation_quotes  &end_semicolon_return  &trans
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &end_return            &colon_quotes  &comma_quotes      &dot_quotes          &semicolon_return      &trans
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down           &five_left     &pair_doubleQuote  &pair_singleQuote    &pair_singleQuote      &trans
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans                 &trans         &to 0              &trans               &trans
             >;
 
             label = "窗口和快捷功能";
