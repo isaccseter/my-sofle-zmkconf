@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - $$mdi:mouse-left-click-outline$$
+  - '&mkp MB3'
   - Ctl+X
   - Ctl+V
   - Ctl+C
@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:pan-down$$
   - $$mdi:pan-up$$
-  - {t: '&mkp MB3', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
   - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
