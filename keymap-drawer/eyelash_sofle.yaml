@@ -346,7 +346,7 @@ layers:
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&pair_doubleQuote'
+  - '&end_semicolon_return'
   - '&caret_quotes'
   - '&question_quotes'
   - '&exclamation_quotes'
@@ -359,11 +359,11 @@ layers:
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&return_quotes'
+  - '&end_return'
   - '&colon_quotes'
   - '&comma_quotes'
   - '&dot_quotes'
-  - '&end_return'
+  - '&semicolon_return'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-7$$
   - '&rename_Ca_Cc'
@@ -374,8 +374,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&triple_down'
   - '&five_left'
-  - {t: '&triple_up', type: held alternate}
-  - '&five_right'
+  - {t: '&pair_doubleQuote', type: held alternate}
+  - '&pair_singleQuote'
   - '&pair_singleQuote'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -462,9 +462,6 @@ combos:
   k: Ctl+Sft+V
 - p: [13, 14]
   k: Ctl+Z
-- p: [36, 37]
-  k: '&semicolon_return'
-  l: [默认层]
 - p: [39, 40]
   k: '&soft_off'
 - p: [47, 48]
