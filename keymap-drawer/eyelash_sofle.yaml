@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:pan-down$$
   - $$mdi:pan-up$$
-  - {t: 功能区和鼠标, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '&mkp MB3', h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
   - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
