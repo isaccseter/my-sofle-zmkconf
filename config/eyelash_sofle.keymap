@@ -129,10 +129,11 @@
             bindings = <&double_return>;
             key-positions = <48 49>;
             timeout-ms = <300>;
+            layers = <0 1 2 3 6>;
         };
 
         under {
-            bindings = <&kp UNDER>;
+            bindings = <&alt_under>;
             key-positions = <48 47>;
             timeout-ms = <300>;
         };
@@ -211,12 +212,50 @@
         alt_backslash: alt_backslash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N9 &kp KP_N2>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
             label = "ALT_BACKSLASH";
+        };
+
+        alt_grave: alt_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_GRAVE";
+        };
+
+        alt_under: alt_under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_UNDER";
+        };
+
+        end_SEMICOLON_Return: end_SEMICOLON_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "END_SEMICOLON_RETURN";
         };
     };
 
@@ -229,7 +268,7 @@
 &mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E                     &kp R         &kp T              &kp DOWN_ARROW   &kp Y            &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
 &kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D                     &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H  &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
 &kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C                     &Llt 6 V      &kp B              &kp RIGHT_ARROW  &kp N            &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
-&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &tog_ctrl LCTRL PRINTSCREEN  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
+&kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &tog_ctrl LCTRL PRINTSCREEN  &kp SPACE     &sl 5              &kp ENTER        &kp LGUI         &kp SPACE     &kp LC(END)   &kp BACKSLASH  &alt_grave
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -239,8 +278,8 @@
 
         Symbols {
             bindings = <
-&trans  &trans           &trans           &kp BACKSLASH     &trans             &trans                    &trans  &trans             &trans                      &kp BACKSLASH          &trans           &trans             &trans
-&trans  &kp GRAVE        &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp CARET          &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &triple_grave      &trans
+&trans  &trans           &trans           &alt_backslash    &trans             &trans                    &trans  &trans             &trans                      &alt_backslash         &trans           &trans             &trans
+&trans  &kp GRAVE        &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp CARET          &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &kp UNDER          &trans
 &trans  &kp EXCLAMATION  &mt LSHIFT STAR  &kp FSLH          &mt LCTRL EQUAL    &mt LS(LALT) AMPERSAND    &trans  &mt RS(RALT) HASH  &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI  &kp DOUBLE_QUOTES  &trans
 &trans  &kp TILDE        &mt LALT PLUS    &kp LBKT          &kp RIGHT_BRACKET  &kp PERCENT               &trans  &kp AT_SIGN        &kp COLON                   &kp QUESTION           &mt RALT EXCL    &kp SQT            &trans
 &trans  &trans           &trans           &trans            &trans             &trans                    &trans  &trans             &trans                      &to 0                  &trans           &trans
@@ -287,11 +326,11 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &to 6                &trans  &trans                 &trans         &trans             &trans               &trans                 &trans
-&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &end_semicolon_return  &caret_quotes  &question_quotes   &exclamation_quotes  &end_semicolon_return  &trans
-&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &end_return            &colon_quotes  &comma_quotes      &dot_quotes          &semicolon_return      &trans
-&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down           &five_left     &pair_doubleQuote  &pair_singleQuote    &pair_singleQuote      &trans
-&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans                 &trans         &to 0              &trans               &trans
+&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &to 6                &trans  &trans     &trans     &kp KP_NUMLOCK  &trans     &trans     &trans
+&rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &kp SPACE  &kp SPACE  &kp SPACE       &kp SPACE  &kp SPACE  &kp SPACE
+&kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &kp SPACE  &kp SPACE  &kp SPACE       &kp SPACE  &kp SPACE  &kp SPACE
+&kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &kp SPACE  &kp SPACE  &kp SPACE       &kp SPACE  &kp SPACE  &kp SPACE
+&trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans     &trans     &to 0           &trans     &trans
             >;
 
             label = "窗口和快捷功能";
