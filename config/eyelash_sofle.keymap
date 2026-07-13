@@ -142,16 +142,16 @@
             key-positions = <56 60>;
             timeout-ms = <300>;
         };
+
+        copy_name {
+            bindings = <&rename_Ca_Cc>;
+            key-positions = <48 49>;
+            layers = <4>;
+            timeout-ms = <300>;
+        };
     };
 
     macros {
-        semicolon_return: semicolon_return {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI &kp RETURN>;
-            label = "SEMICOLON_RETURN";
-        };
-
         double_return: double_return {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -166,27 +166,6 @@
             label = "CE_SPACE";
         };
 
-        tog_Lclick: tog_Lclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK &tog 4>;
-            label = "TOG_LCLICK";
-        };
-
-        tog_Mclick: tog_Mclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MCLK &tog 4>;
-            label = "TOG_MCLICK";
-        };
-
-        triple_grave: triple_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
-            label = "TRIPLE_GRAVE";
-        };
-
         sel_row: sel_row {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -199,83 +178,6 @@
             #binding-cells = <0>;
             bindings = <&kp F2 &kp LC(A) &kp LC(C)>;
             label = "RENAME_CA_CC";
-        };
-
-        pair_doubleQuote: pair_colon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT>;
-            label = "PAIR_COLON";
-        };
-
-        pair_singleQuote: pair_singleQuote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp SQT &kp LEFT>;
-            label = "PAIR_SINGLEQUOTE";
-        };
-
-        caret_quotes: caret_colon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp DQT>;
-            label = "CARET_COLON";
-        };
-
-        question_quotes: question_colon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK &kp DOUBLE_QUOTES>;
-            label = "QUESTION_COLON";
-        };
-
-        exclamation_quotes: exclamation_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCL &kp DQT>;
-            label = "EXCLAMATION_QUOTES";
-        };
-
-        colon_quotes: colon_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp DQT>;
-            label = "COLON_QUOTES";
-        };
-
-        comma_quotes: comma_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &kp DQT>;
-            label = "COMMA_QUOTES";
-        };
-
-        dot_quotes: dot_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp DQT>;
-            label = "DOT_QUOTES";
-        };
-
-        return_quotes: return_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &kp DQT>;
-            label = "RETURN_QUOTES";
-        };
-
-        end_return: end_return {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp RETURN>;
-            label = "END_RETURN";
-        };
-
-        end_semicolon_return: end_semicolon_return {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp SEMI &kp RET>;
-            label = "END_SEMICOLON_RETURN";
         };
 
         triple_up: trple_up {
@@ -304,6 +206,14 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
             label = "FIVE_RIGHT";
+        };
+
+        alt_backslash: alt_backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&macro_press>;
+
+            label = "ALT_BACKSLASH";
         };
     };
 
