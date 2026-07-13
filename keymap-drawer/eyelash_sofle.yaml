@@ -60,7 +60,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - LGUI
+  - {t: Gui+\, h: LGUI, s: Gui+|}
   - $$mdi:keyboard-space$$
   - Ctl+END
   - {t: \, s: '|'}
