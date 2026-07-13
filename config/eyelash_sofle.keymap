@@ -127,12 +127,13 @@
 
         double_return {
             bindings = <&double_return>;
-            key-positions = <47 48>;
+            key-positions = <48 49>;
+            timeout-ms = <300>;
         };
 
         under {
             bindings = <&kp UNDER>;
-            key-positions = <48 49>;
+            key-positions = <48 47>;
             timeout-ms = <300>;
         };
 
@@ -373,7 +374,7 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &trans               &trans  &trans                 &trans         &trans             &trans               &trans                 &trans
+&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &to 6                &trans  &trans                 &trans         &trans             &trans               &trans                 &trans
 &rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &end_semicolon_return  &caret_quotes  &question_quotes   &exclamation_quotes  &end_semicolon_return  &trans
 &kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &end_return            &colon_quotes  &comma_quotes      &dot_quotes          &semicolon_return      &trans
 &kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &triple_down           &five_left     &pair_doubleQuote  &pair_singleQuote    &pair_singleQuote      &trans
