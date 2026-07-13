@@ -254,8 +254,43 @@
         end_SEMICOLON_Return: end_SEMICOLON_Return {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp END &kp SEMICOLON &kp RETURN>;
             label = "END_SEMICOLON_RETURN";
+        };
+
+        SEMICOLON_Return: SEMICOLON_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON &kp RETURN>;
+            label = "SEMICOLON_RETURN";
+        };
+
+        end_Return: end_Return {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp RETURN>;
+            label = "END_RETURN";
+        };
+
+        caret_quote: caret_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp DQT>;
+            label = "CARET_QUOTE";
+        };
+
+        question_quote: question_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION &kp DQT>;
+            label = "QUESTION_QUOTE";
+        };
+
+        exclamation_quote: exclamation_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp DQT>;
+            label = "EXCLAMATION_QUOTE";
         };
     };
 
