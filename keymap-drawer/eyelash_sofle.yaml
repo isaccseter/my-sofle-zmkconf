@@ -64,7 +64,7 @@ layers:
   - $$mdi:keyboard-space$$
   - Ctl+END
   - {t: \, s: '|'}
-  - '&alt_grave'
+  - {t: '`', s: '~'}
   符号:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -80,7 +80,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
+  - '&alt_grave'
   - <
   - {t: '>', type: held}
   - {t: '-', s: _}
@@ -211,9 +211,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: /, s: '?'}
-  - {t: '9', s: (}
-  - {t: '8', s: '*'}
   - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
   - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -224,9 +224,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
-  - {t: '6', s: ^}
-  - {t: '5', s: '%'}
   - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+$$mdi:apple-keyboard-option$$
@@ -237,9 +237,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - X
-  - {t: '3', s: '#'}
-  - {t: '2', s: '@'}
   - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - '3'
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -350,7 +350,7 @@ layers:
   - '&caret_quote'
   - '&question_quote'
   - '&exclamation_quote'
-  - '&triple_alt_grave'
+  - '&pair_alt_grave'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
@@ -420,7 +420,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {t: 导航, type: held alternate}
+  - {t: '&mo26', type: held alternate}
   - $$mdi:apple-keyboard-control$$
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
