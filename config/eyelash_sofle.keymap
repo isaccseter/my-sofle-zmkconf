@@ -211,8 +211,11 @@
         alt_backslash: alt_backslash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&macro_press>;
-
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
             label = "ALT_BACKSLASH";
         };
     };
