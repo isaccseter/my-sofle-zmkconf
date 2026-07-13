@@ -372,7 +372,7 @@ layers:
   - {t: Gui+Ctl+6, s: Gui+Ctl+^}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&pair_alt_grave'
+  - '&signature'
   - '&double_alt_leftBracket'
   - {t: '&Return_quote', type: held alternate}
   - '&pair_quote'
