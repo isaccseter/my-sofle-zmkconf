@@ -346,12 +346,12 @@ layers:
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
+  - '&end_SEMICOLON_Return'
+  - '&caret_quote'
+  - '&question_quote'
+  - '&exclamation_quote'
+  - '&triple_alt_grave'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
@@ -359,12 +359,12 @@ layers:
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
+  - '&SEMICOLON_Return'
+  - '&colon_quote'
+  - '&comma_quote'
+  - '&dot_quote'
+  - '&end_Return'
+  - '&triple_minus'
   - $$mdi:brightness-7$$
   - '&rename_Ca_Cc'
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
@@ -372,12 +372,12 @@ layers:
   - {t: Gui+Ctl+6, s: Gui+Ctl+^}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-space$$', type: held alternate}
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
+  - '&pair_alt_grave'
+  - '&double_alt_leftBracket'
+  - {t: '&Return_quote', type: held alternate}
+  - '&pair_quote'
+  - '&pair_apostrophe'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
