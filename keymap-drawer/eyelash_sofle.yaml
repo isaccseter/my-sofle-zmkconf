@@ -470,3 +470,6 @@ combos:
   k: _
 - p: [56, 60]
   k: '&CE_space'
+- p: [48, 49]
+  k: '&rename_Ca_Cc'
+  l: [功能区和鼠标]
