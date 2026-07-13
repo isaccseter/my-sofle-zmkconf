@@ -331,7 +331,7 @@ layers:
   - {t: 导航, h: toggle}
   - {t: 数字, h: toggle}
   - {t: 功能区和鼠标, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 特殊导航, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -464,9 +464,9 @@ combos:
   k: Ctl+Z
 - p: [39, 40]
   k: '&soft_off'
-- p: [47, 48]
-  k: '&double_return'
 - p: [48, 49]
+  k: '&double_return'
+- p: [48, 47]
   k: _
 - p: [56, 60]
   k: '&CE_space'
