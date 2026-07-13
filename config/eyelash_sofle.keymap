@@ -292,7 +292,8 @@
             bindings = <&kp EXCLAMATION &kp DQT>;
             label = "EXCLAMATION_QUOTE";
         };
-        thriple_alt_grave: thriple_alt_grave {
+
+        triple_alt_grave: thriple_alt_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -316,6 +317,106 @@
                 <&kp LALT>;
 
             label = "THRIPLE_ALT_GRAVE";
+        };
+
+        colon_quote: colon_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp DQT>;
+            label = "COLON_QUOTE";
+        };
+
+        comma_quote: comma_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp DQT>;
+            label = "COMMA_QUOTE";
+        };
+
+        dot_quote: dot_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DQT>;
+            label = "DOT_QUOTE";
+        };
+
+        triple_minus: triple_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp MINUS &kp MINUS>;
+            label = "TRIPLE_MINUS";
+        };
+
+        pair_alt_grave: pair_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&kp LEFT>;
+
+            label = "PAIR_GRAVE";
+        };
+
+        double_alt_leftBracket: double_alt_leftBracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N9 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DOUBLE_ALT_LEFTBRACKET";
+        };
+
+        Return_quote: Return_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RETURN &kp DQT>;
+            label = "RETURN_QUOTE";
+        };
+
+        pair_quote: pair_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOUBLE_QUOTES &kp DQT>,
+                <&macro_wait_time 30>,
+                <&kp LEFT>;
+
+            label = "PAIR_QUOTE";
+        };
+
+        pair_apostrophe: pair_apostrophe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp APOSTROPHE &kp APOSTROPHE>,
+                <&macro_wait_time 30>,
+                <&kp LEFT>;
+
+            label = "PAIR_APOSTROPHE";
         };
     };
 
