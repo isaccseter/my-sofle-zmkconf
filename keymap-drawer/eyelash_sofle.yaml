@@ -64,18 +64,18 @@ layers:
   - $$mdi:keyboard-space$$
   - Ctl+END
   - {t: \, s: '|'}
-  - {t: '`', s: '~'}
+  - '&alt_grave'
   符号:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
+  - '&alt_backslash'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
+  - '&alt_backslash'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -90,7 +90,7 @@ layers:
   - '{'
   - {t: '}', type: held alternate}
   - $
-  - '&triple_grave'
+  - _
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -335,7 +335,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KP NUMLOCK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -346,12 +346,12 @@ layers:
   - F5
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&end_semicolon_return'
-  - '&caret_quotes'
-  - '&question_quotes'
-  - '&exclamation_quotes'
-  - '&end_semicolon_return'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
   - $$mdi:brightness-5$$
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Gui+Ctl+1, s: Gui+Ctl+!}
@@ -359,12 +359,12 @@ layers:
   - {t: Gui+Ctl+3, s: Gui+Ctl+#}
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&end_return'
-  - '&colon_quotes'
-  - '&comma_quotes'
-  - '&dot_quotes'
-  - '&semicolon_return'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
   - $$mdi:brightness-7$$
   - '&rename_Ca_Cc'
   - {t: Gui+Ctl+4, s: Gui+Ctl+$}
@@ -372,12 +372,12 @@ layers:
   - {t: Gui+Ctl+6, s: Gui+Ctl+^}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&triple_down'
-  - '&five_left'
-  - {t: '&pair_doubleQuote', type: held alternate}
-  - '&pair_singleQuote'
-  - '&pair_singleQuote'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', type: held alternate}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -466,8 +466,9 @@ combos:
   k: '&soft_off'
 - p: [48, 49]
   k: '&double_return'
+  l: [默认层, 符号, 导航, 数字, 特殊导航]
 - p: [48, 47]
-  k: _
+  k: '&alt_under'
 - p: [56, 60]
   k: '&CE_space'
 - p: [48, 49]
