@@ -24,14 +24,6 @@
 };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
     Llt: Llt {
         compatible = "zmk,behavior-hold-tap";
         label = "LLT";
@@ -489,7 +481,7 @@
 &trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR_ALL  &trans               &trans  &trans                 &trans                   &to 0            &trans              &trans
             >;
 
-            label = "窗口和快捷功能";
+            label = "快捷功能和快符";
         };
     };
 };
