@@ -86,7 +86,7 @@ layers:
   - {t: '-', s: _}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
-  - ^
+  - '@'
   - '{'
   - {t: '}', type: held alternate}
   - $
@@ -112,8 +112,8 @@ layers:
   - {t: ']', s: '}'}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '@'
   - ':'
+  - ^
   - '?'
   - {t: '!', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '''', s: '"'}
@@ -328,7 +328,7 @@ layers:
   快捷功能和快符:
   - RGB TOG
   - {t: 符号, h: toggle}
-  - {t: 默认层, h: toggle}
+  - {t: 导航, h: toggle}
   - {t: 数字, h: toggle}
   - {t: 功能区和鼠标, h: toggle}
   - {t: 导航, h: toggle}
