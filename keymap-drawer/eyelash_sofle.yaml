@@ -16,7 +16,7 @@ layers:
   - PLAY PAUSE
   - {t: '$$mdi:keyboard-tab$$', h: 'Alt+$$mdi:keyboard-tab$$'}
   - Q
-  - {t: W, h: 窗口和快捷功能}
+  - {t: W, h: 快捷功能和快符}
   - {t: E, h: 符号}
   - R
   - T
@@ -49,7 +49,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', h: 窗口和快捷功能, s: <}
+  - {t: ',', h: 快捷功能和快符, s: <}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-caps$$
@@ -58,7 +58,7 @@ layers:
   - $$mdi:pan-up$$
   - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
-  - {t: 窗口和快捷功能, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: 快捷功能和快符, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Gui+\, h: LGUI, s: Gui+|}
   - $$mdi:keyboard-space$$
@@ -325,7 +325,7 @@ layers:
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  窗口和快捷功能:
+  快捷功能和快符:
   - RGB TOG
   - {t: 符号, h: toggle}
   - {t: 默认层, h: toggle}

@@ -377,7 +377,7 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">W</text>
 <a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 86%">窗口和快捷功能</tspan></text>
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 86%">快捷功能和快符</tspan></text>
 </a></g>
 <g transform="translate(196, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -563,7 +563,7 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">,</text>
 <a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 86%">窗口和快捷功能</tspan></text>
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 86%">快捷功能和快符</tspan></text>
 </a><text x="0" y="-24" class="key shifted">&lt;</text>
 </g>
 <g transform="translate(784, 203)" class="key keypos-49">
@@ -614,7 +614,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <a href="#x_x">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">窗口和快捷功能</tspan></text>
+<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">快捷功能和快符</tspan></text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g transform="translate(462, 91)" class="key enter keypos-58">
@@ -2171,8 +2171,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1941)" class="layer-窗口和快捷功能">
-<text x="0" y="28" class="label" id="x_x">窗口和快捷功能:</text>
+<g transform="translate(40, 1941)" class="layer-快捷功能和快符">
+<text x="0" y="28" class="label" id="x_x">快捷功能和快符:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
