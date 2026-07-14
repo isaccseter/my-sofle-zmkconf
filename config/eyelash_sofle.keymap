@@ -121,13 +121,14 @@
             bindings = <&double_return>;
             key-positions = <48 49>;
             timeout-ms = <300>;
-            layers = <0 1 2 3>;
+            layers = <0 5>;
         };
 
         under {
             bindings = <&alt_under>;
             key-positions = <48 47>;
             timeout-ms = <300>;
+            layers = <0 5>;
         };
 
         CE_space {
@@ -362,20 +363,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(D) &kp Y &kp C &kp A &kp L &kp O &kp R>;
             label = "SIGNATURE";
-        };
-
-        shift_five_right: CS_five_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT)>;
-            label = "CS_FIVE_RIGHT";
-        };
-
-        shift_five_left: CS_five_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT)>;
-            label = "CS_FIVE_LEFT";
         };
     };
 
