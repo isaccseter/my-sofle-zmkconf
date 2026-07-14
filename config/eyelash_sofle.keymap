@@ -173,34 +173,6 @@
             label = "RENAME_CA_CC";
         };
 
-        triple_up: trple_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
-            label = "TRPLE_UP";
-        };
-
-        triple_down: triple_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN &kp DOWN &kp DOWN>;
-            label = "TRIPLE_DOWN";
-        };
-
-        five_left: five_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
-            label = "FIVE_LEFT";
-        };
-
-        five_right: five_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
-            label = "FIVE_RIGHT";
-        };
-
         alt_backslash: alt_backslash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -428,7 +400,7 @@
             bindings = <
 &trans  &trans           &trans           &alt_backslash    &trans             &trans                    &trans  &trans             &trans                      &alt_backslash         &trans           &trans             &trans
 &trans  &alt_grave       &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp CARET          &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &kp UNDER          &trans
-&trans  &kp EXCLAMATION  &mt LSHIFT STAR  &kp FSLH          &mt LCTRL EQUAL    &mt LS(LALT) AMPERSAND    &trans  &mt RS(RALT) HASH  &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI  &kp DOUBLE_QUOTES  &trans
+&trans  &kp EXCLAMATION  &mt LSHIFT STAR  &kp FSLH          &mt LCTRL EQUAL    &mt LS(LALT) AMPERSAND    &trans  &mt RS(RALT) HASH  &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI  &kp DOUBLE_QUOTES  &triple_minus
 &trans  &kp TILDE        &mt LALT PLUS    &kp LBKT          &kp RIGHT_BRACKET  &kp PERCENT               &trans  &kp AT_SIGN        &kp COLON                   &kp QUESTION           &mt RALT EXCL    &kp SQT            &trans
 &trans  &trans           &trans           &trans            &trans             &trans                    &trans  &trans             &trans                      &to 0                  &trans           &trans
             >;
