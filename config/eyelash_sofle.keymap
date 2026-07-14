@@ -99,6 +99,42 @@
         hold-while-undecided;
     };
 
+    left_morph: left_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_MORPH";
+        bindings = <&five_left>, <&kp LEFT>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RGUI)>;
+    };
+
+    right_morph: right_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_MORPH";
+        bindings = <&five_right>, <&kp RIGHT>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RGUI)>;
+    };
+
+    up_morph: up_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UP_MORPH";
+        bindings = <&triple_up>, <&kp UP_ARROW>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RGUI)>;
+    };
+
+    down_morph: down_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOWN_MORPH";
+        bindings = <&triple_down>, <&kp DOWN>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RGUI)>;
+    };
+
     behaviors {
     };
 
@@ -450,11 +486,11 @@
 
         spNAV {
             bindings = <
-&trans  &trans  &trans      &trans  &trans         &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans         &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL      &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
-&trans  &trans  &kp LALT    &trans  &kp RIGHT_WIN  &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
-&trans  &trans  &trans      &trans  &trans         &trans          &trans  &trans     &trans            &to 0              &trans             &trans
+&trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
+&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
+&trans  &trans  &kp LALT    &trans  &mo 2      &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
             label = "特殊导航";
@@ -500,9 +536,9 @@
             label = "导航";
             bindings = <
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
-&trans  &trans  &kp LALT    &trans  &mo 2      &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &up_morph          &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &left_morph       &down_morph        &right_morph       &trans     &trans
+&trans  &trans  &kp LALT    &trans  &kp RGUI   &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
         };
