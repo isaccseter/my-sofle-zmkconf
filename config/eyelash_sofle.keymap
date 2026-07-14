@@ -102,37 +102,55 @@
     left_morph: left_morph {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_MORPH";
-        bindings = <&five_left>, <&kp LEFT>;
+        bindings = <&kp LEFT>, <&five_left>;
 
         #binding-cells = <0>;
-        mods = <(MOD_RGUI)>;
+        mods = <(MOD_RSFT)>;
     };
 
     right_morph: right_morph {
         compatible = "zmk,behavior-mod-morph";
         label = "RIGHT_MORPH";
-        bindings = <&five_right>, <&kp RIGHT>;
+        bindings = <&kp RIGHT>, <&five_right>;
 
         #binding-cells = <0>;
-        mods = <(MOD_RGUI)>;
+        mods = <(MOD_RSFT)>;
     };
 
     up_morph: up_morph {
         compatible = "zmk,behavior-mod-morph";
         label = "UP_MORPH";
-        bindings = <&triple_up>, <&kp UP_ARROW>;
+        bindings = <&kp UP>, <&triple_up>;
 
         #binding-cells = <0>;
-        mods = <(MOD_RGUI)>;
+        mods = <(MOD_RSFT)>;
     };
 
     down_morph: down_morph {
         compatible = "zmk,behavior-mod-morph";
         label = "DOWN_MORPH";
-        bindings = <&triple_down>, <&kp DOWN>;
+        bindings = <&kp DOWN>, <&triple_down>;
 
         #binding-cells = <0>;
-        mods = <(MOD_RGUI)>;
+        mods = <(MOD_RSFT)>;
+    };
+
+    shift_left_morph: shift_left_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SHIFT_LEFT_MORPH";
+        bindings = <&kp LS(LC(LEFT))>, <&shift_five_left>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RSFT)>;
+    };
+
+    shift_right_morph: shift_right_morph {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SHIFT_RIGHT_MORPH";
+        bindings = <&kp LS(LC(RIGHT))>, <&shift_five_right>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RSFT)>;
     };
 
     behaviors {
@@ -435,6 +453,20 @@
             bindings = <&kp LS(D) &kp Y &kp C &kp A &kp L &kp O &kp R>;
             label = "SIGNATURE";
         };
+
+        shift_five_right: CS_five_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT)>;
+            label = "CS_FIVE_RIGHT";
+        };
+
+        shift_five_left: CS_five_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT) &kp LS(LEFT)>;
+            label = "CS_FIVE_LEFT";
+        };
     };
 
     keymap {
@@ -469,9 +501,9 @@
         spNAV {
             bindings = <
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
-&trans  &trans  &kp LALT    &trans  &mo 2      &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &triple_up         &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &five_left        &triple_down       &five_right        &trans     &trans
+&trans  &trans  &kp LALT    &trans  &mo 2      &trans          &trans  &kp LC(Z)  &shift_five_left  &kp K_APPLICATION  &shift_five_right  &kp INS    &trans
 &trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
@@ -517,11 +549,11 @@
         Navigation {
             label = "导航";
             bindings = <
-&trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &up_morph          &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &left_morph       &down_morph        &right_morph       &trans     &trans
-&trans  &trans  &kp LALT    &trans  &kp RGUI   &trans          &trans  &kp LC(Z)  &kp LS(LC(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
-&trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
+&trans  &trans  &trans      &trans  &trans      &trans          &trans  &sel_row   &kp LC(INS)        &kp LS(INS)        &trans              &trans     &trans
+&trans  &trans  &kp DELETE  &trans  &trans      &trans          &trans  &kp PG_UP  &kp HOME           &up_morph          &kp END             &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL   &kp LS(LALT)    &trans  &kp PG_DN  &left_morph        &down_morph        &right_morph        &trans     &trans
+&trans  &trans  &kp LALT    &trans  &kp RSHIFT  &trans          &trans  &kp LC(Z)  &shift_left_morph  &kp K_APPLICATION  &shift_right_morph  &kp INS    &trans
+&trans  &trans  &trans      &trans  &trans      &trans          &trans  &trans     &trans             &to 0              &trans              &trans
             >;
         };
     };
