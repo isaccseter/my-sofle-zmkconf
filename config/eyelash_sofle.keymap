@@ -399,9 +399,9 @@
         Symbols {
             bindings = <
 &trans  &trans           &trans           &alt_backslash    &trans             &trans                    &trans  &trans             &trans                      &alt_backslash         &trans           &trans             &trans
-&trans  &alt_grave       &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp CARET          &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &kp UNDER          &trans
+&trans  &alt_grave       &kp LESS_THAN    &kp GREATER_THAN  &kp MINUS          &kp PIPE                  &trans  &kp AT             &kp LEFT_BRACE              &kp RIGHT_BRACE        &kp DLLR         &kp UNDER          &trans
 &trans  &kp EXCLAMATION  &mt LSHIFT STAR  &kp FSLH          &mt LCTRL EQUAL    &mt LS(LALT) AMPERSAND    &trans  &mt RS(RALT) HASH  &mt RCTRL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RSHIFT SEMI  &kp DOUBLE_QUOTES  &triple_minus
-&trans  &kp TILDE        &mt LALT PLUS    &kp LBKT          &kp RIGHT_BRACKET  &kp PERCENT               &trans  &kp AT_SIGN        &kp COLON                   &kp QUESTION           &mt RALT EXCL    &kp SQT            &trans
+&trans  &kp TILDE        &mt LALT PLUS    &kp LBKT          &kp RIGHT_BRACKET  &kp PERCENT               &trans  &kp COLON          &kp CARET                   &kp QUESTION           &mt RALT EXCL    &kp SQT            &trans
 &trans  &trans           &trans           &trans            &trans             &trans                    &trans  &trans             &trans                      &to 0                  &trans           &trans
             >;
 
@@ -446,7 +446,7 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &to 1           &to 0           &to 3           &to 4           &to 2                &trans  &trans                 &trans                   &kp KP_NUMLOCK   &trans              &trans            &trans
+&rgb_ug RGB_TOG  &to 1           &to 2           &to 3           &to 4           &to 2                &trans  &trans                 &trans                   &kp KP_NUMLOCK   &trans              &trans            &trans
 &rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &end_SEMICOLON_Return  &caret_quote             &question_quote  &exclamation_quote  &pair_alt_grave   &trans
 &kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &SEMICOLON_Return      &colon_quote             &comma_quote     &dot_quote          &end_Return       &triple_minus
 &kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &signature             &double_alt_leftBracket  &Return_quote    &pair_quote         &pair_apostrophe  &trans
