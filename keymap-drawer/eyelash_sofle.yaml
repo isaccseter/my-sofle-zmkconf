@@ -104,7 +104,7 @@ layers:
   - )
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
   - '"'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&triple_minus'
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
   - {t: +, h: '$$mdi:apple-keyboard-option$$'}
