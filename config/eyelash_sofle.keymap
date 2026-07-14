@@ -99,60 +99,6 @@
         hold-while-undecided;
     };
 
-    left_morph: left_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_MORPH";
-        bindings = <&kp LEFT>, <&five_left>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
-    right_morph: right_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_MORPH";
-        bindings = <&kp RIGHT>, <&five_right>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
-    up_morph: up_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "UP_MORPH";
-        bindings = <&kp UP>, <&triple_up>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
-    down_morph: down_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "DOWN_MORPH";
-        bindings = <&kp DOWN>, <&triple_down>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
-    shift_left_morph: shift_left_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "SHIFT_LEFT_MORPH";
-        bindings = <&kp LS(LC(LEFT))>, <&shift_five_left>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
-    shift_right_morph: shift_right_morph {
-        compatible = "zmk,behavior-mod-morph";
-        label = "SHIFT_RIGHT_MORPH";
-        bindings = <&kp LS(LC(RIGHT))>, <&shift_five_right>;
-
-        #binding-cells = <0>;
-        mods = <(MOD_RSFT)>;
-    };
-
     behaviors {
     };
 
@@ -476,8 +422,8 @@
             bindings = <
 &mkp MB3         &kp LC(X)       &kp LC(V)      &kp LC(C)                    &kp LC(A)     &kp DELETE         &kp UP_ARROW     &kp HOME                &kp LEFT      &kp RIGHT     &kp BSPC       &kp END           &kp C_PLAY_PAUSE
 &mt LA(TAB) TAB  &kp Q           &Llt 5 W       &Llt 1 E                     &kp R         &kp T              &kp DOWN_ARROW   &kp Y                   &kp U         &Rlt 1 I      &kp O          &kp P             &kp FSLH
-&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 6 D                     &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H         &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
-&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C                     &Llt 2 V      &kp B              &kp RIGHT_ARROW  &kp N                   &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
+&kp LC(SPACE)    &kp A           &Lmt LSHIFT S  &Llt 2 D                     &Lmt LCTRL F  &Lmt LS(LALT) G    &kp LEFT_ARROW   &Rmt RS(RALT) H         &Rmt RCTRL J  &Rlt 3 K      &Rmt RSHIFT L  &kp ENTER         &kp MINUS
+&kp ESC          &kp Z           &Lmt LALT X    &Llt 4 C                     &kp V         &kp B              &kp RIGHT_ARROW  &kp N                   &kp M         &Rlt 5 COMMA  &Rmt RALT DOT  &kp SINGLE_QUOTE  &kp CAPS
 &kp C_MUTE       &msc SCRL_DOWN  &msc SCRL_UP   &tog_ctrl LCTRL PRINTSCREEN  &kp SPACE     &sl 5              &kp ENTER        &mt LGUI LG(BACKSLASH)  &kp SPACE     &kp LC(END)   &kp BACKSLASH  &kp GRAVE
             >;
 
@@ -498,16 +444,16 @@
             label = "符号";
         };
 
-        spNAV {
+        Navigation {
             bindings = <
-&trans  &trans  &trans      &trans  &trans     &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans     &trans          &trans  &kp PG_UP  &kp HOME          &triple_up         &kp END            &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL  &kp LS(LALT)    &trans  &kp PG_DN  &five_left        &triple_down       &five_right        &trans     &trans
-&trans  &trans  &kp LALT    &trans  &mo 2      &trans          &trans  &kp LC(Z)  &shift_five_left  &kp K_APPLICATION  &shift_five_right  &kp INS    &trans
-&trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans     &trans            &to 0              &trans             &trans
+&trans  &trans  &trans     &trans  &trans      &trans          &trans  &sel_row   &kp LC(INS)       &kp LS(INS)        &trans             &trans     &trans
+&trans  &trans  &trans     &trans  &trans      &trans          &trans  &kp PG_UP  &kp HOME          &kp UP             &kp END            &kp LC(F)  &trans
+&trans  &trans  &kp LSHFT  &mo 2   &kp LCTRL   &kp LS(LALT)    &trans  &kp PG_DN  &kp LEFT          &kp DOWN           &kp RIGHT          &trans     &trans
+&trans  &trans  &kp LALT   &trans  &kp DELETE  &trans          &trans  &kp LC(Z)  &kp LC(LS(LEFT))  &kp K_APPLICATION  &kp LC(LS(RIGHT))  &kp INS    &trans
+&trans  &trans  &trans     &trans  &trans      &trans          &trans  &trans     &trans            &to 0              &trans             &trans
             >;
 
-            label = "特殊导航";
+            label = "导航";
         };
 
         Number {
@@ -536,7 +482,7 @@
 
         APP_flash {
             bindings = <
-&rgb_ug RGB_TOG  &to 1           &to 6           &to 3           &to 4           &to 2                &trans  &trans                 &trans                   &kp KP_NUMLOCK   &trans              &trans            &trans
+&rgb_ug RGB_TOG  &to 1           &to 0           &to 3           &to 4           &to 2                &trans  &trans                 &trans                   &kp KP_NUMLOCK   &trans              &trans            &trans
 &rgb_ug RGB_EFF  &kp LG(LC(N9))  &kp LA(LEFT)    &kp LA(RIGHT)   &kp F5          &kp C_VOLUME_UP      &trans  &end_SEMICOLON_Return  &caret_quote             &question_quote  &exclamation_quote  &pair_alt_grave   &trans
 &kp C_BRI_UP     &kp LG(D)       &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp C_VOLUME_DOWN    &trans  &SEMICOLON_Return      &colon_quote             &comma_quote     &dot_quote          &end_Return       &triple_minus
 &kp C_BRI_DEC    &rename_Ca_Cc   &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &kp C_MUTE           &trans  &signature             &double_alt_leftBracket  &Return_quote    &pair_quote         &pair_apostrophe  &trans
@@ -544,17 +490,6 @@
             >;
 
             label = "窗口和快捷功能";
-        };
-
-        Navigation {
-            label = "导航";
-            bindings = <
-&trans  &trans  &trans      &trans  &trans      &trans          &trans  &sel_row   &kp LC(INS)        &kp LS(INS)        &trans              &trans     &trans
-&trans  &trans  &kp DELETE  &trans  &trans      &trans          &trans  &kp PG_UP  &kp HOME           &up_morph          &kp END             &kp LC(F)  &trans
-&trans  &trans  &kp LSHFT   &mo 6   &kp LCTRL   &kp LS(LALT)    &trans  &kp PG_DN  &left_morph        &down_morph        &right_morph        &trans     &trans
-&trans  &trans  &kp LALT    &trans  &kp RSHIFT  &trans          &trans  &kp LC(Z)  &shift_left_morph  &kp K_APPLICATION  &shift_right_morph  &kp INS    &trans
-&trans  &trans  &trans      &trans  &trans      &trans          &trans  &trans     &trans             &to 0              &trans              &trans
-            >;
         };
     };
 };
