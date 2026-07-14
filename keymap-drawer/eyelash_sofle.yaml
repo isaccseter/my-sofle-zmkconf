@@ -174,7 +174,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: RIGHT WIN, type: held}
+  - {t: 特殊导航, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
@@ -413,7 +413,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - {t: '&triple_up', s: '$$mdi:arrow-up-bold$$'}
   - END
   - Ctl+F
   - {t: '$$mdi:transfer$$', type: trans}
@@ -425,16 +425,16 @@ layers:
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '&five_left', s: '$$mdi:arrow-left-bold$$'}
+  - {t: '&triple_down', s: '$$mdi:arrow-down-bold$$'}
+  - {t: '&five_right', s: '$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 特殊导航, type: held alternate}
+  - {t: RGUI, type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
