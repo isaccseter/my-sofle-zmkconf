@@ -153,7 +153,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - '&triple_up'
   - END
   - Ctl+F
   - {t: '$$mdi:transfer$$', type: trans}
@@ -165,9 +165,9 @@ layers:
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - '&five_left'
+  - '&triple_down'
+  - '&five_right'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -178,9 +178,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
-  - Sft+Ctl+$$mdi:arrow-left-bold$$
+  - '&shift_five_left'
   - APPLICATION
-  - Ctl+Sft+$$mdi:arrow-right-bold$$
+  - '&shift_five_right'
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -413,7 +413,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
   - HOME
-  - {t: '&triple_up', s: '$$mdi:arrow-up-bold$$'}
+  - {t: '$$mdi:arrow-up-bold$$', s: '&triple_up'}
   - END
   - Ctl+F
   - {t: '$$mdi:transfer$$', type: trans}
@@ -425,22 +425,22 @@ layers:
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
-  - {t: '&five_left', s: '$$mdi:arrow-left-bold$$'}
-  - {t: '&triple_down', s: '$$mdi:arrow-down-bold$$'}
-  - {t: '&five_right', s: '$$mdi:arrow-right-bold$$'}
+  - {t: '$$mdi:arrow-left-bold$$', s: '&five_left'}
+  - {t: '$$mdi:arrow-down-bold$$', s: '&triple_down'}
+  - {t: '$$mdi:arrow-right-bold$$', s: '&five_right'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: RGUI, type: held alternate}
+  - {t: '$$mdi:apple-keyboard-shift$$', type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
-  - Sft+Ctl+$$mdi:arrow-left-bold$$
+  - {t: 'Sft+Ctl+$$mdi:arrow-left-bold$$', s: '&shift_five_left'}
   - APPLICATION
-  - Ctl+Sft+$$mdi:arrow-right-bold$$
+  - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', s: '&shift_five_right'}
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
