@@ -328,10 +328,10 @@ layers:
   窗口和快捷功能:
   - RGB TOG
   - {t: 符号, h: toggle}
-  - {t: 特殊导航, h: toggle}
+  - {t: 导航, h: toggle}
   - {t: 数字, h: toggle}
   - {t: 功能区和鼠标, h: toggle}
-  - {t: 默认层, h: toggle}
+  - {t: 特殊导航, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
