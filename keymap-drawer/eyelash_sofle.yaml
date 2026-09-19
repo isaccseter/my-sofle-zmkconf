@@ -63,7 +63,7 @@ layers:
   - _
   - {t: '$$mdi:keyboard-space$$', h: 数字}
   - Ctl+END
-  - {t: \, s: '|'}
+  - $$mdi:apple-keyboard-caps$$
   - {t: '`', s: '~'}
   符号:
   - {t: '$$mdi:transfer$$', type: trans}
