@@ -14,53 +14,53 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - END
   - PLAY PAUSE
-  - {t: '$$mdi:keyboard-tab$$', h: 'Alt+$$mdi:keyboard-tab$$'}
+  - $$mdi:keyboard-tab$$
   - Q
-  - {t: W, h: 快捷功能和快符}
-  - {t: E, h: 符号}
+  - W
+  - E
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
   - U
-  - {t: I, h: 符号}
+  - I
   - O
   - P
   - {t: /, s: '?'}
-  - Ctl+$$mdi:keyboard-space$$
+  - LANG1
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: D, h: 导航}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: G, h: 'Sft+$$mdi:apple-keyboard-option$$'}
+  - S
+  - D
+  - F
+  - G
   - $$mdi:arrow-left-bold$$
-  - {t: H, h: 'Sft+$$mdi:apple-keyboard-option$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: K, h: 数字}
-  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
+  - H
+  - J
+  - K
+  - L
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '-', s: _}
-  - $$mdi:keyboard-esc$$
+  - '&double_return'
   - Z
-  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: C, h: 功能区和鼠标}
+  - X
+  - C
   - V
   - B
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', h: 快捷功能和快符, s: <}
-  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-caps$$
   - $$mdi:volume-off$$
   - $$mdi:pan-down$$
   - $$mdi:pan-up$$
   - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
-  - {t: 快捷功能和快符, h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: Gui+\, h: LGUI, s: Gui+|}
+  - _
   - $$mdi:keyboard-space$$
   - Ctl+END
   - {t: \, s: '|'}
@@ -82,13 +82,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&alt_grave'
   - <
-  - {t: '>', type: held}
+  - '>'
   - {t: '-', s: _}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - '@'
   - '{'
-  - {t: '}', type: held alternate}
+  - '}'
   - $
   - _
   - {t: '$$mdi:transfer$$', type: trans}
@@ -160,7 +160,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-control$$
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -231,7 +231,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+$$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -303,7 +303,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:mouse-left-click-outline$$', type: held}
+  - $$mdi:mouse-left-click-outline$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -341,7 +341,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
   - {t: Gui+Ctl+9, s: Gui+Ctl+(}
-  - {t: 'Alt+$$mdi:arrow-left-bold$$', type: held}
+  - Alt+$$mdi:arrow-left-bold$$
   - Alt+$$mdi:arrow-right-bold$$
   - F5
   - $$mdi:volume-high$$
@@ -374,7 +374,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&signature'
   - '&double_alt_leftBracket'
-  - {t: '&Return_quote', type: held alternate}
+  - '&Return_quote'
   - '&pair_quote'
   - '&pair_apostrophe'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -383,7 +383,7 @@ layers:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - BT CLR ALL
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -392,18 +392,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [2, 3]
-  k: Ctl+Sft+C
-- p: [3, 4]
-  k: Ctl+Sft+V
-- p: [13, 14]
   k: Ctl+Z
 - p: [39, 40]
   k: '&soft_off'
 - p: [48, 49]
-  k: '&double_return'
-  l: [默认层, 快捷功能和快符]
-- p: [48, 47]
-  k: '&alt_under'
+  k: {t: ':', s: ;}
   l: [默认层, 快捷功能和快符]
 - p: [56, 60]
   k: '&CE_space'
