@@ -3,8 +3,8 @@ layers:
   默认层:
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - PASTE
-  - COPY
+  - '&paste'
+  - '&copy'
   - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
@@ -27,7 +27,7 @@ layers:
   - {t: O, h: RIGHT GUI}
   - P
   - {t: /, s: '?'}
-  - LANG1
+  - Meh+F8
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: 符号}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
@@ -392,7 +392,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [2, 3]
-  k: UNDO
+  k: Ctl+Z
 - p: [39, 40]
   k: '&soft_off'
 - p: [48, 49]
