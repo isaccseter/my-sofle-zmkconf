@@ -99,20 +99,6 @@
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    copy: copy {
-        compatible = "zmk,behavior-tap-dance";
-        label = "COPY";
-        #binding-cells = <0>;
-        bindings = <&kp LC(C)>, <&kp LC(LS(C))>;
-    };
-
-    paste: paste {
-        compatible = "zmk,behavior-tap-dance";
-        label = "PASTE";
-        #binding-cells = <0>;
-        bindings = <&kp LC(LS(V))>, <&kp LC(V)>;
-    };
-
     hold_space: hold_space {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_SPACE";
@@ -147,18 +133,6 @@
             key-positions = <48 49>;
             timeout-ms = <300>;
             layers = <0>;
-        };
-
-        CE_space {
-            bindings = <&CE_space>;
-            key-positions = <56 60>;
-            timeout-ms = <300>;
-        };
-
-        copy_name {
-            bindings = <&rename_Ca_Cc>;
-            key-positions = <48 49>;
-            timeout-ms = <300>;
         };
     };
 
