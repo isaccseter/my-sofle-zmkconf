@@ -3,8 +3,8 @@ layers:
   默认层:
   - '&mkp MB3'
   - Ctl+X
-  - Ctl+V
-  - Ctl+C
+  - '&paste'
+  - '&copy'
   - Ctl+A
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
@@ -16,7 +16,7 @@ layers:
   - PLAY PAUSE
   - $$mdi:keyboard-tab$$
   - Q
-  - W
+  - {t: W, h: '$$mdi:apple-keyboard-command$$'}
   - E
   - R
   - T
@@ -24,21 +24,21 @@ layers:
   - Y
   - U
   - I
-  - O
+  - {t: O, h: RIGHT GUI}
   - P
   - {t: /, s: '?'}
   - LANG1
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: 符号}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - H
-  - J
-  - K
-  - L
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: L, h: 符号}
+  - {t: RETURN, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '-', s: _}
   - '&double_return'
   - Z
@@ -54,8 +54,8 @@ layers:
   - {t: /, s: '?'}
   - {t: '''', s: '"'}
   - $$mdi:volume-off$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-up$$
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
@@ -94,7 +94,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
-  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '*', h: '$$mdi:apple-keyboard-shift$$', type: held}
   - {t: /, s: '?'}
   - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
   - {t: '&', h: 'Sft+$$mdi:apple-keyboard-option$$'}
@@ -102,7 +102,7 @@ layers:
   - {t: '#', h: 'Sft+$$mdi:apple-keyboard-option$$'}
   - {t: (, h: '$$mdi:apple-keyboard-control$$'}
   - )
-  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':', type: held alternate}
   - '"'
   - '&triple_minus'
   - {t: '$$mdi:transfer$$', type: trans}
