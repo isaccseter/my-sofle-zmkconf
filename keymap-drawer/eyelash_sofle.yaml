@@ -62,7 +62,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: _, h: Functions}
   - {t: '$$mdi:keyboard-space$$', h: 数字}
-  - Ctl+END
+  - F24
   - $$mdi:apple-keyboard-caps$$
   - {t: '`', s: '~'}
   导航:
