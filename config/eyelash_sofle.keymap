@@ -80,9 +80,9 @@
         hold-trigger-on-release;
     };
 
-    tog_ctrl: tog_ctrl {
+    ptsrn_ctrl: ptsrn_ctrl {
         compatible = "zmk,behavior-hold-tap";
-        label = "TOG_CTRL";
+        label = "PTSRN_CTRL";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
@@ -112,6 +112,19 @@
         label = "PASTE";
         #binding-cells = <0>;
         bindings = <&kp LC(LS(V))>, <&kp LC(V)>;
+    };
+
+    hold_space: hold_space {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_SPACE";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <150>;
+        require-prior-idle-ms = <125>;
+        flavor = "balanced";
+        hold-trigger-on-release;
     };
 
     behaviors {
@@ -377,11 +390,11 @@
 
         Default {
             bindings = <
-&mkp MB3        &kp LC(X)        &paste           &copy                        &kp LC(A)            &kp DELETE    &kp UP_ARROW     &kp HOME   &kp LEFT              &kp RIGHT           &kp BSPC          &kp END                &kp C_PLAY_PAUSE
-&kp TAB         &kp Q            &Lmt LEFT_GUI W  &kp E                        &kp R                &kp T         &kp DOWN_ARROW   &kp Y      &kp U                 &kp I               &Rmt RIGHT_GUI O  &kp P                  &kp FSLH
-&kp LANG1       &Lmt LEFT_ALT A  &Llt 1 S         &Lmt LEFT_SHIFT D            &Lmt LEFT_CONTROL F  &kp G         &kp LEFT_ARROW   &kp H      &Rmt RIGHT_CONTROL J  &Rmt RIGHT_SHIFT K  &Rlt 1 L          &Rmt RIGHT_ALT RETURN  &kp MINUS
-&double_return  &kp Z            &kp X            &kp C                        &kp V                &kp B         &kp RIGHT_ARROW  &kp N      &kp M                 &kp COMMA           &kp DOT           &kp FSLH               &kp APOS
-&kp C_MUTE      &kp LBKT         &kp RBKT         &tog_ctrl LCTRL PRINTSCREEN  &kp SPACE            &kp ESCAPE    &kp ENTER        &kp UNDER  &kp SPACE             &kp LC(END)         &kp BACKSLASH     &kp GRAVE
+&kp MINUS       &kp EQUAL        &paste           &copy                          &kp INSERT           &kp DELETE    &kp UP_ARROW     &kp HOME   &kp LEFT              &kp RIGHT           &kp END           &kp BACKSPACE          &kp C_PLAY_PAUSE
+&kp TAB         &kp Q            &Lmt LEFT_GUI W  &kp E                          &kp R                &kp T         &kp DOWN_ARROW   &kp Y      &kp U                 &kp I               &Rmt RIGHT_GUI O  &kp P                  &kp FSLH
+&kp LANG1       &Lmt LEFT_ALT A  &Llt 1 S         &Lmt LEFT_SHIFT D              &Lmt LEFT_CONTROL F  &kp G         &kp LEFT_ARROW   &kp H      &Rmt RIGHT_CONTROL J  &Rmt RIGHT_SHIFT K  &Rlt 1 L          &Rmt RIGHT_ALT RETURN  &kp MINUS
+&double_return  &kp Z            &kp X            &kp C                          &kp V                &kp B         &kp RIGHT_ARROW  &kp N      &kp M                 &kp COMMA           &kp DOT           &kp FSLH               &kp APOS
+&kp C_MUTE      &kp LBKT         &kp RBKT         &ptsrn_ctrl LCTRL PRINTSCREEN  &hold_space 2 SPACE  &kp ESCAPE    &kp ENTER        &kp UNDER  &hold_space 3 SPACE   &kp LC(END)         &kp BACKSLASH     &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
