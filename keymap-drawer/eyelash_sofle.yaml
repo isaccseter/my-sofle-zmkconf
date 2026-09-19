@@ -1,18 +1,18 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - '&mkp MB3'
-  - Ctl+X
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - '&paste'
   - '&copy'
-  - Ctl+A
+  - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
   - HOME
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:backspace$$', type: backspace}
   - END
+  - {t: '$$mdi:backspace$$', type: backspace}
   - PLAY PAUSE
   - $$mdi:keyboard-tab$$
   - Q
@@ -57,11 +57,11 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: 导航}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - _
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: 数字}
   - Ctl+END
   - {t: \, s: '|'}
   - {t: '`', s: '~'}
@@ -187,7 +187,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -256,7 +256,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
