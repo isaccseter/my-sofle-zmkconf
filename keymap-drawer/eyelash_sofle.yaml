@@ -3,8 +3,8 @@ layers:
   默认层:
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - '&paste'
-  - '&copy'
+  - PASTE
+  - COPY
   - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
@@ -392,7 +392,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [2, 3]
-  k: Ctl+Z
+  k: UNDO
 - p: [39, 40]
   k: '&soft_off'
 - p: [48, 49]
