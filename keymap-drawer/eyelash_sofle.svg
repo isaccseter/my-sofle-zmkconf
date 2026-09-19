@@ -640,16 +640,6 @@ rect.held, rect.combo.held {
 <text x="756" y="200" class="combo tap">:</text>
 <text x="756" y="188" class="combo shifted">;</text>
 </g>
-<g class="combo combopos-3">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
-</g>
 </g>
 </g>
 <g transform="translate(40, 388)" class="layer-导航">
@@ -988,16 +978,6 @@ rect.held, rect.combo.held {
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="42" y="211" width="28" height="26" class="combo"/>
 <text x="56" y="224" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
-</g>
-<g class="combo combopos-2">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
 </g>
 </g>
 </g>
@@ -1347,16 +1327,6 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="211" width="28" height="26" class="combo"/>
 <text x="56" y="224" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
-<g class="combo combopos-2">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
-</g>
 </g>
 </g>
 <g transform="translate(40, 1165)" class="layer-符号">
@@ -1698,16 +1668,6 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="42" y="211" width="28" height="26" class="combo"/>
 <text x="56" y="224" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
-<g class="combo combopos-2">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
-</g>
 </g>
 </g>
 <g transform="translate(40, 1553)" class="layer-功能区和鼠标">
@@ -2043,16 +2003,6 @@ rect.held, rect.combo.held {
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="42" y="211" width="28" height="26" class="combo"/>
 <text x="56" y="224" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
-</g>
-<g class="combo combopos-2">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
 </g>
 </g>
 </g>
@@ -2406,16 +2356,6 @@ rect.held, rect.combo.held {
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="42" y="211" width="28" height="26" class="combo"/>
 <text x="56" y="224" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
-</g>
-<g class="combo combopos-2">
-<path d="M462,283 l-129,0" class="combo"/>
-<path d="M462,283 l129,0" class="combo"/>
-<rect rx="6" ry="6" x="448" y="270" width="28" height="26" class="combo"/>
-<text x="462" y="283" class="combo tap"><tspan style="font-size: 67%">&amp;CE_space</tspan></text>
-</g>
-<g class="combo combopos-3">
-<rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
-<text x="756" y="200" class="combo tap"><tspan style="font-size: 60%">&amp;rename_C…</tspan></text>
 </g>
 </g>
 </g>
