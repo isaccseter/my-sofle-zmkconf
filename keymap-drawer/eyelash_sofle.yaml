@@ -1,19 +1,19 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - PgDn
+  - PgUp
   - '&paste'
   - '&copy'
   - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
-  - HOME
-  - $$mdi:arrow-left-bold$$
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - END
   - {t: '$$mdi:backspace$$', type: backspace}
-  - PLAY PAUSE
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-tab$$
   - Q
   - {t: W, h: '$$mdi:apple-keyboard-command$$'}
@@ -26,7 +26,7 @@ layers:
   - I
   - {t: O, h: RIGHT GUI}
   - P
-  - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - Meh+F8
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: 符号}
@@ -62,8 +62,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: _, h: Functions}
   - {t: '$$mdi:keyboard-space$$', h: 数字}
-  - F24
-  - $$mdi:apple-keyboard-caps$$
+  - HOME
+  - END
   - {t: '`', s: '~'}
   导航:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -86,9 +86,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG UP
+  - APPLICATION
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - PgUp
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -99,9 +99,9 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG DN
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -112,9 +112,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
   - Ctl+Sft+$$mdi:arrow-left-bold$$
-  - APPLICATION
+  - Ctl+Z
+  - PgDn
   - Ctl+Sft+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -277,8 +277,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-command$$
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:brightness-7$$
+  - $$mdi:brightness-5$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F12
@@ -294,11 +294,11 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F10
+  - F11
   - F4
   - F5
   - F6
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F10
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -307,7 +307,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F11
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -387,7 +387,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 默认层, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
