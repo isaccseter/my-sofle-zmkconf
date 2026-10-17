@@ -133,9 +133,9 @@ layers:
   数字:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - E
-  - {t: ',', s: <}
   - '%'
+  - {t: ',', s: <}
+  - E
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
