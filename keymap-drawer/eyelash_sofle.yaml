@@ -1,15 +1,15 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   默认层:
-  - PgDn
-  - PgUp
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - '&paste'
   - '&copy'
   - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:backspace$$', type: backspace}
