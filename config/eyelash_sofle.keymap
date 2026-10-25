@@ -274,11 +274,11 @@
 
         Default {
             bindings = <
-&kp MINUS           &kp EQUAL         &paste           &copy                          &kp INSERT           &kp DELETE              &kp UP_ARROW     &kp UP               &kp LEFT              &kp DOWN            &kp RIGHT         &kp BACKSPACE          &kp CAPSLOCK
-&kp TAB             &kp Q             &Lmt LEFT_GUI W  &Llt 5 E                       &kp R                &kp T                   &kp DOWN_ARROW   &kp Y                &kp U                 &kp I               &Rmt RIGHT_GUI O  &kp P                  &kp BACKSLASH
-&kp LS(LA(LC(F8)))  &Lmt LEFT_ALT A   &Llt 3 S         &Lmt LEFT_SHIFT D              &Lmt LEFT_CONTROL F  &kp G                   &kp LEFT_ARROW   &kp H                &Rmt RIGHT_CONTROL J  &Rmt RIGHT_SHIFT K  &Rlt 3 L          &Rmt RIGHT_ALT RETURN  &kp MINUS
-&double_return      &kp Z             &kp X            &kp C                          &kp V                &kp B                   &kp RIGHT_ARROW  &kp N                &kp M                 &kp COMMA           &kp DOT           &kp FSLH               &kp APOS
-&kp C_MUTE          &kp LEFT_BRACKET  &kp RBKT         &ptsrn_ctrl LCTRL PRINTSCREEN  &hold_space 1 SPACE  &hold_space 4 ESCAPE    &kp ENTER        &hold_space 5 UNDER  &hold_space 2 SPACE   &kp HOME            &kp END           &kp GRAVE
+&kp MINUS           &kp EQUAL        &paste           &copy                          &kp INSERT           &kp DELETE              &kp UP_ARROW     &kp UP               &kp LEFT              &kp DOWN            &kp RIGHT         &kp BACKSPACE          &kp CAPSLOCK
+&kp TAB             &kp Q            &Lmt LEFT_GUI W  &Llt 5 E                       &kp R                &kp T                   &kp DOWN_ARROW   &kp Y                &kp U                 &kp I               &Rmt RIGHT_GUI O  &kp P                  &kp BACKSLASH
+&kp LS(LA(LC(F8)))  &Lmt LEFT_ALT A  &Llt 3 S         &Lmt LEFT_SHIFT D              &Lmt LEFT_CONTROL F  &kp G                   &kp LEFT_ARROW   &kp H                &Rmt RIGHT_CONTROL J  &Rmt RIGHT_SHIFT K  &Rlt 3 L          &Rmt RIGHT_ALT RETURN  &kp MINUS
+&double_return      &kp Z            &kp X            &kp C                          &kp V                &kp B                   &kp RIGHT_ARROW  &kp N                &kp M                 &kp COMMA           &kp DOT           &kp FSLH               &kp APOS
+&kp C_MUTE          &kp HOME         &kp END          &ptsrn_ctrl LCTRL PRINTSCREEN  &hold_space 1 SPACE  &hold_space 4 ESCAPE    &kp ENTER        &hold_space 5 UNDER  &hold_space 2 SPACE   &kp GRAVE           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -336,7 +336,7 @@
 
         Functions {
             bindings = <
-&trans  &to 1   &to 2            &to 3            &to 4         &to 5             &trans  &trans        &trans        &trans           &trans              &trans                 &trans
+&trans  &to 1   &to 2            &to 3            &to 4         &to 5             &trans  &trans        &tog 1        &tog 2           &tog 3              &tog 4                 &trans
 &trans  &trans  &bt BT_SEL 3     &bt BT_SEL 4     &soft_off     &bt BT_CLR_ALL    &trans  &signature    &trans        &end_Return      &SEMICOLON_Return   &end_SEMICOLON_Return  &trans
 &trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR        &trans  &trans        &pair_quote   &comma_quote     &dot_quote          &Return_quote          &triple_minus
 &trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans        &trans            &trans  &colon_quote  &caret_quote  &question_quote  &exclamation_quote  &trans                 &pair_apostrophe
