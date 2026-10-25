@@ -54,17 +54,17 @@ layers:
   - {t: /, s: '?'}
   - {t: '''', s: '"'}
   - $$mdi:volume-off$$
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - HOME
+  - END
   - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-space$$', h: 导航}
   - {t: '$$mdi:keyboard-esc$$', h: 功能区和鼠标}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: _, h: Functions}
   - {t: '$$mdi:keyboard-space$$', h: 数字}
-  - HOME
-  - END
   - {t: '`', s: '~'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   导航:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -334,10 +334,10 @@ layers:
   - {t: Functions, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 导航, h: toggle}
+  - {t: 数字, h: toggle}
+  - {t: 符号, h: toggle}
+  - {t: 功能区和鼠标, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
