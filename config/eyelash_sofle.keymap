@@ -337,10 +337,20 @@
         Functions {
             bindings = <
 &trans  &to 1   &to 2            &to 3            &to 4         &to 5             &trans  &trans        &tog 1        &tog 2           &tog 3              &tog 4                 &trans
-&trans  &trans  &bt BT_SEL 3     &bt BT_SEL 4     &soft_off     &bt BT_CLR_ALL    &trans  &signature    &trans        &end_Return      &SEMICOLON_Return   &end_SEMICOLON_Return  &trans
-&trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR        &trans  &trans        &pair_quote   &comma_quote     &dot_quote          &Return_quote          &triple_minus
-&trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans        &trans            &trans  &colon_quote  &caret_quote  &question_quote  &exclamation_quote  &trans                 &pair_apostrophe
+&trans  &trans  &bt BT_SEL 3     &bt BT_SEL 4     &soft_off     &bt BT_CLR_ALL    &trans  &trans        &trans        &end_Return      &SEMICOLON_Return   &end_SEMICOLON_Return  &trans
+&trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR        &trans  &trans        &trans        &comma_quote     &dot_quote          &Return_quote          &trans
+&trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans        &trans            &trans  &colon_quote  &caret_quote  &question_quote  &exclamation_quote  &trans                 &trans
 &trans  &trans  &trans           &trans           &trans        &trans            &trans  &trans        &trans        &to 0            &trans              &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &signature   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &triple_minus  &pair_apostrophe  &pair_quote  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
