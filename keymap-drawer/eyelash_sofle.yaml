@@ -3,8 +3,8 @@ layers:
   默认层:
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - '&paste'
-  - '&copy'
+  - Sft+Ins
+  - Ctl+Ins
   - Ins
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:arrow-up-bold$$
@@ -86,9 +86,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - APPLICATION
   - HOME
-  - PgUp
+  - Ctl+$$mdi:arrow-left-bold$$
+  - Ctl+$$mdi:arrow-right-bold$$
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -113,8 +113,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Sft+$$mdi:arrow-left-bold$$
-  - Ctl+Z
   - PgDn
+  - PgUp
   - Ctl+Sft+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -350,7 +350,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&end_Return'
   - '&SEMICOLON_Return'
-  - '&end_SEMICOLON_Return'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -363,7 +363,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&comma_quote'
   - '&dot_quote'
-  - '&Return_quote'
+  - '&end_SEMICOLON_Return'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -406,7 +406,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&pair_titles'
   - '&signature'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -421,7 +421,7 @@ layers:
   - '&triple_minus'
   - '&pair_apostrophe'
   - '&pair_quote'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&Return_quote'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
