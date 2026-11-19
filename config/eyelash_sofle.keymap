@@ -112,24 +112,6 @@
         hold-trigger-on-release;
     };
 
-    copy: copy {
-        compatible = "zmk,behavior-tap-dance";
-        label = "COPY";
-        #binding-cells = <0>;
-        bindings = <&kp LC(C)>, <&kp LC(LS(C))>;
-
-        tapping-term-ms = <350>;
-    };
-
-    paste: paste {
-        compatible = "zmk,behavior-tap-dance";
-        label = "PASTE";
-        #binding-cells = <0>;
-        bindings = <&kp LC(LS(V))>, <&kp LC(V)>;
-
-        tapping-term-ms = <350>;
-    };
-
     behaviors {
     };
 
@@ -267,6 +249,17 @@
             bindings = <&kp LS(D) &kp Y &kp C &kp A &kp L &kp O &kp R>;
             label = "SIGNATURE";
         };
+
+        pair_titles: pair_titles {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LESS_THAN &kp GREATER_THAN>,
+                <&macro_wait_time 30>,
+                <&kp LEFT>;
+
+            label = "PAIR_TITLES";
+        };
     };
 
     keymap {
@@ -274,7 +267,7 @@
 
         Default {
             bindings = <
-&kp MINUS           &kp EQUAL        &paste           &copy                          &kp INSERT           &kp DELETE              &kp UP_ARROW     &kp UP               &kp LEFT              &kp DOWN            &kp RIGHT         &kp BACKSPACE          &kp CAPSLOCK
+&kp MINUS           &kp EQUAL        &kp LS(INSERT)   &kp LC(INSERT)                 &kp INSERT           &kp DELETE              &kp UP_ARROW     &kp UP               &kp LEFT              &kp DOWN            &kp RIGHT         &kp BACKSPACE          &kp CAPSLOCK
 &kp TAB             &kp Q            &Lmt LEFT_GUI W  &Llt 5 E                       &kp R                &kp T                   &kp DOWN_ARROW   &kp Y                &kp U                 &Rlt 6 I            &Rmt RIGHT_GUI O  &kp P                  &kp BACKSLASH
 &kp LS(LA(LC(F8)))  &Lmt LEFT_ALT A  &Llt 3 S         &Lmt LEFT_SHIFT D              &Lmt LEFT_CONTROL F  &kp G                   &kp LEFT_ARROW   &kp H                &Rmt RIGHT_CONTROL J  &Rmt RIGHT_SHIFT K  &Rlt 3 L          &Rmt RIGHT_ALT RETURN  &kp MINUS
 &double_return      &kp Z            &kp X            &kp C                          &kp V                &kp B                   &kp RIGHT_ARROW  &kp N                &kp M                 &kp COMMA           &kp DOT           &kp FSLH               &kp APOS
@@ -288,11 +281,11 @@
 
         Navigation {
             bindings = <
-&trans  &trans    &trans        &trans      &trans     &trans    &trans  &trans             &trans     &trans         &trans             &trans  &trans
-&trans  &trans    &kp LEFT_GUI  &kp DELETE  &trans     &trans    &trans  &kp K_APPLICATION  &kp HOME   &kp PAGE_UP    &kp END            &trans  &trans
-&trans  &kp LALT  &mo 3         &kp LSHFT   &kp LCTRL  &trans    &trans  &kp LEFT           &kp DOWN   &kp UP_ARROW   &kp RIGHT          &trans  &trans
-&trans  &trans    &trans        &trans      &trans     &trans    &trans  &kp LC(LS(LEFT))   &kp LC(Z)  &kp PAGE_DOWN  &kp LC(LS(RIGHT))  &trans  &trans
-&trans  &trans    &trans        &trans      &trans     &trans    &trans  &trans             &trans     &to 0          &trans             &trans
+&trans  &trans    &trans        &trans      &trans     &trans    &trans  &trans            &trans         &trans         &trans             &trans  &trans
+&trans  &trans    &kp LEFT_GUI  &kp DELETE  &trans     &trans    &trans  &kp HOME          &kp LC(LEFT)   &kp LC(RIGHT)  &kp END            &trans  &trans
+&trans  &kp LALT  &mo 3         &kp LSHFT   &kp LCTRL  &trans    &trans  &kp LEFT          &kp DOWN       &kp UP_ARROW   &kp RIGHT          &trans  &trans
+&trans  &trans    &trans        &trans      &trans     &trans    &trans  &kp LC(LS(LEFT))  &kp PAGE_DOWN  &kp PAGE_UP    &kp LC(LS(RIGHT))  &trans  &trans
+&trans  &trans    &trans        &trans      &trans     &trans    &trans  &trans            &trans         &to 0          &trans             &trans
             >;
 
             label = "导航";
@@ -337,8 +330,8 @@
         Functions {
             bindings = <
 &trans  &to 1   &to 2            &to 3            &to 4         &to 5             &trans  &trans        &tog 1        &tog 2           &tog 3              &tog 4                 &trans
-&trans  &trans  &bt BT_SEL 3     &bt BT_SEL 4     &soft_off     &bt BT_CLR_ALL    &trans  &trans        &trans        &end_Return      &SEMICOLON_Return   &end_SEMICOLON_Return  &trans
-&trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR        &trans  &trans        &trans        &comma_quote     &dot_quote          &Return_quote          &trans
+&trans  &trans  &bt BT_SEL 3     &bt BT_SEL 4     &soft_off     &bt BT_CLR_ALL    &trans  &trans        &trans        &end_Return      &SEMICOLON_Return   &trans                 &trans
+&trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR        &trans  &trans        &trans        &comma_quote     &dot_quote          &end_SEMICOLON_Return  &trans
 &trans  &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans        &trans            &trans  &colon_quote  &caret_quote  &question_quote  &exclamation_quote  &trans                 &trans
 &trans  &trans  &trans           &trans           &trans        &trans            &trans  &trans        &trans        &to 0            &trans              &trans
             >;
@@ -346,11 +339,11 @@
 
         layer_6 {
             bindings = <
-&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans            &signature   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &triple_minus  &pair_apostrophe  &pair_quote  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans            &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &trans       &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &pair_titles      &signature   &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &triple_minus  &pair_apostrophe  &pair_quote  &Return_quote  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &trans       &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans            &trans       &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
