@@ -23,7 +23,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - Y
   - U
-  - I
+  - {t: I, h: '6'}
   - {t: O, h: RIGHT GUI}
   - P
   - {t: \, s: '|'}
@@ -413,7 +413,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
