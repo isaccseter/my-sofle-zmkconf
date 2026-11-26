@@ -13,7 +13,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:apple-keyboard-caps$$
+  - PRINTSCREEN
   - $$mdi:keyboard-tab$$
   - Q
   - {t: W, h: '$$mdi:apple-keyboard-command$$'}
@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - HOME
   - END
-  - {t: PRINTSCREEN, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-space$$', h: 导航}
   - {t: '$$mdi:keyboard-esc$$', h: 功能区和鼠标}
   - {t: '$$mdi:keyboard-return$$', type: enter}
